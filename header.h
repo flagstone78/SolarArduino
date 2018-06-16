@@ -1,3 +1,8 @@
+#ifndef HEADER
+#define HEADER
+
+#include "RTCLib.h"
+
 //addresses
 #define ACCELEROMETER_ADDRESS 0x69 // I2C address of the MPU-6050 accelerometer
 #define COMPASS_ADDRESS 0x1E //0011110b, I2C 7bit address of HMC5883
@@ -38,3 +43,5 @@ struct target{
   float azimuth = 0;
   float zenith = 0;
 };
+
+#endif // !HEADER

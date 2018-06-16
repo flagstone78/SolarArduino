@@ -1,8 +1,10 @@
-Rtc::Rtc(){
+#include "header.h"
 
+Rtc::Rtc(){
+  t = RTC_DS3231();
   t.begin();
-  //DateTime set(2018, 6, 3, 6, 24, 0);
-  //t.adjust(set);
+  DateTime set(2018, 6, 16, 14, 33, 0);
+  t.adjust(set);
   second = 0; 
   minute = 0; 
   hour = 0;
@@ -23,7 +25,7 @@ uint16_t Rtc::getDayOfYear(uint16_t year, uint8_t month,uint8_t day){
 }
 
 void Rtc::printTime() {
-  currentTime = t.now();
+  //currentTime = t.now();
 
   second = currentTime.second();
   minute = currentTime.minute();

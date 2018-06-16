@@ -25,7 +25,7 @@
     <None Include="compass.ino">
       <Filter>Source Files</Filter>
     </None>
-    <None Include="rtc.ino">
+    <None Include="Rtc.ino">
       <Filter>Source Files</Filter>
     </None>
   </ItemGroup>
@@ -36,5 +36,16 @@
     <ClInclude Include="__vm\.SolarArduino.vsarduino.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="header.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RTClib.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="RTClib.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
