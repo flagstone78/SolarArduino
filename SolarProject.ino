@@ -63,7 +63,7 @@ void loop() {
     pulState = !pulState;
     digitalWrite(pul, pulState);
 
-    //clock->printTime();
+    clock->printTime();
     accel->printAccel();
     compass->printDirection();
 

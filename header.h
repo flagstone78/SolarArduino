@@ -6,8 +6,8 @@
 //addresses
 #define ACCELEROMETER_ADDRESS 0x69 // I2C address of the MPU-6050 accelerometer
 #define COMPASS_ADDRESS 0x1E //0011110b, I2C 7bit address of HMC5883
-#define DS3231_I2C_ADDRESS 0x68
-#define DS3231_I2C_EEPROM 0x57
+#define DS3231_I2C_ADDRESS 0x68 // clock
+#define DS3231_I2C_EEPROM 0x57  // clock
 
 class Accel{
   int16_t AcX,AcY,AcZ,Tmp,GyX,GyY,GyZ;

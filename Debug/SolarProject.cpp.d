@@ -16,5 +16,4 @@ C:\Users\DeepCool\AppData\Local\Temp\VMBuilds\SolarProject\nano_atmega328\Debug\
  C:\Program\ Files\ (x86)\Arduino\hardware\arduino\avr\cores\arduino/Stream.h \
  C:\Users\DeepCool\AppData\Local\Temp\VMBuilds\SolarProject\nano_atmega328\Debug\header.h \
  C:\Users\DeepCool\AppData\Local\Temp\VMBuilds\SolarProject\nano_atmega328\Debug\RTCLib.h \
- C:\Program\ Files\ (x86)\Arduino\hardware\arduino\avr\cores\arduino/Arduino.h \
- C:\Program\ Files\ (x86)\Microsoft\ Visual\ Studio\2017\Community\Common7\IDE\Extensions\pd4xo3tv.r1p\Micro\ Platforms\default\debuggers\VM_DBG/VM_DBG.h
+ C:\Program\ Files\ (x86)\Arduino\hardware\arduino\avr\cores\arduino/Arduino.h
