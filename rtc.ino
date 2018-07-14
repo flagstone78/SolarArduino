@@ -1,8 +1,10 @@
 #include "header.h"
 
 Rtc::Rtc(){
-  t = RTC_DS3231();
-  t.begin();
+  t = RTC_DS3231();     // set clock type installed 
+  t.begin();            // code to set the time reported by the digital clock
+  
+  // uncomment the next to lines to set the time for the clock  ???
   //DateTime set(2018, 6, 28, 19, 53, 0);
   //t.adjust(set);
   second = 0; 
@@ -13,13 +15,13 @@ Rtc::Rtc(){
   year = 0;
 }
 
-bool Rtc::isLeapYear(uint16_t year){
+bool Rtc::isLeapYear(uint16_t year){       // determine if it is leep year or not
   if(year%4 != 0) return false;
   if(year%100 == 0) return (year%400 == 0);
   return true;
 }
 
-uint16_t Rtc::getDayOfYear(uint16_t year, uint8_t month,uint8_t day){
+uint16_t Rtc::getDayOfYear(uint16_t year, uint8_t month,uint8_t day){     // determine number of the days from the beginning of the year, julian day in solar book
   uint16_t days[12] = {0,31,59,90,120,151,181,212,243,273,304,334}; //days since beginning of year for each month
   return days[month-1] + day + ((month>2)*isLeapYear(year));
 }
@@ -27,14 +29,14 @@ uint16_t Rtc::getDayOfYear(uint16_t year, uint8_t month,uint8_t day){
 void Rtc::printTime() {
   currentTime = t.now();
 
-  second = currentTime.second();
+  second = currentTime.second();  //determine year, month, day, hour, minute, second from the real time clock 
   minute = currentTime.minute();
   hour = currentTime.hour();
   month = currentTime.month();
   year = currentTime.year();
   day = currentTime.day();
 
-  Serial.print("RTC: ");
+  Serial.print("RTC: ");    // print time to the screen from the data gathered
   Serial.print(hour, DEC);
   // convert the byte variable to a decimal number when displayed
   Serial.print(":");

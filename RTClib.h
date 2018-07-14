@@ -1,5 +1,5 @@
 // Code by JeeLabs http://news.jeelabs.org/code/
-// Released to the public domain! Enjoy!
+// Released to the public domain! Enjoy!  - return time for the real time clock - should not need to be modified
 
 #ifndef _RTCLIB_H_
 #define _RTCLIB_H_
