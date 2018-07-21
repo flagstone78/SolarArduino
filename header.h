@@ -78,4 +78,16 @@ struct target{
   float zenith = 0;
 };
 
+class Stepper {
+  bool dirState = false;
+  bool stepState = false;
+  int dirPin;
+  int stepPin;
+public:
+  Stepper(int stepPin, int dirPin);
+  void nextStep();
+  void setDirection(bool direction);
+  void switchDirection();
+};
+
 #endif // !HEADER

@@ -28,6 +28,9 @@
     <None Include="Rtc.ino">
       <Filter>Source Files</Filter>
     </None>
+    <None Include="stepper.ino">
+      <Filter>Source Files</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="__vm\.SolarProject.vsarduino.h">
