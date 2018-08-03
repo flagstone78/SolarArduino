@@ -83,11 +83,18 @@ class Stepper {
   bool stepState = false;
   int dirPin;
   int stepPin;
+
+  const int stepsPerRevolution; //steps per revolution of the motor
+
+  int currentStep; //keeps track of the current step
+
 public:
-  Stepper(int stepPin, int dirPin);
+  Stepper(int stepPin, int dirPin, int stepsPerRevolution);
   void nextStep();
   void setDirection(bool direction);
   void switchDirection();
+  void setCurrentAngleTo(float angle);
+  float getCurrentAngle();
 };
 
 #endif // !HEADER

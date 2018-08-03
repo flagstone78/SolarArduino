@@ -10,8 +10,8 @@
 
 const int stepsPerRevolution = 200;  // change this to fit the number of steps per revolution
 
-Stepper compassMotor(8, 7);
-Stepper accelMotor(4, 3);
+Stepper compassMotor(8, 7, 6400);
+Stepper accelMotor(4, 3, 6400);
 
 bool pulState = 0;
 bool dirState = 0;
@@ -38,6 +38,8 @@ void setup() {
   clock = new Rtc();       // set up for clock
   accel = new Accel();     // set up acceleromter 
   compass = new Compass(); // set up compass
+
+  compassMotor.setCurrentAngleTo(1.5707963267);
 
   // initialize the serial port:
   Serial.begin(115200);      // sets data rate to 9600 bits per second
@@ -99,9 +101,10 @@ void loop() {                             // start to for controlling the solar 
       speed = 40000;
     }*/
     
-    compass->printDirection();      // call subroutine to print the angular direction of the compass
-    compassAngle = compass->getAzimuth();
-    //compassMotor.setDirection((angle > targetAngle));
+    //compass->printDirection();      // call subroutine to print the angular direction of the compass
+    compassAngle = compassMotor.getCurrentAngle();
+    Serial.println(compassAngle * 180.0 / 3.1415926535897932384626433832795);
+    compassMotor.setDirection(compassAngle < targetCompass);
 
     //timer
     //Serial.print("delay: ");        // print the work delay to the screen 
