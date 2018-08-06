@@ -22,6 +22,7 @@ void Accel::takeAccel() {
 }
 
 void Accel::printAccel(){
+  takeAccel();
   Serial.print("Accelerometer: ");
   Serial.print("AcX = "); Serial.print(ac.x);
   Serial.print(" | AcY = "); Serial.print(ac.y); //max when platform is vertical (19000 to -19000)

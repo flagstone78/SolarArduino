@@ -8,13 +8,10 @@
 #include "header.h"
 
 
-const int stepsPerRevolution = 200;  // change this to fit the number of steps per revolution
+//const int stepsPerRevolution = 200;  // change this to fit the number of steps per revolution
 
-Stepper compassMotor(8, 7, 6400);
-Stepper accelMotor(4, 3, 6400);
-
-bool pulState = 0;
-bool dirState = 0;
+Stepper compassMotor(5, 6, 7, 6400);
+Stepper accelMotor(2, 3, 4, 6400);
 
 const float longitude = 44.0121; //Longitude of the solar collector, needs to be changed for current location, current Rochester Mn
 const float latitude = 92.4802; //Latitude of the solar collector, needs to be changed for current location, rochester Mn
@@ -30,8 +27,8 @@ Rtc* clock;
 Accel* accel;
 Compass* compass;
 
-unsigned int speed = 400;
-int increment = 1;
+//unsigned int speed = 400;
+//int increment = 1;
 
 void setup() {
   Wire.begin();            // Initialte teh wire library and join the I2c bus as a master or slave
@@ -50,7 +47,7 @@ void setup() {
   TCCR1B = 0;
   TCNT1 = 0;
 
-  OCR1A = 8000; //compare match register 31250 is 1 second
+  OCR1A = 32000; //compare match register 31250 is 1 second
   TCCR1B |= (1 << WGM12);   // CTC mode
   TCCR1B |= (1 << CS11);    // 256 prescaler 
   TIMSK1 |= (1 << OCIE1A);  // enable timer compare interrupt
@@ -91,7 +88,7 @@ void loop() {                             // start to for controlling the solar 
     //clock->printTime();             // call subroutine to print the time
     //accel->printAccel();            // call subroutine to print the accelorometer values
     angle = accel->getZenith();            // call subroutine to print the accelorometer position
-    accelMotor.setDirection((angle > targetAngle));
+    accelMotor.setDirection((angle < targetAngle));
     
     /*diff = angle - targetAngle;
     if (diff < 0) { diff *= -1.0; }
@@ -103,6 +100,7 @@ void loop() {                             // start to for controlling the solar 
     
     //compass->printDirection();      // call subroutine to print the angular direction of the compass
     compassAngle = compassMotor.getCurrentAngle();
+    Serial.print("C");
     Serial.println(compassAngle * 180.0 / 3.1415926535897932384626433832795);
     compassMotor.setDirection(compassAngle < targetCompass);
 

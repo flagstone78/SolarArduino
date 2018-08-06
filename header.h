@@ -81,15 +81,16 @@ struct target{
 class Stepper {
   bool dirState = false;
   bool stepState = false;
-  int dirPin;
-  int stepPin;
+  const int dirPin;
+  const int stepPin;
+  const int enPin;
 
   const int stepsPerRevolution; //steps per revolution of the motor
 
   int currentStep; //keeps track of the current step
 
 public:
-  Stepper(int stepPin, int dirPin, int stepsPerRevolution);
+  Stepper(int _enPin, int _dirPin, int _stepPin, int _stepsPerRevolution);
   void nextStep();
   void setDirection(bool direction);
   void switchDirection();
