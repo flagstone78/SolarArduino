@@ -4,17 +4,17 @@
  Author:	Alan Mathias
 */
 
-#include <Wire.h>
+#include <Wire.h> 
 #include "header.h"
 
 
-//const int stepsPerRevolution = 200;  // change this to fit the number of steps per revolution
+const int stepsPerRevolution = 200;  // change this to fit the number of steps per revolution
 
-Stepper compassMotor(5, 6, 7, 6400);
-Stepper accelMotor(2, 3, 4, 6400);
+Stepper compassMotor(stepsPerRevolution, 6, 7, 6400);
+Stepper accelMotor(stepsPerRevolution, 3, 4, 6400);
 
-const float longitude = 44.0121; //Longitude of the solar collector, needs to be changed for current location, current Rochester Mn
-const float latitude = 92.4802; //Latitude of the solar collector, needs to be changed for current location, rochester Mn
+const float longitude = -92.4802; //Longitude of the solar collector, needs to be changed for current location, current Rochester Mn
+const float latitude = 44.0121; //Latitude of the solar collector, needs to be changed for current location, rochester Mn
 
 const float slope = 0; //platform angle relative to ground
 
@@ -80,7 +80,7 @@ float targetCompass = 1.5707963267;
 float compassDiff = 0;
 
 void loop() {                             // start to for controlling the solar tracker
-  if (millis()>nextTime) {                // process every pet the frequency that nexTime is set to above 
+  if (millis()>nextTime) {                // process every step the frequency that nexTime is set to above 
     if (Serial.available() >= 3) {        // if the number of bytes available for reading is >= 3 then determines the delay time 
       delayTime = Serial.parseInt();      // reads delay time 
     }
@@ -95,7 +95,7 @@ void loop() {                             // start to for controlling the solar 
     if(diff > .25){
       speed = (10000.0 / diff);
     } else {
-      speed = 40000;
+      speed = 40000;//
     }*/
     
     //compass->printDirection();      // call subroutine to print the angular direction of the compass

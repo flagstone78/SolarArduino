@@ -34,9 +34,10 @@ target getTargetAzimuth(){
     + cos(declinationAngle)*sin(slope)*sin(azimuth)*sin(hourAngle)
     );  
 
-  out.azimuth = azimuthAngle;
-  out.zenith = theta;
+  out.azimuth = -azimuthAngle;
+  out.zenith = 90-theta;
 
   return out;
+
 }
 

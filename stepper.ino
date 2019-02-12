@@ -1,4 +1,4 @@
-﻿Stepper::Stepper(int _enPin, int _dirPin, int _stepPin, int _stepsPerRevolution) 
+Stepper::Stepper(int _enPin, int _dirPin, int _stepPin, int _stepsPerRevolution) 
   :stepsPerRevolution(_stepsPerRevolution), dirPin(_dirPin), stepPin(_stepPin), enPin(_enPin)
 {  
   pinMode(dirPin, OUTPUT);    // configures pin 3 (dir) to be an output
