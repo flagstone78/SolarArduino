@@ -98,4 +98,13 @@ public:
   float getCurrentAngle();
 };
 
+class LimitSwitch {
+  const int pin;        //pin number that the switch is connected to
+  const bool inverted;  //true if pressed is pulls pin low and released pulls pin high
+
+public:
+  LimitSwitch(int _pin, bool _inverted):pin(_pin),inverted(_inverted){pinMode(pin, INPUT_PULLUP);};
+  bool pressed(){return (inverted^digitalRead(pin));};
+};
+
 #endif // !HEADER
