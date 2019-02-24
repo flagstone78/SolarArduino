@@ -7,11 +7,14 @@
 #include <Wire.h> 
 #include "header.h"
 
+#define PI 3.1415926535897932384626433832795
 
-const int stepsPerRevolution = 200;  // change this to fit the number of steps per revolution
+const int stepsPerRevolution = 800;  // change this to fit the number of steps per revolution
 
-Stepper azimuthMotor(5, 6, 7, 6400);
-Stepper elevationMotor(2, 3, 4, 6400);
+double azimuthRadPerStep = (2*PI*9.0*.467)/(stepsPerRevolution*60.0); //2 pi radian * (9/60) gear ratio *3.5
+
+Stepper azimuthMotor(5, 6, 7, azimuthRadPerStep); // 54 degrees per revoloution of motor // (2 pi *9)/(3200*200*60)
+Stepper elevationMotor(2, 3, 4, stepsPerRevolution*360/7.5); //7.5 degrees elevation per motor revolotion
 LimitSwitch azimuthSwitch(12, true);
 LimitSwitch elevationSwitch(13, true);
 
@@ -29,20 +32,32 @@ long int nextTime;
 int delayTime;
 String readString;
 
-
-
-
 //unsigned int speed = 400;
 //int increment = 1;
 
 enum STATE{CALIBRATE,TRACKING, TEST};
 STATE curState = CALIBRATE;
 
+void enableTimer1(){
+  TIMSK1 |= (1 << OCIE1A); 
+}
+
+void disableTimer1(){
+  TIMSK1 &= ~(1 << OCIE1A); 
+}
+
+volatile float angle = 1.5707963267;
+volatile float targetAngle = 1.5707963267;
+volatile float diff = 0;
+
+volatile float azimuthAngle = 0;
+volatile float targetAzimuth = (90.0*PI)/180.0; //target angle
+volatile float azimuthDiff = 0;
+
 void setup() {
   Wire.begin();            // Initialte the wire library and join the I2c bus as a master or slave
   clock = new Rtc();       // set up for clock
   accel = new Accel();     // set up acceleromter 
-  //compass = new Compass(); // set up compass
 
   //compassMotor.setCurrentAngleTo(1.5707963267);
 
@@ -55,48 +70,68 @@ void setup() {
   TCCR1B = 0;
   TCNT1 = 0;
 
-  OCR1A = 32000; //compare match register 31250 is 1 second
+  OCR1A = 1025; //compare match register 31250 is 1 second
   TCCR1B |= (1 << WGM12);   // CTC mode
-  TCCR1B |= (1 << CS11);    // 256 prescaler 
-  TIMSK1 |= (1 << OCIE1A);  // enable timer compare interrupt
+  TCCR1B |= (1 << CS12);    // 256 prescaler 
+  disableTimer1(); // timer compare interrupt. enabled further down
 
   nextTime = millis();  //sets next time to process - millis number of millisecond s sinde the arduino board begain running + 1000 
   delayTime = 999;               // set delay time
 }
 
-SIGNAL(TIMER1_COMPA_vect)
+SIGNAL(TIMER1_COMPA_vect) //interrupt handler to move motors periodically
 {
-  //azimuthMotor.nextStep();
-  //elevationMotor.nextStep();
+  //angle = accel->getZenith(); // call subroutine to print the accelorometer position
+  //elevationMotor.setDirection((angle < targetAngle)); //set direction of motor
+  //elevationMotor.nextStep(); //step in that direction
+
+  azimuthAngle = azimuthMotor.getCurrentAngle(); //get current azimuth
+  azimuthDiff = targetAzimuth - azimuthAngle;
+  azimuthMotor.setDirection(0 < azimuthDiff); //set direction
+  if(azimuthDiff > .017 || azimuthDiff < -.017){
+    azimuthMotor.nextStep(); //step in that direction
+  }
+
+  Serial.print(azimuthAngle * 180.0 / PI);
+  Serial.print("  ");
+  Serial.print(targetAzimuth * 180.0 / PI);
+  Serial.print("  ");
+  Serial.print(azimuthDiff * 180.0 / PI);
+  //Serial.print("    ");
+  //Serial.print(azimuthMotor.getDirection());
+  Serial.print("\n");
 }
 
 void updateOCR1A(int val) {
-  OCR1A = val;
+  //OCR1A = val;
   if (TCNT1>val) {
     TCNT1 = 0;
-    //azimuthMotor.nextStep();
-    //elevationMotor.nextStep();
+    azimuthMotor.nextStep();
+    elevationMotor.nextStep();
   }
 }
-
-float angle = 1.5707963267;
-float targetAngle = 1.5707963267;
-float diff = 0;
-
-float compassAngle = 1.5707963267;
-float targetCompass = 1.5707963267;
-float compassDiff = 0;
 
 void loop() {                             // start to for controlling the solar tracker
   switch(curState){
   case CALIBRATE:
-    azimuthMotor.setDirection(0); //test
-    while(!azimuthSwitch.pressed()){
+    disableTimer1();
+    
+    azimuthMotor.setDirection(0);
+    volatile int delayTime;
+    while(azimuthSwitch.pressed()){ //move motor to limit switch
       azimuthMotor.nextStep();
-      delay(20);
+      delayTime = 1600000000;
+      while(delayTime > 0){ delayTime--;};
     }
-    azimuthMotor.setCurrentAngleTo(55.0); //set to angle of the limit switch //55 degrees from north
+    //azimuthMotor.setCurrentAngleTo(55.0); //set to angle of the limit switch //55 degrees from north
+    azimuthMotor.setCurrentAngleTo(0);
     Serial.println("Done calibrating");
+    Serial.print("Pointing to ");
+    Serial.print(azimuthMotor.getCurrentAngle());
+    Serial.print(" degrees\n ");
+    
+    enableTimer1();
+    
     curState = TEST;
     break;
   case TRACKING:
@@ -107,23 +142,6 @@ void loop() {                             // start to for controlling the solar 
   
       //clock->printTime();             // call subroutine to print the time
       //accel->printAccel();            // call subroutine to print the accelorometer values
-      angle = accel->getZenith();            // call subroutine to print the accelorometer position
-      elevationMotor.setDirection((angle < targetAngle));
-      
-      /*diff = angle - targetAngle;
-      if (diff < 0) { diff *= -1.0; }
-      if(diff > .25){
-        speed = (10000.0 / diff);
-      } else {
-        speed = 40000;//
-      }*/
-      
-      //compass->printDirection();      // call subroutine to print the angular direction of the compass
-      compassAngle = azimuthMotor.getCurrentAngle();
-      Serial.print("C");
-      Serial.println(compassAngle * 180.0 / 3.1415926535897932384626433832795);
-      azimuthMotor.setDirection(compassAngle < targetCompass);
-  
       //timer
       //Serial.print("delay: ");        // print the work delay to the screen 
       //Serial.print(delayTime);        // print the delay time time to the screen

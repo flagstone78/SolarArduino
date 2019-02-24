@@ -1,5 +1,5 @@
-Stepper::Stepper(int _enPin, int _dirPin, int _stepPin, int _stepsPerRevolution) 
-  :stepsPerRevolution(_stepsPerRevolution), dirPin(_dirPin), stepPin(_stepPin), enPin(_enPin)
+Stepper::Stepper(int _enPin, int _dirPin, int _stepPin, double _radiansPerStep) 
+  :radiansPerStep(_radiansPerStep), dirPin(_dirPin), stepPin(_stepPin), enPin(_enPin)
 {  
   pinMode(dirPin, OUTPUT);    // configures pin 3 (dir) to be an output
   digitalWrite(dirPin, dirState); // output voltage set to 3 volts/low 
@@ -22,27 +22,31 @@ void Stepper::nextStep() {
   }
 
   //wrap current step
-  if (currentStep < 0) {
+  /*if (currentStep < 0) {
     currentStep = stepsPerRevolution;
   } else if (currentStep > stepsPerRevolution) {
     currentStep = 0;
-  }
+  }*/
 
   digitalWrite(stepPin, stepState);
 }
 
-void Stepper::setCurrentAngleTo(float angle) {
-  int step = stepsPerRevolution*(angle / 6.283185307179586476925286766559);
+void Stepper::setCurrentAngleTo(float rad) {
+  int step = rad/radiansPerStep;
   currentStep = step;
 }
 
 float Stepper::getCurrentAngle() {
-  return 6.283185307179586476925286766559 * (float) currentStep / (float) stepsPerRevolution;
+  return (float) currentStep * radiansPerStep;
 }
 
 void Stepper::setDirection(bool direction) {
   dirState = direction;
   digitalWrite(dirPin, dirState);
+}
+
+bool Stepper::getDirection() {
+  return dirState;
 }
 
 void Stepper::switchDirection() {

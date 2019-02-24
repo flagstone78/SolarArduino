@@ -85,14 +85,15 @@ class Stepper {
   const int stepPin;
   const int enPin;
 
-  const int stepsPerRevolution; //steps per revolution of the motor
+  const double radiansPerStep; //steps per revolution of the motor
 
   int currentStep; //keeps track of the current step
 
 public:
-  Stepper(int _enPin, int _dirPin, int _stepPin, int _stepsPerRevolution);
+  Stepper(int _enPin, int _dirPin, int _stepPin, double _radiansPerStep);
   void nextStep();
   void setDirection(bool direction);
+  bool Stepper::getDirection();
   void switchDirection();
   void setCurrentAngleTo(float angle);
   float getCurrentAngle();
