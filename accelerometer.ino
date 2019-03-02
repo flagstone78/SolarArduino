@@ -31,14 +31,13 @@ void Accel::printAccel(){
 
 float Accel::getZenith() {
   takeAccel();
-  xyz ref( 0, 1, 0 );
+  xyz ref( 0, -1, 0 );
   float magAccel = magnitude(ac);
   float magRef = magnitude(ref);
-  
   // find the magnitude of the the cross produc
   //float mag_cross = sqrt(cross.x*cross.x + cross.y*cross.y + cross.z*cross.z);
   // determine the zenith angle - angle relative to the verticle
   float angle = acos(dot(ac, ref) / (magAccel * magRef));
-  Serial.println(angle*180/3.141596);
+  //Serial.println(angle*180/3.141596);
   return angle;
 }

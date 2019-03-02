@@ -15,8 +15,8 @@ double azimuthRadPerStep = (2*PI*9.0*.467)/(stepsPerRevolution*60.0); //2 pi rad
 
 Stepper azimuthMotor(5, 6, 7, azimuthRadPerStep); // 54 degrees per revoloution of motor // (2 pi *9)/(3200*200*60)
 Stepper elevationMotor(2, 3, 4, stepsPerRevolution*360/7.5); //7.5 degrees elevation per motor revolotion
-LimitSwitch azimuthSwitch(12, true);
-LimitSwitch elevationSwitch(13, true);
+LimitSwitch azimuthSwitch(10, true);
+LimitSwitch elevationSwitch(11, false);
 
 Rtc* clock;
 Accel* accel;
@@ -46,12 +46,12 @@ void disableTimer1(){
   TIMSK1 &= ~(1 << OCIE1A); 
 }
 
-volatile float angle = 1.5707963267;
-volatile float targetAngle = 1.5707963267;
-volatile float diff = 0;
+volatile float elevationAngle = 1.5707963267;
+volatile float targetElevation = (45.0*PI)/180.0;
+volatile float elevationDiff = 0;
 
 volatile float azimuthAngle = 0;
-volatile float targetAzimuth = (90.0*PI)/180.0; //target angle
+volatile float targetAzimuth = (30.0*PI)/180.0; //target angle
 volatile float azimuthDiff = 0;
 
 void setup() {
@@ -75,20 +75,24 @@ void setup() {
   TCCR1B |= (1 << CS12);    // 256 prescaler 
   disableTimer1(); // timer compare interrupt. enabled further down
 
-  nextTime = millis();  //sets next time to process - millis number of millisecond s sinde the arduino board begain running + 1000 
+  nextTime = millis();  //sets next time to process - millis number of millisecond s since the arduino board begain running + 1000 
   delayTime = 999;               // set delay time
+
+  pinMode(2, OUTPUT);
+  digitalWrite(2, HIGH); //enable elevation motor
 }
 
 SIGNAL(TIMER1_COMPA_vect) //interrupt handler to move motors periodically
 {
-  //angle = accel->getZenith(); // call subroutine to print the accelorometer position
-  //elevationMotor.setDirection((angle < targetAngle)); //set direction of motor
-  //elevationMotor.nextStep(); //step in that direction
-
+  /*elevationMotor.setDirection(0 < elevationDiff); //set direction of motor
+  if(elevationDiff > .017 || elevationDiff < -.017){ //step if outside of +- 1 degree
+    elevationMotor.nextStep(); //step in that direction
+  }*/
+  
   azimuthAngle = azimuthMotor.getCurrentAngle(); //get current azimuth
   azimuthDiff = targetAzimuth - azimuthAngle;
   azimuthMotor.setDirection(0 < azimuthDiff); //set direction
-  if(azimuthDiff > .017 || azimuthDiff < -.017){
+  if(azimuthDiff > .017 || azimuthDiff < -.017){ //step if outside of +- 1 degree
     azimuthMotor.nextStep(); //step in that direction
   }
 
@@ -115,11 +119,11 @@ void loop() {                             // start to for controlling the solar 
   switch(curState){
   case CALIBRATE:
     disableTimer1();
-    
     azimuthMotor.setDirection(0);
     volatile int delayTime;
-    while(azimuthSwitch.pressed()){ //move motor to limit switch
+    while(!azimuthSwitch.pressed()){ //move motor to limit switch
       azimuthMotor.nextStep();
+      Serial.println(azimuthSwitch.pressed());
       delayTime = 1600000000;
       while(delayTime > 0){ delayTime--;};
     }
@@ -132,13 +136,21 @@ void loop() {                             // start to for controlling the solar 
     
     enableTimer1();
     
-    curState = TEST;
+    curState = TRACKING;
     break;
   case TRACKING:
-    if (millis()>nextTime) {                // process every step the frequency that nexTime is set to above 
-      if (Serial.available() >= 3) {        // if the number of bytes available for reading is >= 3 then determines the delay time 
-        delayTime = Serial.parseInt();      // reads delay time 
-      }
+    //if (millis()>nextTime) {                // process every step the frequency that nexTime is set to above 
+      //if (Serial.available() >= 3) {        // if the number of bytes available for reading is >= 3 then determines the delay time 
+        //delayTime = Serial.parseInt();      // reads delay time 
+      //}
+      /*elevationAngle = accel->getZenith(); // call subroutine to print the accelorometer position
+      elevationDiff = targetElevation-elevationAngle;
+      Serial.print(elevationAngle * 180.0 / PI);
+      Serial.print("  ");
+      Serial.print(targetElevation * 180.0 / PI);
+      Serial.print("  ");
+      Serial.print(elevationDiff * 180.0 / PI);
+      Serial.print("\n");*/
   
       //clock->printTime();             // call subroutine to print the time
       //accel->printAccel();            // call subroutine to print the accelorometer values
@@ -147,7 +159,7 @@ void loop() {                             // start to for controlling the solar 
       //Serial.print(delayTime);        // print the delay time time to the screen
       //Serial.print("\r\n");           // print text after delay time printed
       nextTime = millis() + (1000 - delayTime);   //update nextTime including the delay time obtained above
-    }
+    //}
     break;
   default:
     break;
