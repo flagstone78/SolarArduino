@@ -1,7 +1,9 @@
-target getTargetAzimuth(){
+target getTargetAzimuth(int day, float hours){
   target out;
+
+  int n = day % 366; //JulianDate; //Julian day. 1<=n<=365   // leap year???
+  float standardTime = hours - floor(hours/24)*24; //keep standard time between 0 and 24
   
-  int n = 1; //JulianDate; //Julian day. 1<=n<=365
   float B = (360 * (n - 81)) / (364); //adjustment for time of year
   float E = 9.87*sin(2 * B) - 7.53*cos(B) - 1.5*sin(B); //solar time
   
@@ -9,7 +11,7 @@ target getTargetAzimuth(){
   // calculate from longitude
   
   float solarTime = 0;
-  float standardTime = 0; //current time of day in hours (not daylight savings time)
+  //float standardTime = 0; //current time of day in hours (not daylight savings time)
   float hourAngle = 0; //angle of the sun east to west relative to south
   
   float declinationAngle = 0;
@@ -17,8 +19,8 @@ target getTargetAzimuth(){
   float azimuthAngle = 0;  //angle of the front of the platform relaive to south
   float azimuth = 0;
 
-  n = 0;//getDayOfYear();
-  standardTime = 0;//getTimeInHours();
+  //n = 0;//getDayOfYear();
+  //standardTime = 0;//getTimeInHours();
     
   Lst = int((longitude+7.5)/15)*15; //takes of fraction
   solarTime = standardTime + 4*(Lst-longitude) + E;

@@ -78,6 +78,8 @@ struct target{
   float zenith = 0;
 };
 
+target getTargetAzimuth(int day, float hours);
+
 class Stepper {
   bool dirState = false;
   bool stepState = false;

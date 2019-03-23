@@ -51,7 +51,7 @@ volatile float targetElevation = (45.0*PI)/180.0;
 volatile float elevationDiff = 0;
 
 volatile float azimuthAngle = 0;
-volatile float targetAzimuth = (30.0*PI)/180.0; //target angle
+volatile float targetAzimuth = (0.0*PI)/180.0; //target angle
 volatile float azimuthDiff = 0;
 
 void setup() {
@@ -84,26 +84,34 @@ void setup() {
 
 SIGNAL(TIMER1_COMPA_vect) //interrupt handler to move motors periodically
 {
-  /*elevationMotor.setDirection(0 < elevationDiff); //set direction of motor
+  elevationMotor.setDirection(0 < elevationDiff); //set direction of motor
   if(elevationDiff > .017 || elevationDiff < -.017){ //step if outside of +- 1 degree
     elevationMotor.nextStep(); //step in that direction
-  }*/
+  }
+
+      Serial.print(elevationAngle * 180.0 / PI);
+      Serial.print("  ");
+      Serial.print(targetElevation * 180.0 / PI);
+      Serial.print("  ");
+      Serial.print(elevationDiff * 180.0 / PI);
+      Serial.print("\n");
   
-  azimuthAngle = azimuthMotor.getCurrentAngle(); //get current azimuth
-  azimuthDiff = targetAzimuth - azimuthAngle;
+  
+  //elevationMotor.setDirection(0 < azimuthDiff); //set direction
   azimuthMotor.setDirection(0 < azimuthDiff); //set direction
   if(azimuthDiff > .017 || azimuthDiff < -.017){ //step if outside of +- 1 degree
     azimuthMotor.nextStep(); //step in that direction
+    //elevationMotor.nextStep();
   }
 
-  Serial.print(azimuthAngle * 180.0 / PI);
+  /*Serial.print(azimuthAngle * 180.0 / PI);
   Serial.print("  ");
   Serial.print(targetAzimuth * 180.0 / PI);
   Serial.print("  ");
   Serial.print(azimuthDiff * 180.0 / PI);
   //Serial.print("    ");
   //Serial.print(azimuthMotor.getDirection());
-  Serial.print("\n");
+  Serial.print("\n");*/
 }
 
 void updateOCR1A(int val) {
@@ -118,7 +126,11 @@ void updateOCR1A(int val) {
 void loop() {                             // start to for controlling the solar tracker
   switch(curState){
   case CALIBRATE:
-    disableTimer1();
+    disableTimer1(); //stops motor tracking until the current position is known
+    
+    //curState = TEST;
+    //break;
+    
     azimuthMotor.setDirection(0);
     volatile int delayTime;
     while(!azimuthSwitch.pressed()){ //move motor to limit switch
@@ -143,14 +155,12 @@ void loop() {                             // start to for controlling the solar 
       //if (Serial.available() >= 3) {        // if the number of bytes available for reading is >= 3 then determines the delay time 
         //delayTime = Serial.parseInt();      // reads delay time 
       //}
-      /*elevationAngle = accel->getZenith(); // call subroutine to print the accelorometer position
+      
+      elevationAngle = accel->getZenith(); // call subroutine to print the accelorometer position
       elevationDiff = targetElevation-elevationAngle;
-      Serial.print(elevationAngle * 180.0 / PI);
-      Serial.print("  ");
-      Serial.print(targetElevation * 180.0 / PI);
-      Serial.print("  ");
-      Serial.print(elevationDiff * 180.0 / PI);
-      Serial.print("\n");*/
+
+      azimuthAngle = azimuthMotor.getCurrentAngle(); //get current azimuth
+      azimuthDiff = targetAzimuth - azimuthAngle;
   
       //clock->printTime();             // call subroutine to print the time
       //accel->printAccel();            // call subroutine to print the accelorometer values
@@ -160,6 +170,26 @@ void loop() {                             // start to for controlling the solar 
       //Serial.print("\r\n");           // print text after delay time printed
       nextTime = millis() + (1000 - delayTime);   //update nextTime including the delay time obtained above
     //}
+    break;
+  case TEST:
+    /*for(int day = 0; day<1; day++){
+      for(float seconds = 0; seconds<24*60*60; seconds+=1){
+        target out = getTargetAzimuth(day, seconds);
+        Serial.print("d: ");
+        Serial.print(day);
+        Serial.print("   ");
+        Serial.print("h: ");
+        Serial.print(seconds);
+        Serial.print("   ");
+        
+        Serial.print("A: ");
+        Serial.print(out.azimuth);
+        Serial.print("   ");
+        Serial.print("E: ");
+        Serial.print(out.zenith);
+        Serial.print('\n');
+      }
+    }*/
     break;
   default:
     break;
