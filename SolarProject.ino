@@ -47,7 +47,7 @@ void disableTimer1(){
 }
 
 volatile float elevationAngle = 1.5707963267;
-volatile float targetElevation = (45.0*PI)/180.0;
+volatile float targetElevation = ((90.0-1.2)*PI)/180.0; //0 degrees is at 7.56 degrees
 volatile float elevationDiff = 0;
 
 volatile float azimuthAngle = 0;
@@ -70,38 +70,33 @@ void setup() {
   TCCR1B = 0;
   TCNT1 = 0;
 
-  OCR1A = 1025; //compare match register 31250 is 1 second
+  OCR1A = 200;//1025; //compare match register 31250 is 1 second
   TCCR1B |= (1 << WGM12);   // CTC mode
   TCCR1B |= (1 << CS12);    // 256 prescaler 
   disableTimer1(); // timer compare interrupt. enabled further down
 
   nextTime = millis();  //sets next time to process - millis number of millisecond s since the arduino board begain running + 1000 
   delayTime = 999;               // set delay time
-
-  pinMode(2, OUTPUT);
-  digitalWrite(2, HIGH); //enable elevation motor
 }
 
 SIGNAL(TIMER1_COMPA_vect) //interrupt handler to move motors periodically
 {
-  elevationMotor.setDirection(0 < elevationDiff); //set direction of motor
+  elevationMotor.setDirection(0 > elevationDiff); //set direction of motor
   if(elevationDiff > .017 || elevationDiff < -.017){ //step if outside of +- 1 degree
     elevationMotor.nextStep(); //step in that direction
   }
 
-      Serial.print(elevationAngle * 180.0 / PI);
-      Serial.print("  ");
-      Serial.print(targetElevation * 180.0 / PI);
-      Serial.print("  ");
-      Serial.print(elevationDiff * 180.0 / PI);
-      Serial.print("\n");
+  Serial.print(elevationAngle * 180.0 / PI);
+  Serial.print("  ");
+  Serial.print(targetElevation * 180.0 / PI);
+  Serial.print("  ");
+  Serial.print(elevationDiff * 180.0 / PI);
+  Serial.print("\n");
   
   
-  //elevationMotor.setDirection(0 < azimuthDiff); //set direction
   azimuthMotor.setDirection(0 < azimuthDiff); //set direction
   if(azimuthDiff > .017 || azimuthDiff < -.017){ //step if outside of +- 1 degree
     azimuthMotor.nextStep(); //step in that direction
-    //elevationMotor.nextStep();
   }
 
   /*Serial.print(azimuthAngle * 180.0 / PI);
