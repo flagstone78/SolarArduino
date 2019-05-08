@@ -71,11 +71,14 @@ class Rtc{
   
   float julianDay();
   void printTime();
+  uint32_t seconds();
+
+  void setTime();
 };
 
 struct target{
-  float azimuth = 0;
-  float zenith = 0;
+  float azimuth = 0; //radians clockwise from north
+  float elevation = 0; //pi/2 degrees is up
 };
 
 target getTargetAzimuth(int day, float hours);

@@ -57,6 +57,19 @@ void Rtc::printTime() {
   Serial.print(month, DEC);
   Serial.print("/");
   Serial.print(year, DEC);
-  Serial.print("    JulianDay: ");
-  Serial.println(getDayOfYear(year,month,day));
+  Serial.print("    Seconds2000: ");
+  Serial.println(currentTime.secondstime());
+  //Serial.print("    JulianDay: ");
+  //Serial.println(getDayOfYear(year,month,day));
 }
+
+uint32_t Rtc::seconds(){
+  return t.now().secondstime();
+}
+
+void Rtc::setTime(){
+  DateTime newtime(2019,5,8,11,35,0);
+  t.adjust(newtime);
+}
+
+
