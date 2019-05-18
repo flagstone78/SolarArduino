@@ -90,18 +90,22 @@ class Stepper {
   const int stepPin;
   const int enPin;
 
-  const double radiansPerStep; //steps per revolution of the motor
-
-  int currentStep; //keeps track of the current step
+  const float radiansPerStep; //steps per revolution of the motor
+  uint32_t maxStep; //maximum angle of motor
+  uint32_t minStep; //minimum angle of motor
+  uint32_t currentStep; //keeps track of the current step
 
 public:
-  Stepper(int _enPin, int _dirPin, int _stepPin, double _radiansPerStep);
+  Stepper(int _enPin, int _dirPin, int _stepPin, float _radiansPerStep, float _maxRad, float _minRad);
   void nextStep();
+  void blindStep();
   void setDirection(bool direction);
   bool Stepper::getDirection();
   void switchDirection();
   void setCurrentAngleTo(float angle);
   float getCurrentAngle();
+  uint32_t getStepAtAngle(float rad);
+  void printStatus();
 };
 
 class LimitSwitch {

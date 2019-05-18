@@ -9,25 +9,32 @@
 
 #define PI 3.1415926535897932384626433832795
 
+const float longitude = -92.4802; //Longitude of the solar collector, needs to be changed for current location, current Rochester Mn
+const float latitude = 44.0121; //Latitude of the solar collector, needs to be changed for current location, rochester Mn
+const float timeZone = -5;
+
+const float slope = 0; //platform angle relative to ground
+
+float maxElevation = 120.0*PI/180.0;
+float minElevation = 10.0*PI/180.0;
+
+const float azimuthLimitLocation = 55.0; //hard stop limit switch location
+float maxAzimuth = (320.0)*PI/180.0;
+float minAzimuth = azimuthLimitLocation*PI/180.0;
+
+
 const int stepsPerRevolution = 800;  // change this to fit the number of steps per revolution
 
-double azimuthRadPerStep = (2*PI*9.0*.467)/(stepsPerRevolution*60.0); //2 pi radian * (9/60) gear ratio *3.5
+float azimuthRadPerStep = (2*PI*9.0*.467)/(stepsPerRevolution*60.0); //2 pi radian * (9/60) gear ratio *3.5
 
-Stepper azimuthMotor(5, 6, 7, azimuthRadPerStep); // 54 degrees per revoloution of motor // (2 pi *9)/(3200*200*60)
-Stepper elevationMotor(2, 3, 4, stepsPerRevolution*360/7.5); //7.5 degrees elevation per motor revolotion
+Stepper azimuthMotor(5, 6, 7, azimuthRadPerStep, maxAzimuth, minAzimuth); // 54 degrees per revoloution of motor // (2 pi *9)/(3200*200*60)
+Stepper elevationMotor(2, 3, 4, 15.0*PI/(stepsPerRevolution*360.0), maxElevation, minElevation); //  7.5 degrees elevation per motor revolotion
 LimitSwitch azimuthSwitch(10, false);
 LimitSwitch elevationSwitch(11, false);
 
 Rtc* clock;
 Accel* accel;
 //Compass* compass;
-
-
-const float longitude = -92.4802; //Longitude of the solar collector, needs to be changed for current location, current Rochester Mn
-const float latitude = 44.0121; //Latitude of the solar collector, needs to be changed for current location, rochester Mn
-const float timeZone = -5;
-
-const float slope = 0; //platform angle relative to ground
 
 long int nextTime;
 int delayTime;
@@ -63,8 +70,6 @@ void setup() {
   //clock->setTime();
   accel = new Accel();     // set up acceleromter 
 
-  //azimuthMotor.setCurrentAngleTo(55.0*PI/180.0);
-
   // initialize the serial port:
   Serial.begin(115200);      // sets data rate to 9600 bits per second
   Serial.println("starting serial");  // prints data to the serial port as human readable ASCII text
@@ -74,7 +79,7 @@ void setup() {
   TCCR1B = 0;
   TCNT1 = 0;
 
-  OCR1A = 1025; //compare match register 31250 is 1 second
+  OCR1A = 5025;//1025; //compare match register 31250 is 1 second
   TCCR1B |= (1 << WGM12);   // CTC mode
   TCCR1B |= (1 << CS12);    // 256 prescaler 
   disableTimer1(); // timer compare interrupt. enabled further down
@@ -90,12 +95,12 @@ SIGNAL(TIMER1_COMPA_vect) //interrupt handler to move motors periodically
     elevationMotor.nextStep(); //step in that direction
   }
 
-  /*Serial.print(elevationAngle * 180.0 / PI);
+  Serial.print(elevationAngle * 180.0 / PI);
   Serial.print("  ");
   Serial.print(Target.elevation * 180.0 / PI);
   Serial.print("  ");
   Serial.print(elevationDiff * 180.0 / PI);
-  Serial.print("\n");*/
+  Serial.print("\n");
   
   
   azimuthMotor.setDirection(0 < azimuthDiff); //set direction
@@ -122,7 +127,7 @@ void updateOCR1A(int val) {
   }
 }
 
-void loop() {                             // start to for controlling the solar tracker
+void loop() {// start to for controlling the solar tracker
   switch(curState){
   case CALIBRATE:
     disableTimer1(); //stops motor tracking until the current position is known
@@ -133,18 +138,19 @@ void loop() {                             // start to for controlling the solar 
     azimuthMotor.setDirection(0);
     volatile int delayTime;
     while(!azimuthSwitch.pressed()){ //move motor to limit switch
-      azimuthMotor.nextStep();
+      azimuthMotor.blindStep();
       Serial.println(azimuthSwitch.pressed());
+      //azimuthMotor.printStatus();
       delayTime = 1600000000;
       while(delayTime > 0){ delayTime--;};
     }
-    azimuthMotor.setCurrentAngleTo(55.0*PI/180.0); //set to angle of the limit switch //55 degrees from north
-    //azimuthMotor.setCurrentAngleTo(0);
+    azimuthMotor.setCurrentAngleTo((float)azimuthLimitLocation*PI/180.0); //set to angle of the limit switch //55 degrees from north
     Serial.println("Done calibrating");
     Serial.print("Pointing to ");
-    Serial.print(azimuthMotor.getCurrentAngle());
+    Serial.print(azimuthMotor.getCurrentAngle()*180.0/PI);
     Serial.print(" degrees\n ");
-    
+    //azimuthMotor.printStatus();
+    //elevationMotor.printStatus();
     enableTimer1();
     
     curState = TRACKING;
@@ -157,14 +163,15 @@ void loop() {                             // start to for controlling the solar 
       
       //clock->printTime();
       Target = getTargetAzimuth(clock->seconds());
-      
+      //azimuthMotor.printStatus();
       //Serial.print("Azimuth: ");
       //Serial.print(Target.azimuth*180/PI);
       //Serial.print("    Elevation: ");
       //Serial.println(Target.elevation*180/PI);
       
       elevationAngle = accel->getZenith(); // call subroutine to print the accelorometer position
-      elevationDiff = Target.elevation-elevationAngle;
+      elevationDiff = Target.elevation - elevationAngle;
+      elevationMotor.setCurrentAngleTo(elevationAngle);
 
       azimuthAngle = azimuthMotor.getCurrentAngle(); //get current azimuth
       azimuthDiff = Target.azimuth - azimuthAngle;
@@ -175,7 +182,7 @@ void loop() {                             // start to for controlling the solar 
       //Serial.print("delay: ");        // print the work delay to the screen 
       //Serial.print(delayTime);        // print the delay time time to the screen
       //Serial.print("\r\n");           // print text after delay time printed
-      nextTime = millis() + (1000 - delayTime);   //update nextTime including the delay time obtained above
+      //nextTime = millis() + (1000 - delayTime);   //update nextTime including the delay time obtained above
     //}
     break;
   case TEST:

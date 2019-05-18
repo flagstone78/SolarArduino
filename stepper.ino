@@ -1,6 +1,8 @@
-Stepper::Stepper(int _enPin, int _dirPin, int _stepPin, double _radiansPerStep) 
+Stepper::Stepper(int _enPin, int _dirPin, int _stepPin, float _radiansPerStep, float _maxRad, float _minRad) 
   :radiansPerStep(_radiansPerStep), dirPin(_dirPin), stepPin(_stepPin), enPin(_enPin)
 {  
+  maxStep = getStepAtAngle(_maxRad);
+  minStep = getStepAtAngle(_minRad);
   pinMode(dirPin, OUTPUT);    // configures pin 3 (dir) to be an output
   digitalWrite(dirPin, dirState); // output voltage set to 3 volts/low 
   pinMode(stepPin, OUTPUT);    // configure pin 4 (pul) to be an output
@@ -12,29 +14,44 @@ Stepper::Stepper(int _enPin, int _dirPin, int _stepPin, double _radiansPerStep)
 }
 
 void Stepper::nextStep() {
-  stepState = !stepState;
-  
   //increment current step
   if (dirState) {
-    currentStep += 1;
+    if(currentStep < maxStep){
+      currentStep += 1;
+      stepState = !stepState;
+      digitalWrite(stepPin, stepState);
+    }
   } else {
-    currentStep -= 1;
+    if(currentStep > minStep){
+      currentStep -= 1;
+      stepState = !stepState;
+      digitalWrite(stepPin, stepState);
+    }
   }
+}
 
-  //wrap current step
-  /*if (currentStep < 0) {
-    currentStep = stepsPerRevolution;
-  } else if (currentStep > stepsPerRevolution) {
-    currentStep = 0;
-  }*/
+//no soft limits;
+void Stepper::blindStep(){
+  if (dirState) {
+      currentStep += 1;
+      stepState = !stepState;
+      digitalWrite(stepPin, stepState);
+  } else {
+      currentStep -= 1;
+      stepState = !stepState;
+      digitalWrite(stepPin, stepState);
+  }
+}
 
-  digitalWrite(stepPin, stepState);
+uint32_t Stepper::getStepAtAngle(float rad){
+  return (uint32_t) (rad/radiansPerStep);
 }
 
 void Stepper::setCurrentAngleTo(float rad) {
-  int step = rad/radiansPerStep;
-  currentStep = step;
+  //int step = rad/radiansPerStep;
+  currentStep = getStepAtAngle(rad);//step;
 }
+
 
 float Stepper::getCurrentAngle() {
   return (float) currentStep * radiansPerStep;
@@ -52,3 +69,23 @@ bool Stepper::getDirection() {
 void Stepper::switchDirection() {
   setDirection(!dirState);
 }
+
+void Stepper::printStatus(){
+  Serial.print("Dir: ");
+  Serial.print(dirState);
+  Serial.print("  ");
+  Serial.print("MinStep: ");
+  Serial.print(minStep);
+  Serial.print("  ");
+  Serial.print("MaxStep: ");
+  Serial.print(maxStep);
+  Serial.print("  ");
+  Serial.print("Angle: ");
+  Serial.print(getCurrentAngle()*180.0/PI);
+  Serial.print("  ");
+  Serial.print(currentStep);
+  Serial.print("/");
+  Serial.print(getStepAtAngle(2*PI));
+  Serial.print("\n");
+}
+
