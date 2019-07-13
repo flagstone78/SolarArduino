@@ -117,4 +117,13 @@ public:
   bool pressed(){return (inverted^digitalRead(pin));};
 };
 
+class Encoder {
+  const uint8_t addr;
+  const uint16_t offset;
+  const bool encoderInvert;
+  public:
+  Encoder(uint8_t address, uint16_t Offset, bool EncoderInvert);
+  uint16_t getPosition();
+};
+
 #endif // !HEADER

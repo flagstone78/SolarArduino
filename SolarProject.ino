@@ -35,6 +35,7 @@ LimitSwitch elevationSwitch(11, false);
 Rtc* clock;
 Accel* accel;
 //Compass* compass;
+Encoder* azimuthEncoder;
 
 long int nextTime;
 int delayTime;
@@ -69,6 +70,7 @@ void setup() {
   clock = new Rtc();       // set up for clock
   //clock->setTime();
   accel = new Accel();     // set up acceleromter 
+  azimuthEncoder = new Encoder(0x40, 9956, true); //set up encoder
 
   // initialize the serial port:
   Serial.begin(115200);      // sets data rate to 9600 bits per second
@@ -79,7 +81,7 @@ void setup() {
   TCCR1B = 0;
   TCNT1 = 0;
 
-  OCR1A = 2025;//1025; //compare match register 31250 is 1 second
+  OCR1A = 5025;//1025; //compare match register 31250 is 1 second
   TCCR1B |= (1 << WGM12);   // CTC mode
   TCCR1B |= (1 << CS12);    // 256 prescaler 
   disableTimer1(); // timer compare interrupt. enabled further down
@@ -95,27 +97,29 @@ SIGNAL(TIMER1_COMPA_vect) //interrupt handler to move motors periodically
     elevationMotor.nextStep(); //step in that direction
   }
 
-  /*Serial.print(elevationAngle * 180.0 / PI);
+  Serial.print("Elevation: ");
+  Serial.print(elevationAngle * 180.0 / PI);
   Serial.print("  ");
   Serial.print(Target.elevation * 180.0 / PI);
   Serial.print("  ");
   Serial.print(elevationDiff * 180.0 / PI);
-  Serial.print("\n");*/
+  //Serial.print("\n");
+  
   
   
   azimuthMotor.setDirection(0 < azimuthDiff); //set direction
   if(azimuthDiff > .017 || azimuthDiff < -.017){ //step if outside of +- 1 degree
     azimuthMotor.nextStep(); //step in that direction
   }
-
-  /*Serial.print(azimuthAngle * 180.0 / PI);
+  Serial.print("    Azimuth: ");
+  Serial.print(azimuthAngle * 180.0 / PI);
   Serial.print("  ");
   Serial.print(Target.azimuth * 180.0 / PI);
   Serial.print("  ");
   Serial.print(azimuthDiff * 180.0 / PI);
   //Serial.print("    ");
   //Serial.print(azimuthMotor.getDirection());
-  Serial.print("\n");*/
+  Serial.print("\n");
 }
 
 void updateOCR1A(int val) {
@@ -130,27 +134,8 @@ void updateOCR1A(int val) {
 void loop() {// start to for controlling the solar tracker
   switch(curState){
   case CALIBRATE:
-    disableTimer1(); //stops motor tracking until the current position is known
-    
-    //curState = TEST;
-    //break;
-    
-    azimuthMotor.setDirection(0);
-    volatile unsigned long int delayTime;
-    while(!azimuthSwitch.pressed()){ //move motor to limit switch
-      azimuthMotor.blindStep();
-      Serial.println(azimuthSwitch.pressed());
-      //azimuthMotor.printStatus();
-      delayTime = 2600;
-      while(delayTime > 0){ delayTime--;};
-    }
-    azimuthMotor.setCurrentAngleTo((float)azimuthLimitLocation*PI/180.0); //set to angle of the limit switch //55 degrees from north
-    Serial.println("Done calibrating");
-    Serial.print("Pointing to ");
-    Serial.print(azimuthMotor.getCurrentAngle()*180.0/PI);
-    Serial.print(" degrees\n ");
-    //azimuthMotor.printStatus();
-    //elevationMotor.printStatus();
+    //disableTimer1(); //stops motor tracking until the current position is known
+   
     enableTimer1();
     
     curState = TRACKING;
@@ -163,21 +148,22 @@ void loop() {// start to for controlling the solar tracker
       
       //clock->printTime();
       Target = getTargetAzimuth(clock->seconds());
+      
       //azimuthMotor.printStatus();
       //Serial.print("Azimuth: ");
       //Serial.print(Target.azimuth*180/PI);
+      //Serial.print("    Elevation: ");
+      //Serial.println(Target.elevation*180/PI);
       
-      elevationMotor.printStatus();
-      Serial.print("    Elevation: ");
-      Serial.println(Target.elevation*180/PI);
+      
       
       elevationAngle = accel->getZenith(); // call subroutine to print the accelorometer position
       elevationDiff = Target.elevation - elevationAngle;
       elevationMotor.setCurrentAngleTo(elevationAngle);
 
-      azimuthAngle = azimuthMotor.getCurrentAngle(); //get current azimuth
+      azimuthAngle = 2*PI*(azimuthEncoder->getPosition())/16384.0; //azimuthMotor.getCurrentAngle(); //get current azimuth
       azimuthDiff = Target.azimuth - azimuthAngle;
-  
+      azimuthMotor.setCurrentAngleTo(azimuthAngle);
       //clock->printTime();             // call subroutine to print the time
       //accel->printAccel();            // call subroutine to print the accelorometer values
       //timer
@@ -206,8 +192,6 @@ void loop() {// start to for controlling the solar tracker
         Serial.print('\n');
       }
     }*/
-    clock->printTime();
-    Serial.println(accel->getZenith()*180/PI); 
     break;
   default:
     break;
