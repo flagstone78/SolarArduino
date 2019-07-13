@@ -77,8 +77,12 @@ void Stepper::printStatus(){
   Serial.print("MinStep: ");
   Serial.print(minStep);
   Serial.print("  ");
+  Serial.print(currentStep > minStep);
+  Serial.print("  ");
   Serial.print("MaxStep: ");
   Serial.print(maxStep);
+  Serial.print("  ");
+  Serial.print(currentStep < maxStep);
   Serial.print("  ");
   Serial.print("Angle: ");
   Serial.print(getCurrentAngle()*180.0/PI);

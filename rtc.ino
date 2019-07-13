@@ -5,7 +5,7 @@ Rtc::Rtc(){
   t.begin();            // code to set the time reported by the digital clock
   
   // uncomment the next to lines to set the time for the clock  ???
-  //DateTime set(2018, 6, 28, 19, 53, 0);
+  //DateTime set(2019, 6, 22, 14, 9, 0);
   //t.adjust(set);
   second = 0; 
   minute = 0; 
@@ -15,7 +15,7 @@ Rtc::Rtc(){
   year = 0;
 }
 
-bool Rtc::isLeapYear(uint16_t year){       // determine if it is leep year or not
+bool Rtc::isLeapYear(uint16_t year){       // determine if it is leap year or not
   if(year%4 != 0) return false;
   if(year%100 == 0) return (year%400 == 0);
   return true;
