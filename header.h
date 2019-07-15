@@ -44,8 +44,9 @@ float magnitude(xyz v1) {
 class Accel{
   xyz ac;
   void takeAccel(); 
+  const float offset;
   public:
-  Accel();
+  Accel(float _offset);
   float getZenith(); // angle for from vertical line straight up
   void printAccel();
 };
@@ -63,9 +64,10 @@ class Rtc{
   RTC_DS3231 t;
   int16_t second, minute, hour, day, month, year;
   DateTime currentTime;
+  DateTime testTime;
   public:
   Rtc();
-  
+    
   bool isLeapYear(uint16_t year);
   uint16_t getDayOfYear(uint16_t year, uint8_t month, uint8_t day);
   
@@ -89,6 +91,7 @@ class Stepper {
   const int dirPin;
   const int stepPin;
   const int enPin;
+  const bool reverse;
 
   const float radiansPerStep; //steps per revolution of the motor
   uint32_t maxStep; //maximum angle of motor
@@ -96,7 +99,7 @@ class Stepper {
   uint32_t currentStep; //keeps track of the current step
 
 public:
-  Stepper(int _enPin, int _dirPin, int _stepPin, float _radiansPerStep, float _maxRad, float _minRad);
+  Stepper(int _enPin, int _dirPin, int _stepPin, float _radiansPerStep, float _maxRad, float _minRad, bool _reverse);
   void nextStep();
   void blindStep();
   void setDirection(bool direction);

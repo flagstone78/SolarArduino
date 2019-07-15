@@ -1,5 +1,5 @@
-Stepper::Stepper(int _enPin, int _dirPin, int _stepPin, float _radiansPerStep, float _maxRad, float _minRad) 
-  :radiansPerStep(_radiansPerStep), dirPin(_dirPin), stepPin(_stepPin), enPin(_enPin)
+Stepper::Stepper(int _enPin, int _dirPin, int _stepPin, float _radiansPerStep, float _maxRad, float _minRad, bool _reverse) 
+  :radiansPerStep(_radiansPerStep), dirPin(_dirPin), stepPin(_stepPin), enPin(_enPin), reverse(_reverse)
 {  
   maxStep = getStepAtAngle(_maxRad);
   minStep = getStepAtAngle(_minRad);
@@ -59,7 +59,7 @@ float Stepper::getCurrentAngle() {
 
 void Stepper::setDirection(bool direction) {
   dirState = direction;
-  digitalWrite(dirPin, dirState);
+  digitalWrite(dirPin, dirState^reverse); //reverses direction if reverse is true
 }
 
 bool Stepper::getDirection() {
@@ -92,4 +92,3 @@ void Stepper::printStatus(){
   Serial.print(getStepAtAngle(2*PI));
   Serial.print("\n");
 }
-

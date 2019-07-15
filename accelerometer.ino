@@ -1,4 +1,4 @@
-Accel::Accel(){  //MPU 6050
+Accel::Accel(float _offset):offset(_offset){  //MPU 6050
   //initializer stuff
      //Wire.begin();
      Wire.beginTransmission(ACCELEROMETER_ADDRESS);
@@ -39,5 +39,5 @@ float Accel::getZenith() {
   // determine the zenith angle - angle relative to the verticle
   float angle = acos(dot(ac, ref) / (magAccel * magRef));
   //Serial.println(angle*180/3.141596);
-  return angle;
+  return angle+offset;
 }

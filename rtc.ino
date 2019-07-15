@@ -13,6 +13,8 @@ Rtc::Rtc(){
   day = 0;
   month = 0;
   year = 0;
+
+  testTime = DateTime(2019,7,15,2,0,0);
 }
 
 bool Rtc::isLeapYear(uint16_t year){       // determine if it is leap year or not
@@ -28,7 +30,8 @@ uint16_t Rtc::getDayOfYear(uint16_t year, uint8_t month,uint8_t day){     // det
 
 void Rtc::printTime() {
   currentTime = t.now();
-
+  //currentTime = testTime;
+  
   second = currentTime.second();  //determine year, month, day, hour, minute, second from the real time clock 
   minute = currentTime.minute();
   hour = currentTime.hour();
@@ -65,11 +68,10 @@ void Rtc::printTime() {
 
 uint32_t Rtc::seconds(){
   return t.now().secondstime();
+  //return testTime.secondstime();
 }
 
 void Rtc::setTime(){
   DateTime newtime(2019,5,8,11,35,0);
   t.adjust(newtime);
 }
-
-

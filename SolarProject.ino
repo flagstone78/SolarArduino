@@ -16,19 +16,19 @@ const float timeZone = -5;
 const float slope = 0; //platform angle relative to ground
 
 float maxElevation = 120.0*PI/180.0;
-float minElevation = 10.0*PI/180.0;
+float minElevation = 16.0*PI/180.0;
 
 const float azimuthLimitLocation = 55.0; //hard stop limit switch location
-float maxAzimuth = (320.0)*PI/180.0;
-float minAzimuth = azimuthLimitLocation*PI/180.0;
+float maxAzimuth = (300.0)*PI/180.0;
+float minAzimuth = (60.0)*PI/180.0;
 
 
 const int stepsPerRevolution = 800;  // change this to fit the number of steps per revolution
 
 float azimuthRadPerStep = (2*PI*9.0*.467)/(stepsPerRevolution*60.0); //2 pi radian * (9/60) gear ratio *3.5
 
-Stepper azimuthMotor(5, 6, 7, azimuthRadPerStep, maxAzimuth, minAzimuth); // 54 degrees per revoloution of motor // (2 pi *9)/(3200*200*60)
-Stepper elevationMotor(2, 3, 4, 15.0*PI/(stepsPerRevolution*360.0), maxElevation, minElevation); //  7.5 degrees elevation per motor revolotion
+Stepper azimuthMotor(5, 6, 7, azimuthRadPerStep, maxAzimuth, minAzimuth, false); // 54 degrees per revoloution of motor // (2 pi *9)/(3200*200*60)
+Stepper elevationMotor(2, 3, 4, 15.0*PI/(stepsPerRevolution*360.0), maxElevation, minElevation,true); //  7.5 degrees elevation per motor revolotion
 LimitSwitch azimuthSwitch(10, false);
 LimitSwitch elevationSwitch(11, false);
 
@@ -56,6 +56,7 @@ void disableTimer1(){
 }
 
 volatile target Target;
+volatile uint32_t timeSeconds;
 
 volatile float elevationAngle = 1.5707963267;
 //Target.elevation = ((90.0-1.2)*PI)/180.0; //0 degrees is at 7.56 degrees; 90 at 88.25
@@ -69,7 +70,7 @@ void setup() {
   Wire.begin();            // Initialte the wire library and join the I2c bus as a master or slave
   clock = new Rtc();       // set up for clock
   //clock->setTime();
-  accel = new Accel();     // set up acceleromter 
+  accel = new Accel(8.0*PI/180);     // set up acceleromter 
   azimuthEncoder = new Encoder(0x40, 9956, true); //set up encoder
 
   // initialize the serial port:
@@ -81,7 +82,7 @@ void setup() {
   TCCR1B = 0;
   TCNT1 = 0;
 
-  OCR1A = 5025;//1025; //compare match register 31250 is 1 second
+  OCR1A = 2025;//1025; //compare match register 31250 is 1 second
   TCCR1B |= (1 << WGM12);   // CTC mode
   TCCR1B |= (1 << CS12);    // 256 prescaler 
   disableTimer1(); // timer compare interrupt. enabled further down
@@ -92,7 +93,7 @@ void setup() {
 
 SIGNAL(TIMER1_COMPA_vect) //interrupt handler to move motors periodically
 {
-  elevationMotor.setDirection(0 > elevationDiff); //set direction of motor
+  elevationMotor.setDirection(0 < elevationDiff); //set direction of motor
   if(elevationDiff > .017 || elevationDiff < -.017){ //step if outside of +- 1 degree
     elevationMotor.nextStep(); //step in that direction
   }
@@ -119,6 +120,8 @@ SIGNAL(TIMER1_COMPA_vect) //interrupt handler to move motors periodically
   Serial.print(azimuthDiff * 180.0 / PI);
   //Serial.print("    ");
   //Serial.print(azimuthMotor.getDirection());
+  Serial.print("    Time: ");
+  Serial.print(timeSeconds);
   Serial.print("\n");
 }
 
@@ -147,9 +150,10 @@ void loop() {// start to for controlling the solar tracker
       //}
       
       //clock->printTime();
-      Target = getTargetAzimuth(clock->seconds());
+      timeSeconds = clock->seconds();
+      Target = getTargetAzimuth(timeSeconds);
       
-      //azimuthMotor.printStatus();
+      
       //Serial.print("Azimuth: ");
       //Serial.print(Target.azimuth*180/PI);
       //Serial.print("    Elevation: ");
@@ -160,10 +164,13 @@ void loop() {// start to for controlling the solar tracker
       elevationAngle = accel->getZenith(); // call subroutine to print the accelorometer position
       elevationDiff = Target.elevation - elevationAngle;
       elevationMotor.setCurrentAngleTo(elevationAngle);
+      //elevationMotor.printStatus();
 
       azimuthAngle = 2*PI*(azimuthEncoder->getPosition())/16384.0; //azimuthMotor.getCurrentAngle(); //get current azimuth
       azimuthDiff = Target.azimuth - azimuthAngle;
       azimuthMotor.setCurrentAngleTo(azimuthAngle);
+      //azimuthMotor.printStatus();
+      
       //clock->printTime();             // call subroutine to print the time
       //accel->printAccel();            // call subroutine to print the accelorometer values
       //timer
