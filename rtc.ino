@@ -67,7 +67,8 @@ void Rtc::printTime() {
 }
 
 uint32_t Rtc::seconds(){
-  return t.now().secondstime();
+  uint32_t offset = 0; //(uint32_t)13*60*60 + 34*60;
+  return t.now().secondstime()- offset;
   //return testTime.secondstime();
 }
 

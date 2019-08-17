@@ -125,8 +125,9 @@ class Encoder {
   const uint16_t offset;
   const bool encoderInvert;
   public:
-  Encoder(uint8_t address, uint16_t Offset, bool EncoderInvert);
+  Encoder(uint8_t address, int16_t Offset, bool EncoderInvert);
   uint16_t getPosition();
+  float getAngle();
 };
 
 #endif // !HEADER

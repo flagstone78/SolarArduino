@@ -1,7 +1,6 @@
-#define south 14645
 #define max14 16384
 
-Encoder::Encoder(uint8_t address, uint16_t Offset, bool EncoderInvert)
+Encoder::Encoder(uint8_t address, int16_t Offset, bool EncoderInvert)
 :addr(address), offset(Offset), encoderInvert(EncoderInvert){
   
 }
@@ -22,4 +21,9 @@ uint16_t Encoder::getPosition(){
   if(val < 0){val += max14;}
   else if (val >= max14){val -= max14;}
   return (val);
+}
+
+//convert raw value into angle
+float Encoder::getAngle(){
+  return 2*PI*getPosition()/16384.0; //convert 14bit value to angle
 }

@@ -71,7 +71,7 @@ void setup() {
   clock = new Rtc();       // set up for clock
   //clock->setTime();
   accel = new Accel(8.0*PI/180);     // set up acceleromter 
-  azimuthEncoder = new Encoder(0x40, 9956, true); //set up encoder
+  azimuthEncoder = new Encoder(0x40, -38*16384.0/360.0, true); //set up encoder
 
   // initialize the serial port:
   Serial.begin(115200);      // sets data rate to 9600 bits per second
@@ -166,7 +166,7 @@ void loop() {// start to for controlling the solar tracker
       elevationMotor.setCurrentAngleTo(elevationAngle);
       //elevationMotor.printStatus();
 
-      azimuthAngle = 2*PI*(azimuthEncoder->getPosition())/16384.0; //azimuthMotor.getCurrentAngle(); //get current azimuth
+      azimuthAngle = azimuthEncoder->getAngle();
       azimuthDiff = Target.azimuth - azimuthAngle;
       azimuthMotor.setCurrentAngleTo(azimuthAngle);
       //azimuthMotor.printStatus();
