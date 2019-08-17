@@ -4,7 +4,8 @@
  Author:	Alan Mathias
 */
 
-#include <Wire.h> 
+#include <I2C.h>
+//#include <Wire.h> 
 #include "header.h"
 
 #define PI 3.1415926535897932384626433832795
@@ -55,8 +56,8 @@ void disableTimer1(){
   TIMSK1 &= ~(1 << OCIE1A); 
 }
 
-volatile target Target;
-volatile uint32_t timeSeconds;
+target Target;
+uint32_t timeSeconds;
 
 volatile float elevationAngle = 1.5707963267;
 //Target.elevation = ((90.0-1.2)*PI)/180.0; //0 degrees is at 7.56 degrees; 90 at 88.25
@@ -67,7 +68,10 @@ volatile float azimuthAngle = 0;
 volatile float azimuthDiff = 0;
 
 void setup() {
-  Wire.begin();            // Initialte the wire library and join the I2c bus as a master or slave
+  I2c.setSpeed(1);
+  I2c.timeOut(1000);
+  I2c.begin();            // Initialte the wire library and join the I2c bus as a master or slave
+  
   clock = new Rtc();       // set up for clock
   //clock->setTime();
   accel = new Accel(8.0*PI/180);     // set up acceleromter 
@@ -97,32 +101,11 @@ SIGNAL(TIMER1_COMPA_vect) //interrupt handler to move motors periodically
   if(elevationDiff > .017 || elevationDiff < -.017){ //step if outside of +- 1 degree
     elevationMotor.nextStep(); //step in that direction
   }
-
-  Serial.print("Elevation: ");
-  Serial.print(elevationAngle * 180.0 / PI);
-  Serial.print("  ");
-  Serial.print(Target.elevation * 180.0 / PI);
-  Serial.print("  ");
-  Serial.print(elevationDiff * 180.0 / PI);
-  //Serial.print("\n");
-  
-  
   
   azimuthMotor.setDirection(0 < azimuthDiff); //set direction
   if(azimuthDiff > .017 || azimuthDiff < -.017){ //step if outside of +- 1 degree
     azimuthMotor.nextStep(); //step in that direction
   }
-  Serial.print("    Azimuth: ");
-  Serial.print(azimuthAngle * 180.0 / PI);
-  Serial.print("  ");
-  Serial.print(Target.azimuth * 180.0 / PI);
-  Serial.print("  ");
-  Serial.print(azimuthDiff * 180.0 / PI);
-  //Serial.print("    ");
-  //Serial.print(azimuthMotor.getDirection());
-  Serial.print("    Time: ");
-  Serial.print(timeSeconds);
-  Serial.print("\n");
 }
 
 void updateOCR1A(int val) {
@@ -144,23 +127,11 @@ void loop() {// start to for controlling the solar tracker
     curState = TRACKING;
     break;
   case TRACKING:
-    //if (millis()>nextTime) {                // process every step the frequency that nexTime is set to above 
-      //if (Serial.available() >= 3) {        // if the number of bytes available for reading is >= 3 then determines the delay time 
-        //delayTime = Serial.parseInt();      // reads delay time 
-      //}
-      
+    if ((millis()-nextTime) > 100) { 
       //clock->printTime();
       timeSeconds = clock->seconds();
       Target = getTargetAzimuth(timeSeconds);
-      
-      
-      //Serial.print("Azimuth: ");
-      //Serial.print(Target.azimuth*180/PI);
-      //Serial.print("    Elevation: ");
-      //Serial.println(Target.elevation*180/PI);
-      
-      
-      
+
       elevationAngle = accel->getZenith(); // call subroutine to print the accelorometer position
       elevationDiff = Target.elevation - elevationAngle;
       elevationMotor.setCurrentAngleTo(elevationAngle);
@@ -170,15 +141,32 @@ void loop() {// start to for controlling the solar tracker
       azimuthDiff = Target.azimuth - azimuthAngle;
       azimuthMotor.setCurrentAngleTo(azimuthAngle);
       //azimuthMotor.printStatus();
+
+      Serial.print("Elevation: ");
+      Serial.print(elevationAngle * 180.0 / PI);
+      Serial.print("  ");
+      Serial.print(Target.elevation * 180.0 / PI);
+      Serial.print("  ");
+      Serial.print(elevationDiff * 180.0 / PI);
+      Serial.print("    Azimuth: ");
+      Serial.print(azimuthAngle * 180.0 / PI);
+      Serial.print("  ");
+      Serial.print(Target.azimuth * 180.0 / PI);
+      Serial.print("  ");
+      Serial.print(azimuthDiff * 180.0 / PI);
+      Serial.print("    Time: ");
+      Serial.print(timeSeconds);
+      Serial.print("\n");
       
       //clock->printTime();             // call subroutine to print the time
       //accel->printAccel();            // call subroutine to print the accelorometer values
-      //timer
+
       //Serial.print("delay: ");        // print the work delay to the screen 
       //Serial.print(delayTime);        // print the delay time time to the screen
       //Serial.print("\r\n");           // print text after delay time printed
-      //nextTime = millis() + (1000 - delayTime);   //update nextTime including the delay time obtained above
-    //}
+      nextTime = millis();   //update nextTime including the delay time obtained above
+      
+    }
     break;
   case TEST:
     /*for(int day = 0; day<1; day++){

@@ -79,8 +79,8 @@ class Rtc{
 };
 
 struct target{
-  float azimuth = 0; //radians clockwise from north
-  float elevation = 0; //pi/2 degrees is up
+  float azimuth; //radians clockwise from north
+  float elevation; //pi/2 degrees is up
 };
 
 target getTargetAzimuth(int day, float hours);
@@ -103,7 +103,7 @@ public:
   void nextStep();
   void blindStep();
   void setDirection(bool direction);
-  bool Stepper::getDirection();
+  bool getDirection();
   void switchDirection();
   void setCurrentAngleTo(float angle);
   float getCurrentAngle();
@@ -124,6 +124,7 @@ class Encoder {
   const uint8_t addr;
   const uint16_t offset;
   const bool encoderInvert;
+  uint8_t dataBuffer[2];
   public:
   Encoder(uint8_t address, int16_t Offset, bool EncoderInvert);
   uint16_t getPosition();

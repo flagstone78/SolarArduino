@@ -7,11 +7,13 @@ Encoder::Encoder(uint8_t address, int16_t Offset, bool EncoderInvert)
 
 //Get the position from the as5048 encoder
 uint16_t Encoder::getPosition(){
-  Wire.beginTransmission(addr);
+  /*Wire.beginTransmission(addr);
   Wire.write(0xFE);  // starting with register 0xFE (ACCEL_XOUT_H)
   Wire.endTransmission(false);
-  Wire.requestFrom(addr, 2, true);  // request a total of 2 registers
-  int16_t val = Wire.read() << 6 | Wire.read();
+  Wire.requestFrom((uint8_t)addr, (uint8_t) 2, (uint8_t)true);  // request a total of 2 registers
+  int16_t val = Wire.read() << 6 | Wire.read();*/
+  I2c.read(addr,0xFE,2,dataBuffer);
+  int16_t val = dataBuffer[0] << 6 | dataBuffer[1];
   if(encoderInvert){val = max14 - val;}
 
   //Serial.print(val);

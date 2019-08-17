@@ -170,4 +170,3 @@ target getTargetAzimuth(uint32_t seconds) {
 
   return out;
 }
-
