@@ -1,4 +1,4 @@
-Accel::Accel(float _offset):offset(_offset){  //MPU 6050
+Accel::Accel(float _offsetx, float _offsety, float _offsetz):offsetx(_offsetx),offsety(_offsety),offsetz(_offsetz){  //MPU 6050
   //initializer stuff
      //Wire.begin();
      /*Wire.beginTransmission(ACCELEROMETER_ADDRESS);
@@ -37,7 +37,7 @@ void Accel::printAccel(){
 
 float Accel::getZenith() {
   takeAccel();
-  xyz ref( 0, -1, 0 );
+  xyz ref( offsetx, -1+offsety, offsetz );
   float magAccel = magnitude(ac);
   float magRef = magnitude(ref);
   // find the magnitude of the the cross produc
@@ -45,5 +45,5 @@ float Accel::getZenith() {
   // determine the zenith angle - angle relative to the verticle
   float angle = acos(dot(ac, ref) / (magAccel * magRef));
   //Serial.println(angle*180/3.141596);
-  return angle+offset;
+  return angle;
 }

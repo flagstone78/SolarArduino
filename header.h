@@ -44,9 +44,11 @@ float magnitude(xyz v1) {
 class Accel{
   xyz ac;
   void takeAccel(); 
-  const float offset;
+  const float offsetx;
+  const float offsety;
+  const float offsetz;
   public:
-  Accel(float _offset);
+  Accel(float _offsetx,float _offsety,float _offsetz);
   float getZenith(); // angle for from vertical line straight up
   void printAccel();
 };

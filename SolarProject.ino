@@ -74,7 +74,7 @@ void setup() {
   
   clock = new Rtc();       // set up for clock
   //clock->setTime();
-  accel = new Accel(8.0*PI/180);     // set up acceleromter 
+  accel = new Accel(0.0*PI/180, 0.0*PI/180, 5.0*PI/180);     // set up acceleromter 
   azimuthEncoder = new Encoder(0x40, -38*16384.0/360.0, true); //set up encoder
 
   // initialize the serial port:
