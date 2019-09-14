@@ -34,9 +34,10 @@ LimitSwitch azimuthSwitch(10, false);
 LimitSwitch elevationSwitch(11, false);
 
 Rtc* clock;
-Accel* accel;
+//Accel* accel;
 //Compass* compass;
 Encoder* azimuthEncoder;
+Encoder* elevationEncoder;
 
 long int nextTime;
 int delayTime;
@@ -74,8 +75,9 @@ void setup() {
   
   clock = new Rtc();       // set up for clock
   //clock->setTime();
-  accel = new Accel(-0.17, 0.0, -0.33);     // set up acceleromter, offsets in radians 
-  azimuthEncoder = new Encoder(0x40, -47.0*16384.0/360.0, true); //set up encoder
+  //accel = new Accel(-0.17, 0.0, -0.33);     // set up acceleromter, offsets in radians 
+  azimuthEncoder = new Encoder(0x40, -80.0*16384.0/360.0, true); //set up encoder
+  elevationEncoder = new Encoder(0x7C, 137*16384.0/360.0, true); //set up encoder
 
   // initialize the serial port:
   Serial.begin(115200);      // sets data rate to 9600 bits per second
@@ -132,7 +134,7 @@ void loop() {// start to for controlling the solar tracker
       timeSeconds = clock->seconds();
       Target = getTargetAzimuth(timeSeconds);
 
-      elevationAngle = accel->getZenith(); // call subroutine to print the accelorometer position
+      elevationAngle = elevationEncoder->getAngle();//accel->getZenith(); // call subroutine to print the accelorometer position
       elevationDiff = Target.elevation - elevationAngle;
       elevationMotor.setCurrentAngleTo(elevationAngle);
       //elevationMotor.printStatus();
