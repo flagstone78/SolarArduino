@@ -76,8 +76,8 @@ void setup() {
   clock = new Rtc();       // set up for clock
   //clock->setTime();
   //accel = new Accel(-0.17, 0.0, -0.33);     // set up acceleromter, offsets in radians 
-  azimuthEncoder = new Encoder(0x40, -80.0*16384.0/360.0, true); //set up encoder
-  elevationEncoder = new Encoder(0x7C, 137*16384.0/360.0, true); //set up encoder
+  azimuthEncoder = new Encoder(0x40, -63.0*16384.0/360.0, true); //set up encoder
+  elevationEncoder = new Encoder(0x41, 137*16384.0/360.0, true); //set up encoder 0x7c
 
   // initialize the serial port:
   Serial.begin(115200);      // sets data rate to 9600 bits per second
@@ -150,12 +150,18 @@ void loop() {// start to for controlling the solar tracker
       Serial.print(Target.elevation * 180.0 / PI);
       Serial.print("  ");
       Serial.print(elevationDiff * 180.0 / PI);
+      Serial.print("  ");
+      Serial.print(elevationEncoder->getOutOfRange());
+      
       Serial.print("    Azimuth: ");
       Serial.print(azimuthAngle * 180.0 / PI);
       Serial.print("  ");
       Serial.print(Target.azimuth * 180.0 / PI);
       Serial.print("  ");
       Serial.print(azimuthDiff * 180.0 / PI);
+      Serial.print("  ");
+      Serial.print(azimuthEncoder->getOutOfRange());
+      
       Serial.print("    Time: ");
       Serial.print(timeSeconds);
       Serial.print("\n");

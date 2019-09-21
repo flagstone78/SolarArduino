@@ -126,11 +126,13 @@ class Encoder {
   const uint8_t addr;
   const uint16_t offset;
   const bool encoderInvert;
-  uint8_t dataBuffer[2];
+  uint8_t dataBuffer[5];
+  bool outOfRange;
   public:
   Encoder(uint8_t address, int16_t Offset, bool EncoderInvert);
   uint16_t getPosition();
   float getAngle();
+  uint8_t getOutOfRange();
 };
 
 #endif // !HEADER
