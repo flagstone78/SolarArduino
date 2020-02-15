@@ -28,15 +28,16 @@ const int stepsPerRevolution = 800;  // change this to fit the number of steps p
 
 float azimuthRadPerStep = (2*PI*9.0*.467)/(stepsPerRevolution*60.0); //2 pi radian * (9/60) gear ratio *3.5
 
-Stepper azimuthMotor(5, 6, 7, azimuthRadPerStep, maxAzimuth, minAzimuth, false); // 54 degrees per revoloution of motor // (2 pi *9)/(3200*200*60)
-Stepper elevationMotor(2, 3, 4, 15.0*PI/(stepsPerRevolution*360.0), maxElevation, minElevation,true); //  7.5 degrees elevation per motor revolotion
-LimitSwitch azimuthSwitch(10, false);
-LimitSwitch elevationSwitch(11, false);
+//azimuth motor gear ratio: 203747/2057
+Stepper azimuthMotor(8, 9, 10, azimuthRadPerStep, maxAzimuth, minAzimuth, false); // 54 degrees per revoloution of motor // (2 pi *9)/(3200*200*60)
+Stepper elevationMotor(5, 6, 7, 15.0*PI/(stepsPerRevolution*360.0), maxElevation, minElevation,true); //  7.5 degrees elevation per motor revolotion
+LimitSwitch azimuthSwitch(11, false);
+LimitSwitch elevationSwitch(12, false);
 
 Rtc* clock;
 //Accel* accel;
 //Compass* compass;
-Encoder* azimuthEncoder;
+OpticalEncoder* azimuthEncoder;
 Encoder* elevationEncoder;
 
 long int nextTime;
@@ -76,7 +77,7 @@ void setup() {
   clock = new Rtc();       // set up for clock
   //clock->setTime();
   //accel = new Accel(-0.17, 0.0, -0.33);     // set up acceleromter, offsets in radians 
-  azimuthEncoder = new Encoder(0x40, -63.0*16384.0/360.0, true); //set up encoder
+  azimuthEncoder = new OpticalEncoder(4, 0, 400, false); //set up encoder
   elevationEncoder = new Encoder(0x41, 137*16384.0/360.0, true); //set up encoder 0x7c
 
   // initialize the serial port:
@@ -101,12 +102,12 @@ SIGNAL(TIMER1_COMPA_vect) //interrupt handler to move motors periodically
 {
   elevationMotor.setDirection(0 < elevationDiff); //set direction of motor
   if(elevationDiff > .017 || elevationDiff < -.017){ //step if outside of +- 1 degree
-    elevationMotor.nextStep(); //step in that direction
+    //elevationMotor.nextStep(); //step in that direction
   }
   
   azimuthMotor.setDirection(0 < azimuthDiff); //set direction
   if(azimuthDiff > .017 || azimuthDiff < -.017){ //step if outside of +- 1 degree
-    azimuthMotor.nextStep(); //step in that direction
+    //azimuthMotor.nextStep(); //step in that direction
   }
 }
 
@@ -114,19 +115,29 @@ void updateOCR1A(int val) {
   //OCR1A = val;
   if (TCNT1>val) {
     TCNT1 = 0;
-    azimuthMotor.nextStep();
-    elevationMotor.nextStep();
+    //azimuthMotor.nextStep();
+    //elevationMotor.nextStep();
   }
 }
 
 void loop() {// start to for controlling the solar tracker
   switch(curState){
   case CALIBRATE:
-    //disableTimer1(); //stops motor tracking until the current position is known
-   
-    enableTimer1();
+    disableTimer1(); //stops motor tracking until the current position is known
     
+    azimuthMotor.setDirection(0); //set direction to move towards min
+    //step towards min until the encoder index is reached
+    while(!azimuthEncoder->getIndex()){
+      azimuthMotor.nextStep();
+      Serial.println(azimuthEncoder->getIndex());
+      Serial.println(azimuthEncoder->getAngle());
+      delay(10);
+    }
+    //set known encoder position
+    
+    enableTimer1();
     curState = TRACKING;
+    Serial.println("tracking");
     break;
   case TRACKING:
     if ((millis()-nextTime) > 100) { 
@@ -160,7 +171,7 @@ void loop() {// start to for controlling the solar tracker
       Serial.print("  ");
       Serial.print(azimuthDiff * 180.0 / PI);
       Serial.print("  ");
-      Serial.print(azimuthEncoder->getOutOfRange());
+      //Serial.print(azimuthEncoder->getOutOfRange());
       
       Serial.print("    Time: ");
       Serial.print(timeSeconds);

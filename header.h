@@ -135,4 +135,19 @@ class Encoder {
   uint8_t getOutOfRange();
 };
 
+class OpticalEncoder {
+  uint16_t currentCount;
+  uint16_t totalCount;
+  const bool encoderInvert;
+  const int chi; //channel index
+  public:
+  OpticalEncoder(int chi, int16_t initCount, int16_t totalCount, bool EncoderInvert);
+  uint16_t getPosition();
+  float getAngle();
+  bool getIndex();
+  void setAngle(float angle);
+  void CHA();
+  void CHB();
+};
+
 #endif // !HEADER
