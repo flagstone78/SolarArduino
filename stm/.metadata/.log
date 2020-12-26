@@ -1,0 +1,42 @@
+!SESSION 2020-12-26 10:58:58.087 -----------------------------------------------
+eclipse.buildId=Version 1.5.0
+java.version=1.8.0_272
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2020-12-26 11:02:15.853
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2020-12-26 11:02:15.925
+!MESSAGE Log4j initialized with config file C:\Users\Duane Mathias\Documents\GitHub\SolarProject\stm\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2020-12-26 11:02:20.836
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 4 4 2020-12-26 11:02:22.634
+!MESSAGE com.st.stm32cube.ide.mcu.ide/META-INF/version/build_ref file not found, build reference will not be reported into properties
+
+!ENTRY org.eclipse.cdt.core 1 0 2020-12-26 11:14:17.898
+!MESSAGE Indexed 'SolarProject' (22 sources, 81 headers) in 4.4 sec: 4,554 declarations; 21,044 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0078%)
+
+!ENTRY org.eclipse.equinox.p2.touchpoint.natives 2 0 2020-12-26 11:16:28.717
+!MESSAGE Could not remove temporary backup directory (it is safe to manually delete it and its contents): C:\Users\DUANEM~1\AppData\Local\Temp\STM32CubeIDE_2ed401a61800_c0a80165cd56
+!SESSION 2020-12-26 11:16:35.857 -----------------------------------------------
+eclipse.buildId=Version 1.5.1
+java.version=1.8.0_272
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2020-12-26 11:16:49.094
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2020-12-26 11:16:49.189
+!MESSAGE Log4j initialized with config file C:\Users\Duane Mathias\Documents\GitHub\SolarProject\stm\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 4 4 2020-12-26 11:16:58.552
+!MESSAGE com.st.stm32cube.ide.mcu.ide/META-INF/version/build_ref file not found, build reference will not be reported into properties
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2020-12-26 11:16:58.558
+!MESSAGE Started RMI Server, listening on port 41337
