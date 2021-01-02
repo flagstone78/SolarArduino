@@ -1,0 +1,5 @@
+
+struct pin{
+	GPIO_TypeDef* bank, 
+	uint8_t bit
+}

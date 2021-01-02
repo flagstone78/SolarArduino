@@ -1,0 +1,17 @@
+/*
+ * absEncoder.h
+ *
+ *  Created on: Jan 2, 2021
+ *      Author: Duane Mathias
+ */
+
+#ifndef ABSENCODER_H_
+#define ABSENCODER_H_
+
+class absEncoder {
+public:
+	absEncoder(GPIO_TypeDef* gpioBanks[10], uint8_t gpioPins[10]);
+	virtual ~absEncoder();
+};
+
+#endif /* ABSENCODER_H_ */

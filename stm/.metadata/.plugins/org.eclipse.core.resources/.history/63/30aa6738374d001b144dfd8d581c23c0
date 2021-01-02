@@ -1,0 +1,18 @@
+/*
+ * GLOBALS.h
+ *
+ *  Created on: Jan 2, 2021
+ *      Author: Duane Mathias
+ */
+
+#ifndef GLOBALS_H_
+#define GLOBALS_H_
+
+#include "main.h"
+
+// Pin mapping for encoders
+//const GPIO_TypeDef* ElEncoderPorts[10];
+//const uint16_t ElEncoderPins[10];
+
+
+#endif /* GLOBALS_H_ */
