@@ -122,7 +122,7 @@ void Error_Handler(void);
 #define ElOrange_GPIO_Port GPIOB
 /* USER CODE BEGIN Private defines */
 
-
+//class absEncoder;
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus

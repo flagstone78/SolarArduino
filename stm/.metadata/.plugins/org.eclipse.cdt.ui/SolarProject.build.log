@@ -1,10 +1,10 @@
-18:29:55 **** Incremental Build of configuration Debug for project SolarProject ****
+18:35:28 **** Incremental Build of configuration Debug for project SolarProject ****
 make -j8 all 
 arm-none-eabi-size   SolarProject.elf 
    text	   data	    bss	    dec	    hex	filename
-   7660	    128	   1672	   9460	   24f4	SolarProject.elf
+   9920	    128	   1736	  11784	   2e08	SolarProject.elf
 Finished building: default.size.stdout
  
 
-18:29:56 Build Finished. 0 errors, 0 warnings. (took 474ms)
+18:35:28 Build Finished. 0 errors, 0 warnings. (took 540ms)
 
