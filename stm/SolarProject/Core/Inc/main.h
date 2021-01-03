@@ -121,7 +121,7 @@ void Error_Handler(void);
 #define ElOrange_Pin GPIO_PIN_9
 #define ElOrange_GPIO_Port GPIOB
 /* USER CODE BEGIN Private defines */
-#include "../absEncoder.h"
+
 //class absEncoder;
 /* USER CODE END Private defines */
 
