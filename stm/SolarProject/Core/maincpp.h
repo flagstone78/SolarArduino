@@ -10,7 +10,7 @@
 
 #include "main.h"
 #include "../absEncoder.h"
-
+#include "../Stepper.h"
 extern "C" {
 	void mainsetup();
 	void mainloop();

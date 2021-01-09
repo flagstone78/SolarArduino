@@ -7,7 +7,7 @@
 
 #include "absEncoder.h"
 
-absEncoder::absEncoder(const GPIO_TypeDef* const gpioPorts[10], const uint16_t gpioPins[10]):ports(gpioPorts),pins(gpioPins) {
+absEncoder::absEncoder(const GPIO_TypeDef* const gpioPorts[10], const uint16_t gpioPins[10], float offset):ports(gpioPorts),pins(gpioPins),degreeOffset(offset) {
 
 }
 
@@ -15,7 +15,7 @@ absEncoder::~absEncoder() {
 	// TODO Auto-generated destructor stub
 }
 
-uint16_t absEncoder::position(){
+uint16_t absEncoder::positionRaw(){
 	// read all gpio at once
 	uint16_t a = GPIOA->IDR;
 	uint16_t b = GPIOB->IDR;
@@ -36,11 +36,22 @@ uint16_t absEncoder::position(){
 		bit = (p&pins[i])>0;
 		grey += bit<<i;
 	}
+	grey = (0xffff^grey)&0x02ff; //bitwise invert because the encoder is active low
+	return grayToBinary(grey);
+}
 
-	//convert to binary
-	uint16_t bin = grey & (1<<9); //copy MSB
-	for(int i=8;i>=0;i--){
-		bin += ((bin & (1<<(i+1)))>0)^((grey&(1<<i))>0);
+float absEncoder::position(){
+	float deg = positionRaw()*360.0/1024.0;
+	deg += degreeOffset;
+	if(deg>360) deg-=360;
+	else if(deg<0)deg+=360;
+}
+
+uint16_t grayToBinary(uint16_t num){
+	uint16_t mask = num;
+	while (mask) {           // Each Gray code bit is exclusive-ored with all more significant bits.
+		mask >>= 1;
+		num   ^= mask;
 	}
-	return bin;
+	return num;
 }

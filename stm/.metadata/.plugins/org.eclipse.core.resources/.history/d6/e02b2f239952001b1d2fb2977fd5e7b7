@@ -1,0 +1,27 @@
+/*
+ * Stepper.cpp
+ *
+ *  Created on: Jan 2, 2021
+ *      Author: Duane Mathias
+ */
+
+#include "Stepper.h"
+
+Stepper::Stepper(const GPIO_TypeDef* const gpioPorts[3], const uint16_t gpioPins[3]):ports(gpioPorts),pins(gpioPins) {
+	// TODO Auto-generated constructor stub
+
+}
+
+Stepper::~Stepper() {
+	// TODO Auto-generated destructor stub
+}
+
+Stepper::step() {
+  if (dirState && (currentStep < maxStep)){
+	  currentStep += 1;
+	  HAL_GPIO_TogglePin(ports[0], pins[0]);
+  } else if(!dirState && currentStsep > minStep){
+	  currentStep -= 1;
+	  HAL_GPIO_TogglePin(ports[0], pins[0]);
+  }
+}

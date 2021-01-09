@@ -1,3 +1,9 @@
-Stepper.cpp:10:1:Stepper::Stepper()	16	static
+Stepper.cpp:10:1:Stepper::Stepper(const GPIO_TypeDef* const*, const uint16_t*)	24	static
 Stepper.cpp:15:1:Stepper::~Stepper()	16	static
 Stepper.cpp:15:1:virtual Stepper::~Stepper()	16	static
+Stepper.cpp:19:6:void Stepper::setDir(GPIO_PinState)	16	static
+Stepper.cpp:23:6:void Stepper::step()	24	static
+Stepper.cpp:34:6:void Stepper::update()	16	static
+Stepper.cpp:39:6:void Stepper::setFreq(unsigned int)	16	static
+Stepper.cpp:45:6:void Stepper::setTarget(int)	16	static
+Stepper.cpp:49:14:unsigned int Stepper::getPosition()	16	static

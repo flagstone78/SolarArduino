@@ -1,0 +1,44 @@
+/*
+ * maincpp.cpp
+ *
+ *  Created on: Jan 2, 2021
+ *      Author: Duane Mathias
+ */
+
+
+#include "maincpp.h"
+
+TIM_HandleTypeDef htim1;
+
+//encoders
+absEncoder elEncoder(ElEncoderPorts,ElEncoderPins);
+
+//motors
+Stepper elStepper(ElStepperPorts,ElStepperPins);
+
+// callback function for stepper motor timer
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+{
+  // Check which version of the timer triggered this callback and toggle LED
+  if (htim == &htim1)
+  {
+    //HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
+	  elStepper.update();
+  }
+}
+
+int pos,oldpos,target, currentpos;
+void mainsetup(){
+	elStepper.setFreq(100);
+	target=0;
+	currentpos = 0;
+	oldpos = 0;
+	pos=0;
+}
+
+void mainloop(){
+	oldpos = pos;
+	pos = elEncoder.position();
+	elStepper.setTarget(target);
+	currentpos = elStepper.getPosition();
+}
