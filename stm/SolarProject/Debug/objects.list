@@ -1,4 +1,5 @@
 "Core/GLOBALS.o"
+"Core/RTCLib.o"
 "Core/Stepper.o"
 "Core/absEncoder.o"
 "Core/maincpp.o"

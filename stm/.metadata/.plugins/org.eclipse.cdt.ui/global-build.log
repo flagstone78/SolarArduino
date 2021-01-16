@@ -7766,3 +7766,1457 @@ Finished building: SolarProject.bin
  
 Finished building: SolarProject.list
  
+12:25:56 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/maincpp.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/maincpp.d" -MT"Core/maincpp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/maincpp.o"
+arm-none-eabi-g++ -o "SolarProject.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Duane Mathias\Documents\GitHub\SolarProject\stm\SolarProject\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SolarProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: SolarProject.elf
+ 
+arm-none-eabi-objdump -h -S  SolarProject.elf  > "SolarProject.list"
+arm-none-eabi-objcopy  -O binary  SolarProject.elf  "SolarProject.bin"
+arm-none-eabi-size   SolarProject.elf 
+   text	   data	    bss	    dec	    hex	filename
+  14348	    128	   1784	  16260	   3f84	SolarProject.elf
+Finished building: default.size.stdout
+ 
+Finished building: SolarProject.bin
+ 
+Finished building: SolarProject.list
+ 
+12:27:37 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/maincpp.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/maincpp.d" -MT"Core/maincpp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/maincpp.o"
+arm-none-eabi-g++ -o "SolarProject.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Duane Mathias\Documents\GitHub\SolarProject\stm\SolarProject\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SolarProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: SolarProject.elf
+ 
+arm-none-eabi-objdump -h -S  SolarProject.elf  > "SolarProject.list"
+arm-none-eabi-objcopy  -O binary  SolarProject.elf  "SolarProject.bin"
+arm-none-eabi-size   SolarProject.elf 
+   text	   data	    bss	    dec	    hex	filename
+  14364	    128	   1784	  16276	   3f94	SolarProject.elf
+Finished building: default.size.stdout
+ 
+Finished building: SolarProject.bin
+ 
+Finished building: SolarProject.list
+ 
+12:54:00 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/RTCLib.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/RTCLib.d" -MT"Core/RTCLib.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/RTCLib.o"
+arm-none-eabi-g++ "../Core/maincpp.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/maincpp.d" -MT"Core/maincpp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/maincpp.o"
+In file included from ../Core/RTCLib.cpp:6:0:
+../Core/RTCLib.h:23:24: error: expected ')' before 't'
+     DateTime (uint32_t t =0);
+                        ^
+../Core/RTCLib.h:24:24: error: expected ')' before 'year'
+     DateTime (uint16_t year, uint8_t month, uint8_t day,
+                        ^~~~
+../Core/RTCLib.h:28:21: error: '__FlashStringHelper' does not name a type
+     DateTime (const __FlashStringHelper* date, const __FlashStringHelper* time);
+                     ^~~~~~~~~~~~~~~~~~~
+../Core/RTCLib.h:28:54: error: '__FlashStringHelper' does not name a type
+     DateTime (const __FlashStringHelper* date, const __FlashStringHelper* time);
+                                                      ^~~~~~~~~~~~~~~~~~~
+../Core/RTCLib.h:29:5: error: 'uint16_t' does not name a type; did you mean 'char16_t'?
+     uint16_t year() const       { return 2000 + yOff; }
+     ^~~~~~~~
+     char16_t
+../Core/RTCLib.h:30:5: error: 'uint8_t' does not name a type
+     uint8_t month() const       { return m; }
+     ^~~~~~~
+../Core/RTCLib.h:31:5: error: 'uint8_t' does not name a type
+     uint8_t day() const         { return d; }
+     ^~~~~~~
+../Core/RTCLib.h:32:5: error: 'uint8_t' does not name a type
+     uint8_t hour() const        { return hh; }
+     ^~~~~~~
+../Core/RTCLib.h:33:5: error: 'uint8_t' does not name a type
+     uint8_t minute() const      { return mm; }
+     ^~~~~~~
+../Core/RTCLib.h:34:5: error: 'uint8_t' does not name a type
+     uint8_t second() const      { return ss; }
+     ^~~~~~~
+../Core/RTCLib.h:35:5: error: 'uint8_t' does not name a type
+     uint8_t dayOfTheWeek() const;
+     ^~~~~~~
+../Core/RTCLib.h:40:5: error: 'uint32_t' does not name a type; did you mean 'char32_t'?
+     uint32_t unixtime(void) const;
+     ^~~~~~~~
+     char32_t
+../Core/RTCLib.h:47:5: error: 'uint8_t' does not name a type
+     uint8_t yOff, m, d, hh, mm, ss;
+     ^~~~~~~
+../Core/RTCLib.h:53:23: error: expected ')' before 'seconds'
+     TimeSpan (int32_t seconds = 0);
+                       ^~~~~~~
+../Core/RTCLib.h:54:23: error: expected ')' before 'days'
+     TimeSpan (int16_t days, int8_t hours, int8_t minutes, int8_t seconds);
+                       ^~~~
+../Core/RTCLib.h:56:5: error: 'int16_t' does not name a type; did you mean 'char16_t'?
+     int16_t days() const         { return _seconds / 86400L; }
+     ^~~~~~~
+     char16_t
+../Core/RTCLib.h:57:5: error: 'int8_t' does not name a type; did you mean 'int'?
+     int8_t  hours() const        { return _seconds / 3600 % 24; }
+     ^~~~~~
+     int
+../Core/RTCLib.h:58:5: error: 'int8_t' does not name a type; did you mean 'int'?
+     int8_t  minutes() const      { return _seconds / 60 % 60; }
+     ^~~~~~
+     int
+../Core/RTCLib.h:59:5: error: 'int8_t' does not name a type; did you mean 'int'?
+     int8_t  seconds() const      { return _seconds % 60; }
+     ^~~~~~
+     int
+../Core/RTCLib.h:60:5: error: 'int32_t' does not name a type; did you mean 'char32_t'?
+     int32_t totalseconds() const { return _seconds; }
+     ^~~~~~~
+     char32_t
+../Core/RTCLib.h:66:5: error: 'int32_t' does not name a type; did you mean 'char32_t'?
+     int32_t _seconds;
+     ^~~~~~~
+     char32_t
+In file included from ../Core/RTCLib.cpp:6:0:
+../Core/RTCLib.h:74:5: error: 'boolean' does not name a type; did you mean 'bool'?
+     boolean begin(void);
+     ^~~~~~~
+     bool
+../Core/RTCLib.cpp:8:8: error: 'uint8_t' does not name a type
+ static uint8_t read_i2c_register(uint8_t addr, uint8_t reg) {
+        ^~~~~~~
+../Core/RTCLib.cpp:17:32: error: variable or field 'write_i2c_register' declared void
+ static void write_i2c_register(uint8_t addr, uint8_t reg, uint8_t val) {
+                                ^~~~~~~
+../Core/RTCLib.cpp:17:32: error: 'uint8_t' was not declared in this scope
+../Core/RTCLib.cpp:17:46: error: 'uint8_t' was not declared in this scope
+ static void write_i2c_register(uint8_t addr, uint8_t reg, uint8_t val) {
+                                              ^~~~~~~
+../Core/RTCLib.cpp:17:59: error: 'uint8_t' was not declared in this scope
+ static void write_i2c_register(uint8_t addr, uint8_t reg, uint8_t val) {
+                                                           ^~~~~~~
+../Core/RTCLib.cpp:26:7: error: 'uint8_t' does not name a type
+ const uint8_t daysInMonth [] = { 31,28,31,30,31,30,31,31,30,31,30,31 };
+       ^~~~~~~
+../Core/RTCLib.cpp:29:8: error: 'uint16_t' does not name a type; did you mean 'char16_t'?
+ static uint16_t date2days(uint16_t y, uint8_t m, uint8_t d) {
+        ^~~~~~~~
+        char16_t
+../Core/RTCLib.cpp:40:23: error: 'uint16_t' was not declared in this scope
+ static long time2long(uint16_t days, uint8_t h, uint8_t m, uint8_t s) {
+                       ^~~~~~~~
+../Core/RTCLib.cpp:40:23: note: suggested alternative: 'char16_t'
+ static long time2long(uint16_t days, uint8_t h, uint8_t m, uint8_t s) {
+                       ^~~~~~~~
+                       char16_t
+../Core/RTCLib.cpp:40:38: error: 'uint8_t' was not declared in this scope
+ static long time2long(uint16_t days, uint8_t h, uint8_t m, uint8_t s) {
+                                      ^~~~~~~
+../Core/RTCLib.cpp:40:49: error: 'uint8_t' was not declared in this scope
+ static long time2long(uint16_t days, uint8_t h, uint8_t m, uint8_t s) {
+                                                 ^~~~~~~
+../Core/RTCLib.cpp:40:60: error: 'uint8_t' was not declared in this scope
+ static long time2long(uint16_t days, uint8_t h, uint8_t m, uint8_t s) {
+                                                            ^~~~~~~
+../Core/RTCLib.cpp:40:69: error: expression list treated as compound expression in initializer [-fpermissive]
+ static long time2long(uint16_t days, uint8_t h, uint8_t m, uint8_t s) {
+                                                                     ^
+../Core/RTCLib.cpp:48:20: error: expected constructor, destructor, or type conversion before '(' token
+ DateTime::DateTime (uint32_t t) {
+                    ^
+../Core/RTCLib.cpp:75:20: error: expected constructor, destructor, or type conversion before '(' token
+ DateTime::DateTime (uint16_t year, uint8_t month, uint8_t day, uint8_t hour, uint8_t min, uint8_t sec) {
+                    ^
+../Core/RTCLib.cpp: In copy constructor 'DateTime::DateTime(const DateTime&)':
+../Core/RTCLib.cpp:87:3: error: class 'DateTime' does not have any field named 'yOff'
+   yOff(copy.yOff),
+   ^~~~
+../Core/RTCLib.cpp:87:13: error: 'const class DateTime' has no member named 'yOff'
+   yOff(copy.yOff),
+             ^~~~
+../Core/RTCLib.cpp:88:3: error: class 'DateTime' does not have any field named 'm'
+   m(copy.m),
+   ^
+../Core/RTCLib.cpp:88:10: error: 'const class DateTime' has no member named 'm'
+   m(copy.m),
+          ^
+../Core/RTCLib.cpp:89:3: error: class 'DateTime' does not have any field named 'd'
+   d(copy.d),
+   ^
+../Core/RTCLib.cpp:89:10: error: 'const class DateTime' has no member named 'd'
+   d(copy.d),
+          ^
+../Core/RTCLib.cpp:90:3: error: class 'DateTime' does not have any field named 'hh'
+   hh(copy.hh),
+   ^~
+../Core/RTCLib.cpp:90:11: error: 'const class DateTime' has no member named 'hh'
+   hh(copy.hh),
+           ^~
+../Core/RTCLib.cpp:91:3: error: class 'DateTime' does not have any field named 'mm'
+   mm(copy.mm),
+   ^~
+../Core/RTCLib.cpp:91:11: error: 'const class DateTime' has no member named 'mm'
+   mm(copy.mm),
+           ^~
+../Core/RTCLib.cpp:92:3: error: class 'DateTime' does not have any field named 'ss'
+   ss(copy.ss)
+   ^~
+../Core/RTCLib.cpp:92:11: error: 'const class DateTime' has no member named 'ss'
+   ss(copy.ss)
+           ^~
+../Core/RTCLib.cpp: At global scope:
+../Core/RTCLib.cpp:95:8: error: 'uint8_t' does not name a type
+ static uint8_t conv2d(const char* p) {
+        ^~~~~~~
+../Core/RTCLib.cpp: In constructor 'DateTime::DateTime(const char*, const char*)':
+../Core/RTCLib.cpp:107:5: error: 'yOff' was not declared in this scope
+     yOff = conv2d(date + 9);
+     ^~~~
+../Core/RTCLib.cpp:107:12: error: 'conv2d' was not declared in this scope
+     yOff = conv2d(date + 9);
+            ^~~~~~
+../Core/RTCLib.cpp:110:19: error: 'm' was not declared in this scope
+         case 'J': m = (date[1] == 'a') ? 1 : ((date[2] == 'n') ? 6 : 7); break;
+                   ^
+../Core/RTCLib.cpp:119:5: error: 'd' was not declared in this scope
+     d = conv2d(date + 4);
+     ^
+../Core/RTCLib.cpp:120:5: error: 'hh' was not declared in this scope
+     hh = conv2d(time);
+     ^~
+../Core/RTCLib.cpp:121:5: error: 'mm' was not declared in this scope
+     mm = conv2d(time + 3);
+     ^~
+../Core/RTCLib.cpp:122:5: error: 'ss' was not declared in this scope
+     ss = conv2d(time + 6);
+     ^~
+../Core/RTCLib.cpp: At global scope:
+../Core/RTCLib.cpp:128:27: error: '__FlashStringHelper' does not name a type
+ DateTime::DateTime (const __FlashStringHelper* date, const __FlashStringHelper* time) {
+                           ^~~~~~~~~~~~~~~~~~~
+../Core/RTCLib.cpp:128:60: error: '__FlashStringHelper' does not name a type
+ DateTime::DateTime (const __FlashStringHelper* date, const __FlashStringHelper* time) {
+                                                            ^~~~~~~~~~~~~~~~~~~
+../Core/RTCLib.cpp: In constructor 'DateTime::DateTime(const int*, const int*)':
+../Core/RTCLib.cpp:131:5: error: 'memcpy_P' was not declared in this scope
+     memcpy_P(buff, date, 11);
+     ^~~~~~~~
+../Core/RTCLib.cpp:132:5: error: 'yOff' was not declared in this scope
+     yOff = conv2d(buff + 9);
+     ^~~~
+../Core/RTCLib.cpp:132:5: note: suggested alternative: 'buff'
+     yOff = conv2d(buff + 9);
+     ^~~~
+     buff
+../Core/RTCLib.cpp:132:12: error: 'conv2d' was not declared in this scope
+     yOff = conv2d(buff + 9);
+            ^~~~~~
+../Core/RTCLib.cpp:135:19: error: 'm' was not declared in this scope
+         case 'J': m = (buff[1] == 'a') ? 1 : ((buff[2] == 'n') ? 6 : 7); break;
+                   ^
+../Core/RTCLib.cpp:144:5: error: 'd' was not declared in this scope
+     d = conv2d(buff + 4);
+     ^
+../Core/RTCLib.cpp:146:5: error: 'hh' was not declared in this scope
+     hh = conv2d(buff);
+     ^~
+../Core/RTCLib.cpp:147:5: error: 'mm' was not declared in this scope
+     mm = conv2d(buff + 3);
+     ^~
+../Core/RTCLib.cpp:148:5: error: 'ss' was not declared in this scope
+     ss = conv2d(buff + 6);
+     ^~
+../Core/RTCLib.cpp: At global scope:
+../Core/RTCLib.cpp:151:1: error: 'uint8_t' does not name a type
+ uint8_t DateTime::dayOfTheWeek() const {
+ ^~~~~~~
+../Core/RTCLib.cpp:156:1: error: 'uint32_t' does not name a type; did you mean 'char32_t'?
+ uint32_t DateTime::unixtime(void) const {
+ ^~~~~~~~
+ char32_t
+../Core/RTCLib.cpp: In member function 'long int DateTime::secondstime() const':
+../Core/RTCLib.cpp:167:3: error: 'uint16_t' was not declared in this scope
+   uint16_t days = date2days(yOff, m, d);
+   ^~~~~~~~
+../Core/RTCLib.cpp:167:3: note: suggested alternative: 'char16_t'
+   uint16_t days = date2days(yOff, m, d);
+   ^~~~~~~~
+   char16_t
+../Core/RTCLib.cpp:168:17: error: 'days' was not declared in this scope
+   t = time2long(days, hh, mm, ss);
+                 ^~~~
+../Core/RTCLib.cpp:168:23: error: 'hh' was not declared in this scope
+   t = time2long(days, hh, mm, ss);
+                       ^~
+../Core/RTCLib.cpp:168:27: error: 'mm' was not declared in this scope
+   t = time2long(days, hh, mm, ss);
+                           ^~
+../Core/RTCLib.cpp:168:31: error: 'ss' was not declared in this scope
+   t = time2long(days, hh, mm, ss);
+                               ^~
+../Core/RTCLib.cpp:168:33: error: 'time2long' cannot be used as a function
+   t = time2long(days, hh, mm, ss);
+                                 ^
+../Core/RTCLib.cpp: In member function 'DateTime DateTime::operator+(const TimeSpan&)':
+../Core/RTCLib.cpp:173:19: error: 'unixtime' was not declared in this scope
+   return DateTime(unixtime()+span.totalseconds());
+                   ^~~~~~~~
+../Core/RTCLib.cpp:173:35: error: 'const class TimeSpan' has no member named 'totalseconds'
+   return DateTime(unixtime()+span.totalseconds());
+                                   ^~~~~~~~~~~~
+../Core/RTCLib.cpp: In member function 'DateTime DateTime::operator-(const TimeSpan&)':
+../Core/RTCLib.cpp:177:19: error: 'unixtime' was not declared in this scope
+   return DateTime(unixtime()-span.totalseconds());
+                   ^~~~~~~~
+../Core/RTCLib.cpp:177:35: error: 'const class TimeSpan' has no member named 'totalseconds'
+   return DateTime(unixtime()-span.totalseconds());
+                                   ^~~~~~~~~~~~
+../Core/RTCLib.cpp: In member function 'TimeSpan DateTime::operator-(const DateTime&)':
+../Core/RTCLib.cpp:181:19: error: 'unixtime' was not declared in this scope
+   return TimeSpan(unixtime()-right.unixtime());
+                   ^~~~~~~~
+../Core/RTCLib.cpp:181:36: error: 'const class DateTime' has no member named 'unixtime'
+   return TimeSpan(unixtime()-right.unixtime());
+                                    ^~~~~~~~
+../Core/RTCLib.cpp: At global scope:
+../Core/RTCLib.cpp:187:20: error: expected constructor, destructor, or type conversion before '(' token
+ TimeSpan::TimeSpan (int32_t seconds):
+                    ^
+../Core/RTCLib.cpp:191:20: error: expected constructor, destructor, or type conversion before '(' token
+ TimeSpan::TimeSpan (int16_t days, int8_t hours, int8_t minutes, int8_t seconds):
+                    ^
+../Core/RTCLib.cpp: In copy constructor 'TimeSpan::TimeSpan(const TimeSpan&)':
+../Core/RTCLib.cpp:196:3: error: class 'TimeSpan' does not have any field named '_seconds'
+   _seconds(copy._seconds)
+   ^~~~~~~~
+../Core/RTCLib.cpp:196:17: error: 'const class TimeSpan' has no member named '_seconds'
+   _seconds(copy._seconds)
+                 ^~~~~~~~
+../Core/RTCLib.cpp: In member function 'TimeSpan TimeSpan::operator+(const TimeSpan&)':
+../Core/RTCLib.cpp:200:19: error: '_seconds' was not declared in this scope
+   return TimeSpan(_seconds+right._seconds);
+                   ^~~~~~~~
+../Core/RTCLib.cpp:200:34: error: 'const class TimeSpan' has no member named '_seconds'
+   return TimeSpan(_seconds+right._seconds);
+                                  ^~~~~~~~
+../Core/RTCLib.cpp: In member function 'TimeSpan TimeSpan::operator-(const TimeSpan&)':
+../Core/RTCLib.cpp:204:19: error: '_seconds' was not declared in this scope
+   return TimeSpan(_seconds-right._seconds);
+                   ^~~~~~~~
+../Core/RTCLib.cpp:204:34: error: 'const class TimeSpan' has no member named '_seconds'
+   return TimeSpan(_seconds-right._seconds);
+                                  ^~~~~~~~
+../Core/RTCLib.cpp: In static member function 'static void RTC_Millis::adjust(const DateTime&)':
+../Core/RTCLib.cpp:213:17: error: 'const class DateTime' has no member named 'unixtime'
+     offset = dt.unixtime() - millis() / 1000;
+                 ^~~~~~~~
+../Core/RTCLib.cpp:213:30: error: 'millis' was not declared in this scope
+     offset = dt.unixtime() - millis() / 1000;
+                              ^~~~~~
+../Core/RTCLib.cpp: In static member function 'static DateTime RTC_Millis::now()':
+../Core/RTCLib.cpp:217:11: error: 'uint32_t' was not declared in this scope
+   return (uint32_t)(offset + millis() / 1000);
+           ^~~~~~~~
+../Core/RTCLib.cpp:217:11: note: suggested alternative: 'char32_t'
+   return (uint32_t)(offset + millis() / 1000);
+           ^~~~~~~~
+           char32_t
+../Core/RTCLib.cpp:217:30: error: 'millis' was not declared in this scope
+   return (uint32_t)(offset + millis() / 1000);
+                              ^~~~~~
+../Core/RTCLib.cpp: At global scope:
+../Core/RTCLib.cpp:228:8: error: 'uint8_t' does not name a type
+ static uint8_t bcd2bin (uint8_t val) { return val - 6 * (val >> 4); }
+        ^~~~~~~
+../Core/RTCLib.cpp:237:8: error: 'uint8_t' does not name a type
+ static uint8_t bin2bcd (uint8_t val) { return val + 6 * (val / 10); }
+        ^~~~~~~
+../Core/RTCLib.cpp:241:1: error: 'boolean' does not name a type; did you mean 'bool'?
+ boolean RTC_DS3231::begin(void) {
+ ^~~~~~~
+ bool
+../Core/RTCLib.cpp: In member function 'bool RTC_DS3231::lostPower()':
+../Core/RTCLib.cpp:247:11: error: 'read_i2c_register' was not declared in this scope
+   return (read_i2c_register(DS3231_ADDRESS, DS3231_STATUSREG) >> 7);
+           ^~~~~~~~~~~~~~~~~
+../Core/RTCLib.cpp: In static member function 'static void RTC_DS3231::adjust(const DateTime&)':
+../Core/RTCLib.cpp:261:3: error: 'uint8_t' was not declared in this scope
+   uint8_t data[7];
+   ^~~~~~~
+../Core/RTCLib.cpp:262:3: error: 'data' was not declared in this scope
+   data[0] = bin2bcd(dt.second()),
+   ^~~~
+../Core/RTCLib.cpp:262:3: note: suggested alternative: 'dt'
+   data[0] = bin2bcd(dt.second()),
+   ^~~~
+   dt
+../Core/RTCLib.cpp:262:24: error: 'const class DateTime' has no member named 'second'; did you mean 'secondstime'?
+   data[0] = bin2bcd(dt.second()),
+                        ^~~~~~
+                        secondstime
+../Core/RTCLib.cpp:262:13: error: 'bin2bcd' was not declared in this scope
+   data[0] = bin2bcd(dt.second()),
+             ^~~~~~~
+../Core/RTCLib.cpp:263:24: error: 'const class DateTime' has no member named 'minute'
+   data[1] = bin2bcd(dt.minute()),
+                        ^~~~~~
+../Core/RTCLib.cpp:264:24: error: 'const class DateTime' has no member named 'hour'
+   data[2] = bin2bcd(dt.hour()),
+                        ^~~~
+../Core/RTCLib.cpp:266:24: error: 'const class DateTime' has no member named 'day'
+   data[4] = bin2bcd(dt.day()),
+                        ^~~
+../Core/RTCLib.cpp:267:24: error: 'const class DateTime' has no member named 'month'
+   data[5] = bin2bcd(dt.month()),
+                        ^~~~~
+../Core/RTCLib.cpp:268:24: error: 'const class DateTime' has no member named 'year'
+   data[6] = bin2bcd(dt.year() - 2000);
+                        ^~~~
+../Core/RTCLib.cpp:269:3: error: 'I2c' was not declared in this scope
+   I2c.write(DS3231_ADDRESS,0,data,7);
+   ^~~
+../Core/RTCLib.cpp:271:11: error: expected ';' before 'statreg'
+   uint8_t statreg = read_i2c_register(DS3231_ADDRESS, DS3231_STATUSREG);
+           ^~~~~~~
+../Core/RTCLib.cpp:272:3: error: 'statreg' was not declared in this scope
+   statreg &= ~0x80; // flip OSF bit
+   ^~~~~~~
+../Core/RTCLib.cpp:272:3: note: suggested alternative: 'static'
+   statreg &= ~0x80; // flip OSF bit
+   ^~~~~~~
+   static
+../Core/RTCLib.cpp:273:3: error: 'write_i2c_register' was not declared in this scope
+   write_i2c_register(DS3231_ADDRESS, DS3231_STATUSREG, statreg);
+   ^~~~~~~~~~~~~~~~~~
+../Core/RTCLib.cpp: In static member function 'static DateTime RTC_DS3231::now()':
+../Core/RTCLib.cpp:277:3: error: 'uint8_t' was not declared in this scope
+   uint8_t data[7];
+   ^~~~~~~
+../Core/RTCLib.cpp:278:3: error: 'I2c' was not declared in this scope
+   I2c.read(DS3231_ADDRESS,0,7,data);
+   ^~~
+../Core/RTCLib.cpp:278:31: error: 'data' was not declared in this scope
+   I2c.read(DS3231_ADDRESS,0,7,data);
+                               ^~~~
+../Core/RTCLib.cpp:295:7: error: 'bcd2bin' was not declared in this scope
+       bcd2bin(data[6])+2000,
+       ^~~~~~~
+../Core/RTCLib.cpp: In static member function 'static Ds3231SqwPinMode RTC_DS3231::readSqwPinMode()':
+../Core/RTCLib.cpp:305:3: error: 'uint8_t' was not declared in this scope
+   uint8_t mode[1];
+   ^~~~~~~
+../Core/RTCLib.cpp:313:3: error: 'I2c' was not declared in this scope
+   I2c.read(DS3231_ADDRESS, DS3231_CONTROL,1,mode);
+   ^~~
+../Core/RTCLib.cpp:313:45: error: 'mode' was not declared in this scope
+   I2c.read(DS3231_ADDRESS, DS3231_CONTROL,1,mode);
+                                             ^~~~
+../Core/RTCLib.cpp: In static member function 'static void RTC_DS3231::writeSqwPinMode(Ds3231SqwPinMode)':
+../Core/RTCLib.cpp:319:3: error: 'uint8_t' was not declared in this scope
+   uint8_t ctrl;
+   ^~~~~~~
+../Core/RTCLib.cpp:320:3: error: 'ctrl' was not declared in this scope
+   ctrl = read_i2c_register(DS3231_ADDRESS, DS3231_CONTROL);
+   ^~~~
+../Core/RTCLib.cpp:320:10: error: 'read_i2c_register' was not declared in this scope
+   ctrl = read_i2c_register(DS3231_ADDRESS, DS3231_CONTROL);
+          ^~~~~~~~~~~~~~~~~
+../Core/RTCLib.cpp:330:3: error: 'write_i2c_register' was not declared in this scope
+   write_i2c_register(DS3231_ADDRESS, DS3231_CONTROL, ctrl);
+   ^~~~~~~~~~~~~~~~~~
+make: *** [Core/subdir.mk:32: Core/RTCLib.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+12:56:34 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/RTCLib.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/RTCLib.d" -MT"Core/RTCLib.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/RTCLib.o"
+In file included from ../Core/RTCLib.cpp:6:0:
+../Core/RTCLib.h:30:22: error: ISO C++ forbids declaration of 'date' with no type [-fpermissive]
+     DateTime (const* date, const* time);
+                      ^~~~
+../Core/RTCLib.h:30:35: error: ISO C++ forbids declaration of 'time' with no type [-fpermissive]
+     DateTime (const* date, const* time);
+                                   ^~~~
+In file included from ../Core/RTCLib.cpp:6:0:
+../Core/RTCLib.h:76:5: error: 'boolean' does not name a type; did you mean 'bool'?
+     boolean begin(void);
+     ^~~~~~~
+     bool
+../Core/RTCLib.cpp: In function 'uint8_t read_i2c_register(uint8_t, uint8_t)':
+../Core/RTCLib.cpp:10:51: error: 'hi2c2' was not declared in this scope
+  HAL_StatusTypeDef ret = HAL_I2C_Master_Transmit(&hi2c2, addr, reg, 1, HAL_MAX_DELAY);
+                                                   ^~~~~
+../Core/RTCLib.cpp: In function 'void write_i2c_register(uint8_t, uint8_t, uint8_t)':
+../Core/RTCLib.cpp:19:51: error: 'hi2c2' was not declared in this scope
+  HAL_StatusTypeDef ret = HAL_I2C_Master_Transmit(&hi2c2, addr, data, 2, HAL_MAX_DELAY);
+                                                   ^~~~~
+../Core/RTCLib.cpp:19:20: warning: unused variable 'ret' [-Wunused-variable]
+  HAL_StatusTypeDef ret = HAL_I2C_Master_Transmit(&hi2c2, addr, data, 2, HAL_MAX_DELAY);
+                    ^~~
+../Core/RTCLib.cpp: In function 'uint16_t date2days(uint16_t, uint8_t, uint8_t)':
+../Core/RTCLib.cpp:34:17: error: 'pgm_read_byte' was not declared in this scope
+         days += pgm_read_byte(daysInMonth + i - 1);
+                 ^~~~~~~~~~~~~
+../Core/RTCLib.cpp: In constructor 'DateTime::DateTime(uint32_t)':
+../Core/RTCLib.cpp:65:32: error: 'pgm_read_byte' was not declared in this scope
+         uint8_t daysPerMonth = pgm_read_byte(daysInMonth + m - 1);
+                                ^~~~~~~~~~~~~
+../Core/RTCLib.cpp: At global scope:
+../Core/RTCLib.cpp:128:27: error: '__FlashStringHelper' does not name a type
+ DateTime::DateTime (const __FlashStringHelper* date, const __FlashStringHelper* time) {
+                           ^~~~~~~~~~~~~~~~~~~
+../Core/RTCLib.cpp:128:60: error: '__FlashStringHelper' does not name a type
+ DateTime::DateTime (const __FlashStringHelper* date, const __FlashStringHelper* time) {
+                                                            ^~~~~~~~~~~~~~~~~~~
+../Core/RTCLib.cpp: In constructor 'DateTime::DateTime(const int*, const int*)':
+../Core/RTCLib.cpp:131:5: error: 'memcpy_P' was not declared in this scope
+     memcpy_P(buff, date, 11);
+     ^~~~~~~~
+../Core/RTCLib.cpp: In static member function 'static void RTC_Millis::adjust(const DateTime&)':
+../Core/RTCLib.cpp:213:30: error: 'millis' was not declared in this scope
+     offset = dt.unixtime() - millis() / 1000;
+                              ^~~~~~
+../Core/RTCLib.cpp: In static member function 'static DateTime RTC_Millis::now()':
+../Core/RTCLib.cpp:217:30: error: 'millis' was not declared in this scope
+   return (uint32_t)(offset + millis() / 1000);
+                              ^~~~~~
+../Core/RTCLib.cpp: At global scope:
+../Core/RTCLib.cpp:241:1: error: 'boolean' does not name a type; did you mean 'bool'?
+ boolean RTC_DS3231::begin(void) {
+ ^~~~~~~
+ bool
+../Core/RTCLib.cpp: In static member function 'static void RTC_DS3231::adjust(const DateTime&)':
+../Core/RTCLib.cpp:269:3: error: 'I2c' was not declared in this scope
+   I2c.write(DS3231_ADDRESS,0,data,7);
+   ^~~
+../Core/RTCLib.cpp:269:3: note: suggested alternative: 'I2C1'
+   I2c.write(DS3231_ADDRESS,0,data,7);
+   ^~~
+   I2C1
+../Core/RTCLib.cpp: In static member function 'static DateTime RTC_DS3231::now()':
+../Core/RTCLib.cpp:278:3: error: 'I2c' was not declared in this scope
+   I2c.read(DS3231_ADDRESS,0,7,data);
+   ^~~
+../Core/RTCLib.cpp:278:3: note: suggested alternative: 'I2C1'
+   I2c.read(DS3231_ADDRESS,0,7,data);
+   ^~~
+   I2C1
+../Core/RTCLib.cpp: In static member function 'static Ds3231SqwPinMode RTC_DS3231::readSqwPinMode()':
+../Core/RTCLib.cpp:313:3: error: 'I2c' was not declared in this scope
+   I2c.read(DS3231_ADDRESS, DS3231_CONTROL,1,mode);
+   ^~~
+../Core/RTCLib.cpp:313:3: note: suggested alternative: 'I2C1'
+   I2c.read(DS3231_ADDRESS, DS3231_CONTROL,1,mode);
+   ^~~
+   I2C1
+make: *** [Core/subdir.mk:32: Core/RTCLib.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+12:57:07 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/RTCLib.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/RTCLib.d" -MT"Core/RTCLib.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/RTCLib.o"
+In file included from ../Core/RTCLib.cpp:6:0:
+../Core/RTCLib.h:76:5: error: 'boolean' does not name a type; did you mean 'bool'?
+     boolean begin(void);
+     ^~~~~~~
+     bool
+../Core/RTCLib.cpp: In function 'uint8_t read_i2c_register(uint8_t, uint8_t)':
+../Core/RTCLib.cpp:10:51: error: 'hi2c2' was not declared in this scope
+  HAL_StatusTypeDef ret = HAL_I2C_Master_Transmit(&hi2c2, addr, reg, 1, HAL_MAX_DELAY);
+                                                   ^~~~~
+../Core/RTCLib.cpp: In function 'void write_i2c_register(uint8_t, uint8_t, uint8_t)':
+../Core/RTCLib.cpp:19:51: error: 'hi2c2' was not declared in this scope
+  HAL_StatusTypeDef ret = HAL_I2C_Master_Transmit(&hi2c2, addr, data, 2, HAL_MAX_DELAY);
+                                                   ^~~~~
+../Core/RTCLib.cpp:19:20: warning: unused variable 'ret' [-Wunused-variable]
+  HAL_StatusTypeDef ret = HAL_I2C_Master_Transmit(&hi2c2, addr, data, 2, HAL_MAX_DELAY);
+                    ^~~
+../Core/RTCLib.cpp: In function 'uint16_t date2days(uint16_t, uint8_t, uint8_t)':
+../Core/RTCLib.cpp:34:17: error: 'pgm_read_byte' was not declared in this scope
+         days += pgm_read_byte(daysInMonth + i - 1);
+                 ^~~~~~~~~~~~~
+../Core/RTCLib.cpp: In constructor 'DateTime::DateTime(uint32_t)':
+../Core/RTCLib.cpp:65:32: error: 'pgm_read_byte' was not declared in this scope
+         uint8_t daysPerMonth = pgm_read_byte(daysInMonth + m - 1);
+                                ^~~~~~~~~~~~~
+../Core/RTCLib.cpp: At global scope:
+../Core/RTCLib.cpp:128:27: error: '__FlashStringHelper' does not name a type
+ DateTime::DateTime (const __FlashStringHelper* date, const __FlashStringHelper* time) {
+                           ^~~~~~~~~~~~~~~~~~~
+../Core/RTCLib.cpp:128:60: error: '__FlashStringHelper' does not name a type
+ DateTime::DateTime (const __FlashStringHelper* date, const __FlashStringHelper* time) {
+                                                            ^~~~~~~~~~~~~~~~~~~
+../Core/RTCLib.cpp:128:1: error: prototype for 'DateTime::DateTime(const int*, const int*)' does not match any in class 'DateTime'
+ DateTime::DateTime (const __FlashStringHelper* date, const __FlashStringHelper* time) {
+ ^~~~~~~~
+../Core/RTCLib.cpp:105:1: error: candidates are: DateTime::DateTime(const char*, const char*)
+ DateTime::DateTime (const char* date, const char* time) {
+ ^~~~~~~~
+../Core/RTCLib.cpp:86:1: error:                 DateTime::DateTime(const DateTime&)
+ DateTime::DateTime (const DateTime& copy):
+ ^~~~~~~~
+../Core/RTCLib.cpp:75:1: error:                 DateTime::DateTime(uint16_t, uint8_t, uint8_t, uint8_t, uint8_t, uint8_t)
+ DateTime::DateTime (uint16_t year, uint8_t month, uint8_t day, uint8_t hour, uint8_t min, uint8_t sec) {
+ ^~~~~~~~
+../Core/RTCLib.cpp:48:1: error:                 DateTime::DateTime(uint32_t)
+ DateTime::DateTime (uint32_t t) {
+ ^~~~~~~~
+../Core/RTCLib.cpp: In static member function 'static void RTC_Millis::adjust(const DateTime&)':
+../Core/RTCLib.cpp:213:30: error: 'millis' was not declared in this scope
+     offset = dt.unixtime() - millis() / 1000;
+                              ^~~~~~
+../Core/RTCLib.cpp: In static member function 'static DateTime RTC_Millis::now()':
+../Core/RTCLib.cpp:217:30: error: 'millis' was not declared in this scope
+   return (uint32_t)(offset + millis() / 1000);
+                              ^~~~~~
+../Core/RTCLib.cpp: At global scope:
+../Core/RTCLib.cpp:241:1: error: 'boolean' does not name a type; did you mean 'bool'?
+ boolean RTC_DS3231::begin(void) {
+ ^~~~~~~
+ bool
+../Core/RTCLib.cpp: In static member function 'static void RTC_DS3231::adjust(const DateTime&)':
+../Core/RTCLib.cpp:269:3: error: 'I2c' was not declared in this scope
+   I2c.write(DS3231_ADDRESS,0,data,7);
+   ^~~
+../Core/RTCLib.cpp:269:3: note: suggested alternative: 'I2C1'
+   I2c.write(DS3231_ADDRESS,0,data,7);
+   ^~~
+   I2C1
+../Core/RTCLib.cpp: In static member function 'static DateTime RTC_DS3231::now()':
+../Core/RTCLib.cpp:278:3: error: 'I2c' was not declared in this scope
+   I2c.read(DS3231_ADDRESS,0,7,data);
+   ^~~
+../Core/RTCLib.cpp:278:3: note: suggested alternative: 'I2C1'
+   I2c.read(DS3231_ADDRESS,0,7,data);
+   ^~~
+   I2C1
+../Core/RTCLib.cpp: In static member function 'static Ds3231SqwPinMode RTC_DS3231::readSqwPinMode()':
+../Core/RTCLib.cpp:313:3: error: 'I2c' was not declared in this scope
+   I2c.read(DS3231_ADDRESS, DS3231_CONTROL,1,mode);
+   ^~~
+../Core/RTCLib.cpp:313:3: note: suggested alternative: 'I2C1'
+   I2c.read(DS3231_ADDRESS, DS3231_CONTROL,1,mode);
+   ^~~
+   I2C1
+make: *** [Core/subdir.mk:32: Core/RTCLib.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+12:57:49 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/RTCLib.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/RTCLib.d" -MT"Core/RTCLib.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/RTCLib.o"
+../Core/RTCLib.cpp: In function 'uint8_t read_i2c_register(uint8_t, uint8_t)':
+../Core/RTCLib.cpp:10:51: error: 'hi2c2' was not declared in this scope
+  HAL_StatusTypeDef ret = HAL_I2C_Master_Transmit(&hi2c2, addr, reg, 1, HAL_MAX_DELAY);
+                                                   ^~~~~
+../Core/RTCLib.cpp: In function 'void write_i2c_register(uint8_t, uint8_t, uint8_t)':
+../Core/RTCLib.cpp:19:51: error: 'hi2c2' was not declared in this scope
+  HAL_StatusTypeDef ret = HAL_I2C_Master_Transmit(&hi2c2, addr, data, 2, HAL_MAX_DELAY);
+                                                   ^~~~~
+../Core/RTCLib.cpp:19:20: warning: unused variable 'ret' [-Wunused-variable]
+  HAL_StatusTypeDef ret = HAL_I2C_Master_Transmit(&hi2c2, addr, data, 2, HAL_MAX_DELAY);
+                    ^~~
+../Core/RTCLib.cpp: In function 'uint16_t date2days(uint16_t, uint8_t, uint8_t)':
+../Core/RTCLib.cpp:34:17: error: 'pgm_read_byte' was not declared in this scope
+         days += pgm_read_byte(daysInMonth + i - 1);
+                 ^~~~~~~~~~~~~
+../Core/RTCLib.cpp: In constructor 'DateTime::DateTime(uint32_t)':
+../Core/RTCLib.cpp:65:32: error: 'pgm_read_byte' was not declared in this scope
+         uint8_t daysPerMonth = pgm_read_byte(daysInMonth + m - 1);
+                                ^~~~~~~~~~~~~
+../Core/RTCLib.cpp: At global scope:
+../Core/RTCLib.cpp:128:27: error: '__FlashStringHelper' does not name a type
+ DateTime::DateTime (const __FlashStringHelper* date, const __FlashStringHelper* time) {
+                           ^~~~~~~~~~~~~~~~~~~
+../Core/RTCLib.cpp:128:60: error: '__FlashStringHelper' does not name a type
+ DateTime::DateTime (const __FlashStringHelper* date, const __FlashStringHelper* time) {
+                                                            ^~~~~~~~~~~~~~~~~~~
+../Core/RTCLib.cpp:128:1: error: prototype for 'DateTime::DateTime(const int*, const int*)' does not match any in class 'DateTime'
+ DateTime::DateTime (const __FlashStringHelper* date, const __FlashStringHelper* time) {
+ ^~~~~~~~
+../Core/RTCLib.cpp:105:1: error: candidates are: DateTime::DateTime(const char*, const char*)
+ DateTime::DateTime (const char* date, const char* time) {
+ ^~~~~~~~
+../Core/RTCLib.cpp:86:1: error:                 DateTime::DateTime(const DateTime&)
+ DateTime::DateTime (const DateTime& copy):
+ ^~~~~~~~
+../Core/RTCLib.cpp:75:1: error:                 DateTime::DateTime(uint16_t, uint8_t, uint8_t, uint8_t, uint8_t, uint8_t)
+ DateTime::DateTime (uint16_t year, uint8_t month, uint8_t day, uint8_t hour, uint8_t min, uint8_t sec) {
+ ^~~~~~~~
+../Core/RTCLib.cpp:48:1: error:                 DateTime::DateTime(uint32_t)
+ DateTime::DateTime (uint32_t t) {
+ ^~~~~~~~
+../Core/RTCLib.cpp: In static member function 'static void RTC_Millis::adjust(const DateTime&)':
+../Core/RTCLib.cpp:213:30: error: 'millis' was not declared in this scope
+     offset = dt.unixtime() - millis() / 1000;
+                              ^~~~~~
+../Core/RTCLib.cpp: In static member function 'static DateTime RTC_Millis::now()':
+../Core/RTCLib.cpp:217:30: error: 'millis' was not declared in this scope
+   return (uint32_t)(offset + millis() / 1000);
+                              ^~~~~~
+../Core/RTCLib.cpp: At global scope:
+../Core/RTCLib.cpp:241:1: error: 'boolean' does not name a type; did you mean 'bool'?
+ boolean RTC_DS3231::begin(void) {
+ ^~~~~~~
+ bool
+../Core/RTCLib.cpp: In static member function 'static void RTC_DS3231::adjust(const DateTime&)':
+../Core/RTCLib.cpp:269:3: error: 'I2c' was not declared in this scope
+   I2c.write(DS3231_ADDRESS,0,data,7);
+   ^~~
+../Core/RTCLib.cpp:269:3: note: suggested alternative: 'I2C1'
+   I2c.write(DS3231_ADDRESS,0,data,7);
+   ^~~
+   I2C1
+../Core/RTCLib.cpp: In static member function 'static DateTime RTC_DS3231::now()':
+../Core/RTCLib.cpp:278:3: error: 'I2c' was not declared in this scope
+   I2c.read(DS3231_ADDRESS,0,7,data);
+   ^~~
+../Core/RTCLib.cpp:278:3: note: suggested alternative: 'I2C1'
+   I2c.read(DS3231_ADDRESS,0,7,data);
+   ^~~
+   I2C1
+../Core/RTCLib.cpp: In static member function 'static Ds3231SqwPinMode RTC_DS3231::readSqwPinMode()':
+../Core/RTCLib.cpp:313:3: error: 'I2c' was not declared in this scope
+   I2c.read(DS3231_ADDRESS, DS3231_CONTROL,1,mode);
+   ^~~
+../Core/RTCLib.cpp:313:3: note: suggested alternative: 'I2C1'
+   I2c.read(DS3231_ADDRESS, DS3231_CONTROL,1,mode);
+   ^~~
+   I2C1
+make: *** [Core/subdir.mk:32: Core/RTCLib.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+12:58:39 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/RTCLib.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/RTCLib.d" -MT"Core/RTCLib.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/RTCLib.o"
+../Core/RTCLib.cpp: In function 'uint8_t read_i2c_register(uint8_t, uint8_t)':
+../Core/RTCLib.cpp:12:85: error: invalid conversion from 'uint8_t {aka unsigned char}' to 'uint8_t* {aka unsigned char*}' [-fpermissive]
+  HAL_StatusTypeDef ret = HAL_I2C_Master_Transmit(&hi2c2, addr, reg, 1, HAL_MAX_DELAY);
+                                                                                     ^
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:356:0,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/GLOBALS.h:11,
+                 from ../Core/RTCLib.h:8,
+                 from ../Core/RTCLib.cpp:6:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h:567:19: note:   initializing argument 3 of 'HAL_StatusTypeDef HAL_I2C_Master_Transmit(I2C_HandleTypeDef*, uint16_t, uint8_t*, uint16_t, uint32_t)'
+ HAL_StatusTypeDef HAL_I2C_Master_Transmit(I2C_HandleTypeDef *hi2c, uint16_t DevAddress, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+                   ^~~~~~~~~~~~~~~~~~~~~~~
+../Core/RTCLib.cpp: In function 'void write_i2c_register(uint8_t, uint8_t, uint8_t)':
+../Core/RTCLib.cpp:21:20: warning: unused variable 'ret' [-Wunused-variable]
+  HAL_StatusTypeDef ret = HAL_I2C_Master_Transmit(&hi2c2, addr, data, 2, HAL_MAX_DELAY);
+                    ^~~
+../Core/RTCLib.cpp: In function 'uint16_t date2days(uint16_t, uint8_t, uint8_t)':
+../Core/RTCLib.cpp:36:17: error: 'pgm_read_byte' was not declared in this scope
+         days += pgm_read_byte(daysInMonth + i - 1);
+                 ^~~~~~~~~~~~~
+../Core/RTCLib.cpp: In constructor 'DateTime::DateTime(uint32_t)':
+../Core/RTCLib.cpp:67:32: error: 'pgm_read_byte' was not declared in this scope
+         uint8_t daysPerMonth = pgm_read_byte(daysInMonth + m - 1);
+                                ^~~~~~~~~~~~~
+../Core/RTCLib.cpp: At global scope:
+../Core/RTCLib.cpp:130:27: error: '__FlashStringHelper' does not name a type
+ DateTime::DateTime (const __FlashStringHelper* date, const __FlashStringHelper* time) {
+                           ^~~~~~~~~~~~~~~~~~~
+../Core/RTCLib.cpp:130:60: error: '__FlashStringHelper' does not name a type
+ DateTime::DateTime (const __FlashStringHelper* date, const __FlashStringHelper* time) {
+                                                            ^~~~~~~~~~~~~~~~~~~
+../Core/RTCLib.cpp:130:1: error: prototype for 'DateTime::DateTime(const int*, const int*)' does not match any in class 'DateTime'
+ DateTime::DateTime (const __FlashStringHelper* date, const __FlashStringHelper* time) {
+ ^~~~~~~~
+../Core/RTCLib.cpp:107:1: error: candidates are: DateTime::DateTime(const char*, const char*)
+ DateTime::DateTime (const char* date, const char* time) {
+ ^~~~~~~~
+../Core/RTCLib.cpp:88:1: error:                 DateTime::DateTime(const DateTime&)
+ DateTime::DateTime (const DateTime& copy):
+ ^~~~~~~~
+../Core/RTCLib.cpp:77:1: error:                 DateTime::DateTime(uint16_t, uint8_t, uint8_t, uint8_t, uint8_t, uint8_t)
+ DateTime::DateTime (uint16_t year, uint8_t month, uint8_t day, uint8_t hour, uint8_t min, uint8_t sec) {
+ ^~~~~~~~
+../Core/RTCLib.cpp:50:1: error:                 DateTime::DateTime(uint32_t)
+ DateTime::DateTime (uint32_t t) {
+ ^~~~~~~~
+../Core/RTCLib.cpp: In static member function 'static void RTC_Millis::adjust(const DateTime&)':
+../Core/RTCLib.cpp:215:30: error: 'millis' was not declared in this scope
+     offset = dt.unixtime() - millis() / 1000;
+                              ^~~~~~
+../Core/RTCLib.cpp: In static member function 'static DateTime RTC_Millis::now()':
+../Core/RTCLib.cpp:219:30: error: 'millis' was not declared in this scope
+   return (uint32_t)(offset + millis() / 1000);
+                              ^~~~~~
+../Core/RTCLib.cpp: At global scope:
+../Core/RTCLib.cpp:243:1: error: 'boolean' does not name a type; did you mean 'bool'?
+ boolean RTC_DS3231::begin(void) {
+ ^~~~~~~
+ bool
+../Core/RTCLib.cpp: In static member function 'static void RTC_DS3231::adjust(const DateTime&)':
+../Core/RTCLib.cpp:271:3: error: 'I2c' was not declared in this scope
+   I2c.write(DS3231_ADDRESS,0,data,7);
+   ^~~
+../Core/RTCLib.cpp:271:3: note: suggested alternative: 'I2C1'
+   I2c.write(DS3231_ADDRESS,0,data,7);
+   ^~~
+   I2C1
+../Core/RTCLib.cpp: In static member function 'static DateTime RTC_DS3231::now()':
+../Core/RTCLib.cpp:280:3: error: 'I2c' was not declared in this scope
+   I2c.read(DS3231_ADDRESS,0,7,data);
+   ^~~
+../Core/RTCLib.cpp:280:3: note: suggested alternative: 'I2C1'
+   I2c.read(DS3231_ADDRESS,0,7,data);
+   ^~~
+   I2C1
+../Core/RTCLib.cpp: In static member function 'static Ds3231SqwPinMode RTC_DS3231::readSqwPinMode()':
+../Core/RTCLib.cpp:315:3: error: 'I2c' was not declared in this scope
+   I2c.read(DS3231_ADDRESS, DS3231_CONTROL,1,mode);
+   ^~~
+../Core/RTCLib.cpp:315:3: note: suggested alternative: 'I2C1'
+   I2c.read(DS3231_ADDRESS, DS3231_CONTROL,1,mode);
+   ^~~
+   I2C1
+make: *** [Core/subdir.mk:32: Core/RTCLib.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+12:59:15 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/RTCLib.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/RTCLib.d" -MT"Core/RTCLib.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/RTCLib.o"
+../Core/RTCLib.cpp: In function 'void write_i2c_register(uint8_t, uint8_t, uint8_t)':
+../Core/RTCLib.cpp:21:20: warning: unused variable 'ret' [-Wunused-variable]
+  HAL_StatusTypeDef ret = HAL_I2C_Master_Transmit(&hi2c2, addr, data, 2, HAL_MAX_DELAY);
+                    ^~~
+../Core/RTCLib.cpp: In function 'uint16_t date2days(uint16_t, uint8_t, uint8_t)':
+../Core/RTCLib.cpp:36:17: error: 'pgm_read_byte' was not declared in this scope
+         days += pgm_read_byte(daysInMonth + i - 1);
+                 ^~~~~~~~~~~~~
+../Core/RTCLib.cpp: In constructor 'DateTime::DateTime(uint32_t)':
+../Core/RTCLib.cpp:67:32: error: 'pgm_read_byte' was not declared in this scope
+         uint8_t daysPerMonth = pgm_read_byte(daysInMonth + m - 1);
+                                ^~~~~~~~~~~~~
+../Core/RTCLib.cpp: At global scope:
+../Core/RTCLib.cpp:130:27: error: '__FlashStringHelper' does not name a type
+ DateTime::DateTime (const __FlashStringHelper* date, const __FlashStringHelper* time) {
+                           ^~~~~~~~~~~~~~~~~~~
+../Core/RTCLib.cpp:130:60: error: '__FlashStringHelper' does not name a type
+ DateTime::DateTime (const __FlashStringHelper* date, const __FlashStringHelper* time) {
+                                                            ^~~~~~~~~~~~~~~~~~~
+../Core/RTCLib.cpp:130:1: error: prototype for 'DateTime::DateTime(const int*, const int*)' does not match any in class 'DateTime'
+ DateTime::DateTime (const __FlashStringHelper* date, const __FlashStringHelper* time) {
+ ^~~~~~~~
+../Core/RTCLib.cpp:107:1: error: candidates are: DateTime::DateTime(const char*, const char*)
+ DateTime::DateTime (const char* date, const char* time) {
+ ^~~~~~~~
+../Core/RTCLib.cpp:88:1: error:                 DateTime::DateTime(const DateTime&)
+ DateTime::DateTime (const DateTime& copy):
+ ^~~~~~~~
+../Core/RTCLib.cpp:77:1: error:                 DateTime::DateTime(uint16_t, uint8_t, uint8_t, uint8_t, uint8_t, uint8_t)
+ DateTime::DateTime (uint16_t year, uint8_t month, uint8_t day, uint8_t hour, uint8_t min, uint8_t sec) {
+ ^~~~~~~~
+../Core/RTCLib.cpp:50:1: error:                 DateTime::DateTime(uint32_t)
+ DateTime::DateTime (uint32_t t) {
+ ^~~~~~~~
+../Core/RTCLib.cpp: In static member function 'static void RTC_Millis::adjust(const DateTime&)':
+../Core/RTCLib.cpp:215:30: error: 'millis' was not declared in this scope
+     offset = dt.unixtime() - millis() / 1000;
+                              ^~~~~~
+../Core/RTCLib.cpp: In static member function 'static DateTime RTC_Millis::now()':
+../Core/RTCLib.cpp:219:30: error: 'millis' was not declared in this scope
+   return (uint32_t)(offset + millis() / 1000);
+                              ^~~~~~
+../Core/RTCLib.cpp: At global scope:
+../Core/RTCLib.cpp:243:1: error: 'boolean' does not name a type; did you mean 'bool'?
+ boolean RTC_DS3231::begin(void) {
+ ^~~~~~~
+ bool
+../Core/RTCLib.cpp: In static member function 'static void RTC_DS3231::adjust(const DateTime&)':
+../Core/RTCLib.cpp:271:3: error: 'I2c' was not declared in this scope
+   I2c.write(DS3231_ADDRESS,0,data,7);
+   ^~~
+../Core/RTCLib.cpp:271:3: note: suggested alternative: 'I2C1'
+   I2c.write(DS3231_ADDRESS,0,data,7);
+   ^~~
+   I2C1
+../Core/RTCLib.cpp: In static member function 'static DateTime RTC_DS3231::now()':
+../Core/RTCLib.cpp:280:3: error: 'I2c' was not declared in this scope
+   I2c.read(DS3231_ADDRESS,0,7,data);
+   ^~~
+../Core/RTCLib.cpp:280:3: note: suggested alternative: 'I2C1'
+   I2c.read(DS3231_ADDRESS,0,7,data);
+   ^~~
+   I2C1
+../Core/RTCLib.cpp: In static member function 'static Ds3231SqwPinMode RTC_DS3231::readSqwPinMode()':
+../Core/RTCLib.cpp:315:3: error: 'I2c' was not declared in this scope
+   I2c.read(DS3231_ADDRESS, DS3231_CONTROL,1,mode);
+   ^~~
+../Core/RTCLib.cpp:315:3: note: suggested alternative: 'I2C1'
+   I2c.read(DS3231_ADDRESS, DS3231_CONTROL,1,mode);
+   ^~~
+   I2C1
+make: *** [Core/subdir.mk:32: Core/RTCLib.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+12:59:51 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/RTCLib.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/RTCLib.d" -MT"Core/RTCLib.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/RTCLib.o"
+../Core/RTCLib.cpp: In function 'void write_i2c_register(uint8_t, uint8_t, uint8_t)':
+../Core/RTCLib.cpp:22:25: error: exception handling disabled, use -fexceptions to enable
+  if ( ret != HAL_OK ) { throw; }
+                         ^~~~~
+../Core/RTCLib.cpp: In function 'uint16_t date2days(uint16_t, uint8_t, uint8_t)':
+../Core/RTCLib.cpp:37:17: error: 'pgm_read_byte' was not declared in this scope
+         days += pgm_read_byte(daysInMonth + i - 1);
+                 ^~~~~~~~~~~~~
+../Core/RTCLib.cpp: In constructor 'DateTime::DateTime(uint32_t)':
+../Core/RTCLib.cpp:68:32: error: 'pgm_read_byte' was not declared in this scope
+         uint8_t daysPerMonth = pgm_read_byte(daysInMonth + m - 1);
+                                ^~~~~~~~~~~~~
+../Core/RTCLib.cpp: At global scope:
+../Core/RTCLib.cpp:131:27: error: '__FlashStringHelper' does not name a type
+ DateTime::DateTime (const __FlashStringHelper* date, const __FlashStringHelper* time) {
+                           ^~~~~~~~~~~~~~~~~~~
+../Core/RTCLib.cpp:131:60: error: '__FlashStringHelper' does not name a type
+ DateTime::DateTime (const __FlashStringHelper* date, const __FlashStringHelper* time) {
+                                                            ^~~~~~~~~~~~~~~~~~~
+../Core/RTCLib.cpp:131:1: error: prototype for 'DateTime::DateTime(const int*, const int*)' does not match any in class 'DateTime'
+ DateTime::DateTime (const __FlashStringHelper* date, const __FlashStringHelper* time) {
+ ^~~~~~~~
+../Core/RTCLib.cpp:108:1: error: candidates are: DateTime::DateTime(const char*, const char*)
+ DateTime::DateTime (const char* date, const char* time) {
+ ^~~~~~~~
+../Core/RTCLib.cpp:89:1: error:                 DateTime::DateTime(const DateTime&)
+ DateTime::DateTime (const DateTime& copy):
+ ^~~~~~~~
+../Core/RTCLib.cpp:78:1: error:                 DateTime::DateTime(uint16_t, uint8_t, uint8_t, uint8_t, uint8_t, uint8_t)
+ DateTime::DateTime (uint16_t year, uint8_t month, uint8_t day, uint8_t hour, uint8_t min, uint8_t sec) {
+ ^~~~~~~~
+../Core/RTCLib.cpp:51:1: error:                 DateTime::DateTime(uint32_t)
+ DateTime::DateTime (uint32_t t) {
+ ^~~~~~~~
+../Core/RTCLib.cpp: In static member function 'static void RTC_Millis::adjust(const DateTime&)':
+../Core/RTCLib.cpp:216:30: error: 'millis' was not declared in this scope
+     offset = dt.unixtime() - millis() / 1000;
+                              ^~~~~~
+../Core/RTCLib.cpp: In static member function 'static DateTime RTC_Millis::now()':
+../Core/RTCLib.cpp:220:30: error: 'millis' was not declared in this scope
+   return (uint32_t)(offset + millis() / 1000);
+                              ^~~~~~
+../Core/RTCLib.cpp: At global scope:
+../Core/RTCLib.cpp:244:1: error: 'boolean' does not name a type; did you mean 'bool'?
+ boolean RTC_DS3231::begin(void) {
+ ^~~~~~~
+ bool
+../Core/RTCLib.cpp: In static member function 'static void RTC_DS3231::adjust(const DateTime&)':
+../Core/RTCLib.cpp:272:3: error: 'I2c' was not declared in this scope
+   I2c.write(DS3231_ADDRESS,0,data,7);
+   ^~~
+../Core/RTCLib.cpp:272:3: note: suggested alternative: 'I2C1'
+   I2c.write(DS3231_ADDRESS,0,data,7);
+   ^~~
+   I2C1
+../Core/RTCLib.cpp: In static member function 'static DateTime RTC_DS3231::now()':
+../Core/RTCLib.cpp:281:3: error: 'I2c' was not declared in this scope
+   I2c.read(DS3231_ADDRESS,0,7,data);
+   ^~~
+../Core/RTCLib.cpp:281:3: note: suggested alternative: 'I2C1'
+   I2c.read(DS3231_ADDRESS,0,7,data);
+   ^~~
+   I2C1
+../Core/RTCLib.cpp: In static member function 'static Ds3231SqwPinMode RTC_DS3231::readSqwPinMode()':
+../Core/RTCLib.cpp:316:3: error: 'I2c' was not declared in this scope
+   I2c.read(DS3231_ADDRESS, DS3231_CONTROL,1,mode);
+   ^~~
+../Core/RTCLib.cpp:316:3: note: suggested alternative: 'I2C1'
+   I2c.read(DS3231_ADDRESS, DS3231_CONTROL,1,mode);
+   ^~~
+   I2C1
+make: *** [Core/subdir.mk:32: Core/RTCLib.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+13:00:23 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/RTCLib.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/RTCLib.d" -MT"Core/RTCLib.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/RTCLib.o"
+../Core/RTCLib.cpp: In function 'uint16_t date2days(uint16_t, uint8_t, uint8_t)':
+../Core/RTCLib.cpp:38:17: error: 'pgm_read_byte' was not declared in this scope
+         days += pgm_read_byte(daysInMonth + i - 1);
+                 ^~~~~~~~~~~~~
+../Core/RTCLib.cpp: In constructor 'DateTime::DateTime(uint32_t)':
+../Core/RTCLib.cpp:69:32: error: 'pgm_read_byte' was not declared in this scope
+         uint8_t daysPerMonth = pgm_read_byte(daysInMonth + m - 1);
+                                ^~~~~~~~~~~~~
+../Core/RTCLib.cpp: At global scope:
+../Core/RTCLib.cpp:132:27: error: '__FlashStringHelper' does not name a type
+ DateTime::DateTime (const __FlashStringHelper* date, const __FlashStringHelper* time) {
+                           ^~~~~~~~~~~~~~~~~~~
+../Core/RTCLib.cpp:132:60: error: '__FlashStringHelper' does not name a type
+ DateTime::DateTime (const __FlashStringHelper* date, const __FlashStringHelper* time) {
+                                                            ^~~~~~~~~~~~~~~~~~~
+../Core/RTCLib.cpp:132:1: error: prototype for 'DateTime::DateTime(const int*, const int*)' does not match any in class 'DateTime'
+ DateTime::DateTime (const __FlashStringHelper* date, const __FlashStringHelper* time) {
+ ^~~~~~~~
+../Core/RTCLib.cpp:109:1: error: candidates are: DateTime::DateTime(const char*, const char*)
+ DateTime::DateTime (const char* date, const char* time) {
+ ^~~~~~~~
+../Core/RTCLib.cpp:90:1: error:                 DateTime::DateTime(const DateTime&)
+ DateTime::DateTime (const DateTime& copy):
+ ^~~~~~~~
+../Core/RTCLib.cpp:79:1: error:                 DateTime::DateTime(uint16_t, uint8_t, uint8_t, uint8_t, uint8_t, uint8_t)
+ DateTime::DateTime (uint16_t year, uint8_t month, uint8_t day, uint8_t hour, uint8_t min, uint8_t sec) {
+ ^~~~~~~~
+../Core/RTCLib.cpp:52:1: error:                 DateTime::DateTime(uint32_t)
+ DateTime::DateTime (uint32_t t) {
+ ^~~~~~~~
+../Core/RTCLib.cpp: In static member function 'static void RTC_Millis::adjust(const DateTime&)':
+../Core/RTCLib.cpp:217:30: error: 'millis' was not declared in this scope
+     offset = dt.unixtime() - millis() / 1000;
+                              ^~~~~~
+../Core/RTCLib.cpp: In static member function 'static DateTime RTC_Millis::now()':
+../Core/RTCLib.cpp:221:30: error: 'millis' was not declared in this scope
+   return (uint32_t)(offset + millis() / 1000);
+                              ^~~~~~
+../Core/RTCLib.cpp: At global scope:
+../Core/RTCLib.cpp:245:1: error: 'boolean' does not name a type; did you mean 'bool'?
+ boolean RTC_DS3231::begin(void) {
+ ^~~~~~~
+ bool
+../Core/RTCLib.cpp: In static member function 'static void RTC_DS3231::adjust(const DateTime&)':
+../Core/RTCLib.cpp:273:3: error: 'I2c' was not declared in this scope
+   I2c.write(DS3231_ADDRESS,0,data,7);
+   ^~~
+../Core/RTCLib.cpp:273:3: note: suggested alternative: 'I2C1'
+   I2c.write(DS3231_ADDRESS,0,data,7);
+   ^~~
+   I2C1
+../Core/RTCLib.cpp: In static member function 'static DateTime RTC_DS3231::now()':
+../Core/RTCLib.cpp:282:3: error: 'I2c' was not declared in this scope
+   I2c.read(DS3231_ADDRESS,0,7,data);
+   ^~~
+../Core/RTCLib.cpp:282:3: note: suggested alternative: 'I2C1'
+   I2c.read(DS3231_ADDRESS,0,7,data);
+   ^~~
+   I2C1
+../Core/RTCLib.cpp: In static member function 'static Ds3231SqwPinMode RTC_DS3231::readSqwPinMode()':
+../Core/RTCLib.cpp:317:3: error: 'I2c' was not declared in this scope
+   I2c.read(DS3231_ADDRESS, DS3231_CONTROL,1,mode);
+   ^~~
+../Core/RTCLib.cpp:317:3: note: suggested alternative: 'I2C1'
+   I2c.read(DS3231_ADDRESS, DS3231_CONTROL,1,mode);
+   ^~~
+   I2C1
+make: *** [Core/subdir.mk:32: Core/RTCLib.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+13:01:10 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/RTCLib.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/RTCLib.d" -MT"Core/RTCLib.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/RTCLib.o"
+../Core/RTCLib.cpp: In constructor 'DateTime::DateTime(uint32_t)':
+../Core/RTCLib.cpp:69:32: error: 'pgm_read_byte' was not declared in this scope
+         uint8_t daysPerMonth = pgm_read_byte(daysInMonth + m - 1);
+                                ^~~~~~~~~~~~~
+../Core/RTCLib.cpp: At global scope:
+../Core/RTCLib.cpp:132:27: error: '__FlashStringHelper' does not name a type
+ DateTime::DateTime (const __FlashStringHelper* date, const __FlashStringHelper* time) {
+                           ^~~~~~~~~~~~~~~~~~~
+../Core/RTCLib.cpp:132:60: error: '__FlashStringHelper' does not name a type
+ DateTime::DateTime (const __FlashStringHelper* date, const __FlashStringHelper* time) {
+                                                            ^~~~~~~~~~~~~~~~~~~
+../Core/RTCLib.cpp:132:1: error: prototype for 'DateTime::DateTime(const int*, const int*)' does not match any in class 'DateTime'
+ DateTime::DateTime (const __FlashStringHelper* date, const __FlashStringHelper* time) {
+ ^~~~~~~~
+../Core/RTCLib.cpp:109:1: error: candidates are: DateTime::DateTime(const char*, const char*)
+ DateTime::DateTime (const char* date, const char* time) {
+ ^~~~~~~~
+../Core/RTCLib.cpp:90:1: error:                 DateTime::DateTime(const DateTime&)
+ DateTime::DateTime (const DateTime& copy):
+ ^~~~~~~~
+../Core/RTCLib.cpp:79:1: error:                 DateTime::DateTime(uint16_t, uint8_t, uint8_t, uint8_t, uint8_t, uint8_t)
+ DateTime::DateTime (uint16_t year, uint8_t month, uint8_t day, uint8_t hour, uint8_t min, uint8_t sec) {
+ ^~~~~~~~
+../Core/RTCLib.cpp:52:1: error:                 DateTime::DateTime(uint32_t)
+ DateTime::DateTime (uint32_t t) {
+ ^~~~~~~~
+../Core/RTCLib.cpp: In static member function 'static void RTC_Millis::adjust(const DateTime&)':
+../Core/RTCLib.cpp:217:30: error: 'millis' was not declared in this scope
+     offset = dt.unixtime() - millis() / 1000;
+                              ^~~~~~
+../Core/RTCLib.cpp: In static member function 'static DateTime RTC_Millis::now()':
+../Core/RTCLib.cpp:221:30: error: 'millis' was not declared in this scope
+   return (uint32_t)(offset + millis() / 1000);
+                              ^~~~~~
+../Core/RTCLib.cpp: At global scope:
+../Core/RTCLib.cpp:245:1: error: 'boolean' does not name a type; did you mean 'bool'?
+ boolean RTC_DS3231::begin(void) {
+ ^~~~~~~
+ bool
+../Core/RTCLib.cpp: In static member function 'static void RTC_DS3231::adjust(const DateTime&)':
+../Core/RTCLib.cpp:273:3: error: 'I2c' was not declared in this scope
+   I2c.write(DS3231_ADDRESS,0,data,7);
+   ^~~
+../Core/RTCLib.cpp:273:3: note: suggested alternative: 'I2C1'
+   I2c.write(DS3231_ADDRESS,0,data,7);
+   ^~~
+   I2C1
+../Core/RTCLib.cpp: In static member function 'static DateTime RTC_DS3231::now()':
+../Core/RTCLib.cpp:282:3: error: 'I2c' was not declared in this scope
+   I2c.read(DS3231_ADDRESS,0,7,data);
+   ^~~
+../Core/RTCLib.cpp:282:3: note: suggested alternative: 'I2C1'
+   I2c.read(DS3231_ADDRESS,0,7,data);
+   ^~~
+   I2C1
+../Core/RTCLib.cpp: In static member function 'static Ds3231SqwPinMode RTC_DS3231::readSqwPinMode()':
+../Core/RTCLib.cpp:317:3: error: 'I2c' was not declared in this scope
+   I2c.read(DS3231_ADDRESS, DS3231_CONTROL,1,mode);
+   ^~~
+../Core/RTCLib.cpp:317:3: note: suggested alternative: 'I2C1'
+   I2c.read(DS3231_ADDRESS, DS3231_CONTROL,1,mode);
+   ^~~
+   I2C1
+make: *** [Core/subdir.mk:32: Core/RTCLib.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+13:01:48 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/RTCLib.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/RTCLib.d" -MT"Core/RTCLib.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/RTCLib.o"
+../Core/RTCLib.cpp:132:27: error: '__FlashStringHelper' does not name a type
+ DateTime::DateTime (const __FlashStringHelper* date, const __FlashStringHelper* time) {
+                           ^~~~~~~~~~~~~~~~~~~
+../Core/RTCLib.cpp:132:60: error: '__FlashStringHelper' does not name a type
+ DateTime::DateTime (const __FlashStringHelper* date, const __FlashStringHelper* time) {
+                                                            ^~~~~~~~~~~~~~~~~~~
+../Core/RTCLib.cpp:132:1: error: prototype for 'DateTime::DateTime(const int*, const int*)' does not match any in class 'DateTime'
+ DateTime::DateTime (const __FlashStringHelper* date, const __FlashStringHelper* time) {
+ ^~~~~~~~
+../Core/RTCLib.cpp:109:1: error: candidates are: DateTime::DateTime(const char*, const char*)
+ DateTime::DateTime (const char* date, const char* time) {
+ ^~~~~~~~
+../Core/RTCLib.cpp:90:1: error:                 DateTime::DateTime(const DateTime&)
+ DateTime::DateTime (const DateTime& copy):
+ ^~~~~~~~
+../Core/RTCLib.cpp:79:1: error:                 DateTime::DateTime(uint16_t, uint8_t, uint8_t, uint8_t, uint8_t, uint8_t)
+ DateTime::DateTime (uint16_t year, uint8_t month, uint8_t day, uint8_t hour, uint8_t min, uint8_t sec) {
+ ^~~~~~~~
+../Core/RTCLib.cpp:52:1: error:                 DateTime::DateTime(uint32_t)
+ DateTime::DateTime (uint32_t t) {
+ ^~~~~~~~
+../Core/RTCLib.cpp: In static member function 'static void RTC_Millis::adjust(const DateTime&)':
+../Core/RTCLib.cpp:217:30: error: 'millis' was not declared in this scope
+     offset = dt.unixtime() - millis() / 1000;
+                              ^~~~~~
+../Core/RTCLib.cpp: In static member function 'static DateTime RTC_Millis::now()':
+../Core/RTCLib.cpp:221:30: error: 'millis' was not declared in this scope
+   return (uint32_t)(offset + millis() / 1000);
+                              ^~~~~~
+../Core/RTCLib.cpp: At global scope:
+../Core/RTCLib.cpp:245:1: error: 'boolean' does not name a type; did you mean 'bool'?
+ boolean RTC_DS3231::begin(void) {
+ ^~~~~~~
+ bool
+../Core/RTCLib.cpp: In static member function 'static void RTC_DS3231::adjust(const DateTime&)':
+../Core/RTCLib.cpp:273:3: error: 'I2c' was not declared in this scope
+   I2c.write(DS3231_ADDRESS,0,data,7);
+   ^~~
+../Core/RTCLib.cpp:273:3: note: suggested alternative: 'I2C1'
+   I2c.write(DS3231_ADDRESS,0,data,7);
+   ^~~
+   I2C1
+../Core/RTCLib.cpp: In static member function 'static DateTime RTC_DS3231::now()':
+../Core/RTCLib.cpp:282:3: error: 'I2c' was not declared in this scope
+   I2c.read(DS3231_ADDRESS,0,7,data);
+   ^~~
+../Core/RTCLib.cpp:282:3: note: suggested alternative: 'I2C1'
+   I2c.read(DS3231_ADDRESS,0,7,data);
+   ^~~
+   I2C1
+../Core/RTCLib.cpp: In static member function 'static Ds3231SqwPinMode RTC_DS3231::readSqwPinMode()':
+../Core/RTCLib.cpp:317:3: error: 'I2c' was not declared in this scope
+   I2c.read(DS3231_ADDRESS, DS3231_CONTROL,1,mode);
+   ^~~
+../Core/RTCLib.cpp:317:3: note: suggested alternative: 'I2C1'
+   I2c.read(DS3231_ADDRESS, DS3231_CONTROL,1,mode);
+   ^~~
+   I2C1
+make: *** [Core/subdir.mk:32: Core/RTCLib.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+13:02:21 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/RTCLib.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/RTCLib.d" -MT"Core/RTCLib.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/RTCLib.o"
+../Core/RTCLib.cpp: In static member function 'static void RTC_Millis::adjust(const DateTime&)':
+../Core/RTCLib.cpp:217:30: error: 'millis' was not declared in this scope
+     offset = dt.unixtime() - millis() / 1000;
+                              ^~~~~~
+../Core/RTCLib.cpp: In static member function 'static DateTime RTC_Millis::now()':
+../Core/RTCLib.cpp:221:30: error: 'millis' was not declared in this scope
+   return (uint32_t)(offset + millis() / 1000);
+                              ^~~~~~
+../Core/RTCLib.cpp: At global scope:
+../Core/RTCLib.cpp:245:1: error: 'boolean' does not name a type; did you mean 'bool'?
+ boolean RTC_DS3231::begin(void) {
+ ^~~~~~~
+ bool
+../Core/RTCLib.cpp: In static member function 'static void RTC_DS3231::adjust(const DateTime&)':
+../Core/RTCLib.cpp:273:3: error: 'I2c' was not declared in this scope
+   I2c.write(DS3231_ADDRESS,0,data,7);
+   ^~~
+../Core/RTCLib.cpp:273:3: note: suggested alternative: 'I2C1'
+   I2c.write(DS3231_ADDRESS,0,data,7);
+   ^~~
+   I2C1
+../Core/RTCLib.cpp: In static member function 'static DateTime RTC_DS3231::now()':
+../Core/RTCLib.cpp:282:3: error: 'I2c' was not declared in this scope
+   I2c.read(DS3231_ADDRESS,0,7,data);
+   ^~~
+../Core/RTCLib.cpp:282:3: note: suggested alternative: 'I2C1'
+   I2c.read(DS3231_ADDRESS,0,7,data);
+   ^~~
+   I2C1
+../Core/RTCLib.cpp: In static member function 'static Ds3231SqwPinMode RTC_DS3231::readSqwPinMode()':
+../Core/RTCLib.cpp:317:3: error: 'I2c' was not declared in this scope
+   I2c.read(DS3231_ADDRESS, DS3231_CONTROL,1,mode);
+   ^~~
+../Core/RTCLib.cpp:317:3: note: suggested alternative: 'I2C1'
+   I2c.read(DS3231_ADDRESS, DS3231_CONTROL,1,mode);
+   ^~~
+   I2C1
+make: *** [Core/subdir.mk:32: Core/RTCLib.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+13:02:50 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/RTCLib.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/RTCLib.d" -MT"Core/RTCLib.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/RTCLib.o"
+../Core/RTCLib.cpp:245:1: error: 'boolean' does not name a type; did you mean 'bool'?
+ boolean RTC_DS3231::begin(void) {
+ ^~~~~~~
+ bool
+../Core/RTCLib.cpp: In static member function 'static void RTC_DS3231::adjust(const DateTime&)':
+../Core/RTCLib.cpp:273:3: error: 'I2c' was not declared in this scope
+   I2c.write(DS3231_ADDRESS,0,data,7);
+   ^~~
+../Core/RTCLib.cpp:273:3: note: suggested alternative: 'I2C1'
+   I2c.write(DS3231_ADDRESS,0,data,7);
+   ^~~
+   I2C1
+../Core/RTCLib.cpp: In static member function 'static DateTime RTC_DS3231::now()':
+../Core/RTCLib.cpp:282:3: error: 'I2c' was not declared in this scope
+   I2c.read(DS3231_ADDRESS,0,7,data);
+   ^~~
+../Core/RTCLib.cpp:282:3: note: suggested alternative: 'I2C1'
+   I2c.read(DS3231_ADDRESS,0,7,data);
+   ^~~
+   I2C1
+../Core/RTCLib.cpp: In static member function 'static Ds3231SqwPinMode RTC_DS3231::readSqwPinMode()':
+../Core/RTCLib.cpp:317:3: error: 'I2c' was not declared in this scope
+   I2c.read(DS3231_ADDRESS, DS3231_CONTROL,1,mode);
+   ^~~
+../Core/RTCLib.cpp:317:3: note: suggested alternative: 'I2C1'
+   I2c.read(DS3231_ADDRESS, DS3231_CONTROL,1,mode);
+   ^~~
+   I2C1
+make: *** [Core/subdir.mk:32: Core/RTCLib.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+13:03:28 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/RTCLib.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/RTCLib.d" -MT"Core/RTCLib.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/RTCLib.o"
+../Core/RTCLib.cpp: In member function 'bool RTC_DS3231::begin()':
+../Core/RTCLib.cpp:246:3: error: 'I2c' was not declared in this scope
+   I2c.begin();
+   ^~~
+../Core/RTCLib.cpp:246:3: note: suggested alternative: 'I2C1'
+   I2c.begin();
+   ^~~
+   I2C1
+../Core/RTCLib.cpp: In static member function 'static void RTC_DS3231::adjust(const DateTime&)':
+../Core/RTCLib.cpp:273:3: error: 'I2c' was not declared in this scope
+   I2c.write(DS3231_ADDRESS,0,data,7);
+   ^~~
+../Core/RTCLib.cpp:273:3: note: suggested alternative: 'I2C1'
+   I2c.write(DS3231_ADDRESS,0,data,7);
+   ^~~
+   I2C1
+../Core/RTCLib.cpp: In static member function 'static DateTime RTC_DS3231::now()':
+../Core/RTCLib.cpp:282:3: error: 'I2c' was not declared in this scope
+   I2c.read(DS3231_ADDRESS,0,7,data);
+   ^~~
+../Core/RTCLib.cpp:282:3: note: suggested alternative: 'I2C1'
+   I2c.read(DS3231_ADDRESS,0,7,data);
+   ^~~
+   I2C1
+../Core/RTCLib.cpp: In static member function 'static Ds3231SqwPinMode RTC_DS3231::readSqwPinMode()':
+../Core/RTCLib.cpp:317:3: error: 'I2c' was not declared in this scope
+   I2c.read(DS3231_ADDRESS, DS3231_CONTROL,1,mode);
+   ^~~
+../Core/RTCLib.cpp:317:3: note: suggested alternative: 'I2C1'
+   I2c.read(DS3231_ADDRESS, DS3231_CONTROL,1,mode);
+   ^~~
+   I2C1
+make: *** [Core/subdir.mk:32: Core/RTCLib.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+13:03:38 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/RTCLib.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/RTCLib.d" -MT"Core/RTCLib.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/RTCLib.o"
+../Core/RTCLib.cpp: In static member function 'static void RTC_DS3231::adjust(const DateTime&)':
+../Core/RTCLib.cpp:273:3: error: 'I2c' was not declared in this scope
+   I2c.write(DS3231_ADDRESS,0,data,7);
+   ^~~
+../Core/RTCLib.cpp:273:3: note: suggested alternative: 'I2C1'
+   I2c.write(DS3231_ADDRESS,0,data,7);
+   ^~~
+   I2C1
+../Core/RTCLib.cpp: In static member function 'static DateTime RTC_DS3231::now()':
+../Core/RTCLib.cpp:282:3: error: 'I2c' was not declared in this scope
+   I2c.read(DS3231_ADDRESS,0,7,data);
+   ^~~
+../Core/RTCLib.cpp:282:3: note: suggested alternative: 'I2C1'
+   I2c.read(DS3231_ADDRESS,0,7,data);
+   ^~~
+   I2C1
+../Core/RTCLib.cpp: In static member function 'static Ds3231SqwPinMode RTC_DS3231::readSqwPinMode()':
+../Core/RTCLib.cpp:317:3: error: 'I2c' was not declared in this scope
+   I2c.read(DS3231_ADDRESS, DS3231_CONTROL,1,mode);
+   ^~~
+../Core/RTCLib.cpp:317:3: note: suggested alternative: 'I2C1'
+   I2c.read(DS3231_ADDRESS, DS3231_CONTROL,1,mode);
+   ^~~
+   I2C1
+make: *** [Core/subdir.mk:32: Core/RTCLib.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+13:14:20 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/RTCLib.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/RTCLib.d" -MT"Core/RTCLib.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/RTCLib.o"
+../Core/RTCLib.cpp: In function 'uint8_t read_i2c_register(uint8_t, uint8_t)':
+../Core/RTCLib.cpp:12:44: error: too few arguments to function 'HAL_StatusTypeDef HAL_I2C_Mem_Read(I2C_HandleTypeDef*, uint16_t, uint16_t, uint16_t, uint8_t*, uint16_t, uint32_t)'
+  HAL_I2C_Mem_Read(&hi2c2, addr,reg,1,data,1);
+                                            ^
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:356:0,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/GLOBALS.h:11,
+                 from ../Core/RTCLib.h:8,
+                 from ../Core/RTCLib.cpp:6:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h:572:19: note: declared here
+ HAL_StatusTypeDef HAL_I2C_Mem_Read(I2C_HandleTypeDef *hi2c, uint16_t DevAddress, uint16_t MemAddress, uint16_t MemAddSize, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+                   ^~~~~~~~~~~~~~~~
+../Core/RTCLib.cpp: In function 'void write_i2c_register(uint8_t, uint8_t, uint8_t)':
+../Core/RTCLib.cpp:18:49: error: too few arguments to function 'HAL_StatusTypeDef HAL_I2C_Mem_Write(I2C_HandleTypeDef*, uint16_t, uint16_t, uint16_t, uint8_t*, uint16_t, uint32_t)'
+  HAL_I2C_Mem_Write(&hi2c2, addr, reg, 1, data, 1);
+                                                 ^
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:356:0,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/GLOBALS.h:11,
+                 from ../Core/RTCLib.h:8,
+                 from ../Core/RTCLib.cpp:6:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h:571:19: note: declared here
+ HAL_StatusTypeDef HAL_I2C_Mem_Write(I2C_HandleTypeDef *hi2c, uint16_t DevAddress, uint16_t MemAddress, uint16_t MemAddSize, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+                   ^~~~~~~~~~~~~~~~~
+../Core/RTCLib.cpp: In static member function 'static DateTime RTC_DS3231::now()':
+../Core/RTCLib.cpp:279:3: error: 'I2c' was not declared in this scope
+   I2c.read(DS3231_ADDRESS,0,7,data);
+   ^~~
+../Core/RTCLib.cpp:279:3: note: suggested alternative: 'I2C1'
+   I2c.read(DS3231_ADDRESS,0,7,data);
+   ^~~
+   I2C1
+../Core/RTCLib.cpp: In static member function 'static Ds3231SqwPinMode RTC_DS3231::readSqwPinMode()':
+../Core/RTCLib.cpp:314:3: error: 'I2c' was not declared in this scope
+   I2c.read(DS3231_ADDRESS, DS3231_CONTROL,1,mode);
+   ^~~
+../Core/RTCLib.cpp:314:3: note: suggested alternative: 'I2C1'
+   I2c.read(DS3231_ADDRESS, DS3231_CONTROL,1,mode);
+   ^~~
+   I2C1
+make: *** [Core/subdir.mk:32: Core/RTCLib.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+13:15:03 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/RTCLib.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/RTCLib.d" -MT"Core/RTCLib.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/RTCLib.o"
+../Core/RTCLib.cpp: In static member function 'static DateTime RTC_DS3231::now()':
+../Core/RTCLib.cpp:279:3: error: 'I2c' was not declared in this scope
+   I2c.read(DS3231_ADDRESS,0,7,data);
+   ^~~
+../Core/RTCLib.cpp:279:3: note: suggested alternative: 'I2C1'
+   I2c.read(DS3231_ADDRESS,0,7,data);
+   ^~~
+   I2C1
+../Core/RTCLib.cpp: In static member function 'static Ds3231SqwPinMode RTC_DS3231::readSqwPinMode()':
+../Core/RTCLib.cpp:314:3: error: 'I2c' was not declared in this scope
+   I2c.read(DS3231_ADDRESS, DS3231_CONTROL,1,mode);
+   ^~~
+../Core/RTCLib.cpp:314:3: note: suggested alternative: 'I2C1'
+   I2c.read(DS3231_ADDRESS, DS3231_CONTROL,1,mode);
+   ^~~
+   I2C1
+make: *** [Core/subdir.mk:32: Core/RTCLib.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+13:16:01 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/RTCLib.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/RTCLib.d" -MT"Core/RTCLib.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/RTCLib.o"
+../Core/RTCLib.cpp: In static member function 'static Ds3231SqwPinMode RTC_DS3231::readSqwPinMode()':
+../Core/RTCLib.cpp:314:3: error: 'I2c' was not declared in this scope
+   I2c.read(DS3231_ADDRESS, DS3231_CONTROL,1,mode);
+   ^~~
+../Core/RTCLib.cpp:314:3: note: suggested alternative: 'I2C1'
+   I2c.read(DS3231_ADDRESS, DS3231_CONTROL,1,mode);
+   ^~~
+   I2C1
+make: *** [Core/subdir.mk:32: Core/RTCLib.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+13:17:19 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/RTCLib.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/RTCLib.d" -MT"Core/RTCLib.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/RTCLib.o"
+arm-none-eabi-g++ -o "SolarProject.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Duane Mathias\Documents\GitHub\SolarProject\stm\SolarProject\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SolarProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: SolarProject.elf
+ 
+arm-none-eabi-objdump -h -S  SolarProject.elf  > "SolarProject.list"
+arm-none-eabi-objcopy  -O binary  SolarProject.elf  "SolarProject.bin"
+arm-none-eabi-size   SolarProject.elf 
+   text	   data	    bss	    dec	    hex	filename
+  14364	    128	   1784	  16276	   3f94	SolarProject.elf
+Finished building: default.size.stdout
+ 
+Finished building: SolarProject.bin
+ 
+Finished building: SolarProject.list
+ 
+14:28:10 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/RTCLib.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/RTCLib.d" -MT"Core/RTCLib.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/RTCLib.o"
+arm-none-eabi-g++ "../Core/maincpp.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/maincpp.d" -MT"Core/maincpp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/maincpp.o"
+arm-none-eabi-g++ -o "SolarProject.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Duane Mathias\Documents\GitHub\SolarProject\stm\SolarProject\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SolarProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: SolarProject.elf
+ 
+arm-none-eabi-objdump -h -S  SolarProject.elf  > "SolarProject.list"
+arm-none-eabi-objcopy  -O binary  SolarProject.elf  "SolarProject.bin"
+arm-none-eabi-size   SolarProject.elf 
+   text	   data	    bss	    dec	    hex	filename
+  17396	    128	   1784	  19308	   4b6c	SolarProject.elf
+Finished building: default.size.stdout
+ 
+Finished building: SolarProject.bin
+ 
+Finished building: SolarProject.list
+ 
+14:28:20 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-size   SolarProject.elf 
+   text	   data	    bss	    dec	    hex	filename
+  17396	    128	   1784	  19308	   4b6c	SolarProject.elf
+Finished building: default.size.stdout
+ 
+14:30:23 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/maincpp.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/maincpp.d" -MT"Core/maincpp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/maincpp.o"
+arm-none-eabi-g++ -o "SolarProject.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Duane Mathias\Documents\GitHub\SolarProject\stm\SolarProject\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SolarProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: SolarProject.elf
+ 
+arm-none-eabi-objdump -h -S  SolarProject.elf  > "SolarProject.list"
+arm-none-eabi-objcopy  -O binary  SolarProject.elf  "SolarProject.bin"
+arm-none-eabi-size   SolarProject.elf 
+   text	   data	    bss	    dec	    hex	filename
+  17424	    128	   1792	  19344	   4b90	SolarProject.elf
+Finished building: default.size.stdout
+ 
+Finished building: SolarProject.bin
+ 
+Finished building: SolarProject.list
+ 
+14:48:38 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-size   SolarProject.elf 
+   text	   data	    bss	    dec	    hex	filename
+  17424	    128	   1792	  19344	   4b90	SolarProject.elf
+Finished building: default.size.stdout
+ 
+15:06:11 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-size   SolarProject.elf 
+   text	   data	    bss	    dec	    hex	filename
+  17424	    128	   1792	  19344	   4b90	SolarProject.elf
+Finished building: default.size.stdout
+ 

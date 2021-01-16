@@ -11,6 +11,7 @@
 #include "main.h"
 #include "../absEncoder.h"
 #include "../Stepper.h"
+#include "../RTCLib.h"
 extern "C" {
 	void mainsetup();
 	void mainloop();

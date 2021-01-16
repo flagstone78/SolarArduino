@@ -1,7 +1,7 @@
 std_abs.h:74:3:constexpr float std::abs(float)	16	static
-maincpp.cpp:20:6:void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef*)	16	static
-maincpp.cpp:30:6:void mainsetup()	8	static
-maincpp.cpp:38:6:void mainloop()	16	static
-maincpp.cpp:46:1:void __static_initialization_and_destruction_0(int, int)	16	static
-maincpp.cpp:46:1:cpp)	8	static
-maincpp.cpp:46:1:cpp)	8	static
+maincpp.cpp:23:6:void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef*)	16	static
+maincpp.cpp:35:6:void mainsetup()	8	static
+maincpp.cpp:43:6:void mainloop()	32	static
+maincpp.cpp:54:1:void __static_initialization_and_destruction_0(int, int)	16	static
+maincpp.cpp:54:1:cpp)	8	static
+maincpp.cpp:54:1:cpp)	8	static

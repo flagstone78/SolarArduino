@@ -1,0 +1,35 @@
+RTCLib.h:31:14:uint16_t DateTime::year() const	16	static
+RTCLib.h:32:13:uint8_t DateTime::month() const	16	static
+RTCLib.h:33:13:uint8_t DateTime::day() const	16	static
+RTCLib.h:34:13:uint8_t DateTime::hour() const	16	static
+RTCLib.h:35:13:uint8_t DateTime::minute() const	16	static
+RTCLib.h:36:13:uint8_t DateTime::second() const	16	static
+RTCLib.h:62:13:int32_t TimeSpan::totalseconds() const	16	static
+RTCLib.cpp:10:16:uint8_t read_i2c_register(uint8_t, uint8_t)	40	static
+RTCLib.cpp:16:13:void write_i2c_register(uint8_t, uint8_t, uint8_t)	40	static
+RTCLib.cpp:29:17:uint16_t date2days(uint16_t, uint8_t, uint8_t)	24	static
+RTCLib.cpp:40:13:long int time2long(uint16_t, uint8_t, uint8_t, uint8_t)	16	static
+RTCLib.cpp:48:1:DateTime::DateTime(uint32_t)	24	static
+RTCLib.cpp:75:1:DateTime::DateTime(uint16_t, uint8_t, uint8_t, uint8_t, uint8_t, uint8_t)	16	static
+RTCLib.cpp:86:1:DateTime::DateTime(const DateTime&)	16	static
+RTCLib.cpp:95:16:uint8_t conv2d(const char*)	24	static
+RTCLib.cpp:105:1:DateTime::DateTime(const char*, const char*)	24	static
+RTCLib.cpp:151:9:uint8_t DateTime::dayOfTheWeek() const	24	static
+RTCLib.cpp:156:10:uint32_t DateTime::unixtime() const	24	static
+RTCLib.cpp:165:6:long int DateTime::secondstime() const	24	static
+RTCLib.cpp:172:10:DateTime DateTime::operator+(const TimeSpan&)	32	static
+RTCLib.cpp:176:10:DateTime DateTime::operator-(const TimeSpan&)	32	static
+RTCLib.cpp:180:10:TimeSpan DateTime::operator-(const DateTime&)	32	static
+RTCLib.cpp:187:1:TimeSpan::TimeSpan(int32_t)	16	static
+RTCLib.cpp:191:1:TimeSpan::TimeSpan(int16_t, int8_t, int8_t, int8_t)	16	static
+RTCLib.cpp:195:1:TimeSpan::TimeSpan(const TimeSpan&)	16	static
+RTCLib.cpp:199:10:TimeSpan TimeSpan::operator+(const TimeSpan&)	24	static
+RTCLib.cpp:203:10:TimeSpan TimeSpan::operator-(const TimeSpan&)	24	static
+RTCLib.cpp:215:16:uint8_t bcd2bin(uint8_t)	16	static
+RTCLib.cpp:224:16:uint8_t bin2bcd(uint8_t)	16	static
+RTCLib.cpp:228:6:bool RTC_DS3231::begin()	16	static
+RTCLib.cpp:233:6:bool RTC_DS3231::lostPower()	16	static
+RTCLib.cpp:237:6:static void RTC_DS3231::adjust(const DateTime&)	40	static
+RTCLib.cpp:264:10:static DateTime RTC_DS3231::now()	64	static
+RTCLib.cpp:277:18:static Ds3231SqwPinMode RTC_DS3231::readSqwPinMode()	32	static
+RTCLib.cpp:291:6:static void RTC_DS3231::writeSqwPinMode(Ds3231SqwPinMode)	24	static
