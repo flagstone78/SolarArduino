@@ -1,6 +1,7 @@
-absEncoder.cpp:10:1:absEncoder::absEncoder(const GPIO_TypeDef* const*, const uint16_t*)	24	static
+absEncoder.cpp:10:1:absEncoder::absEncoder(const GPIO_TypeDef* const*, const uint16_t*, bool, float)	32	static
 absEncoder.cpp:14:1:absEncoder::~absEncoder()	16	static
 absEncoder.cpp:14:1:virtual absEncoder::~absEncoder()	16	static
 absEncoder.cpp:18:10:uint16_t absEncoder::positionRaw()	32	static
-absEncoder.cpp:43:7:float absEncoder::position()	24	static
-absEncoder.cpp:47:10:uint16_t grayToBinary(uint16_t)	24	static
+absEncoder.cpp:44:7:float absEncoder::position()	32	static
+absEncoder.cpp:54:10:uint16_t grayToBinary(uint16_t)	24	static
+cmath:290:5:constexpr typename __gnu_cxx::__promote_2<_Tp, _Up>::__type std::fmod(_Tp, _Up) [with _Tp = float; _Up = double]	32	static

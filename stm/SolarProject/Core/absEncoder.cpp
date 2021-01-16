@@ -7,7 +7,7 @@
 
 #include "absEncoder.h"
 
-absEncoder::absEncoder(const GPIO_TypeDef* const gpioPorts[10], const uint16_t gpioPins[10], float offset):ports(gpioPorts),pins(gpioPins),degreeOffset(offset) {
+absEncoder::absEncoder(const GPIO_TypeDef* const gpioPorts[10], const uint16_t gpioPins[10], bool reverseDirection, float offset):ports(gpioPorts),pins(gpioPins),reverse(reverseDirection),degreeOffset(offset) {
 
 }
 
@@ -40,11 +40,15 @@ uint16_t absEncoder::positionRaw(){
 	return grayToBinary(grey);
 }
 
+//return the position of the encoder in degrees -180.0 to 180.0 range
 float absEncoder::position(){
 	float deg = positionRaw()*360.0/1024.0;
+	if(reverse) deg = -deg;
 	deg += degreeOffset;
-	if(deg>360) deg-=360;
-	else if(deg<0)deg+=360;
+	if(deg != 0) deg = fmod(deg,360.0);
+	if(deg < -180.0)deg+=360;
+	else if(deg > 180.0)deg-=360;
+	return deg;
 }
 
 uint16_t grayToBinary(uint16_t num){

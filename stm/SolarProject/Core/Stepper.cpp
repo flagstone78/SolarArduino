@@ -7,39 +7,32 @@
 
 #include "Stepper.h"
 
-Stepper::Stepper(const GPIO_TypeDef* const gpioPorts[3], const uint16_t gpioPins[3]):ports(gpioPorts),pins(gpioPins) {
-	currentStep = 0;
-	targetStep = 0;
+Stepper::Stepper(const GPIO_TypeDef* const gpioPorts[3], const uint16_t gpioPins[3], const bool reverseDirection):ports(gpioPorts),pins(gpioPins), reverse(reverseDirection) {
+
 }
 
 Stepper::~Stepper() {
 	// TODO Auto-generated destructor stub
 }
 
-void Stepper::setDir(GPIO_PinState dir){
-	HAL_GPIO_WritePin((GPIO_TypeDef*)ports[1],pins[1],dir);
+void Stepper::setDir(bool dir){
+	if(reverse) dir = !dir;
+	HAL_GPIO_WritePin((GPIO_TypeDef*)ports[1],pins[1],(GPIO_PinState)dir);
 }
 
 void Stepper::step() {
-	bool dirState = ((ports[1]->ODR & pins[1]) == pins[1]);
-	if (dirState){
-		currentStep += 1;
-		HAL_GPIO_TogglePin((GPIO_TypeDef*) ports[0], pins[0]);
-	} else if(!dirState){
-		currentStep -= 1;
-		HAL_GPIO_TogglePin((GPIO_TypeDef*)ports[0], pins[0]);
-	}
+	//bool dirState = ((ports[1]->ODR & pins[1]) == pins[1]);
+	HAL_GPIO_TogglePin((GPIO_TypeDef*) ports[0], pins[0]);
 }
 
 void Stepper::update(){
-	setDir((GPIO_PinState)(currentStep < targetStep));
-	if(currentStep!=targetStep) step();
+	step();
 }
 
-void Stepper::setFreq(unsigned int Hz){
-	if(Hz < 5000){
-		TIM1->ARR = 65535/Hz;
-	}
+void Stepper::setFreq(float Hz){
+	if(Hz < 1) Hz = 1;
+	if(Hz > 2000) Hz = 2000;
+	TIM1->ARR = (uint16_t)(65535.0/Hz);
 }
 
 void Stepper::setTarget(int pos){

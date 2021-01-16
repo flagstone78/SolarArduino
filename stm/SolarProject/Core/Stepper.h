@@ -14,13 +14,14 @@ class Stepper {
 	const GPIO_TypeDef*const* ports;
 	const uint16_t* pins;
 	int currentStep, targetStep;
+	const bool reverse;
 public:
-	Stepper(const GPIO_TypeDef* const gpioPorts[3], const uint16_t gpioPins[3]);
+	Stepper(const GPIO_TypeDef* const gpioPorts[3], const uint16_t gpioPins[3], bool reverseDirection);
 	virtual ~Stepper();
 	void step();
 	void update();
-	void setDir(GPIO_PinState dir);
-	void setFreq(unsigned int Hz);
+	void setDir(bool dir);
+	void setFreq(float Hz);
 	void setTarget(int pos);
 	unsigned int getPosition();
 };

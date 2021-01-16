@@ -7325,3 +7325,444 @@ Finished building: SolarProject.bin
 Finished building: SolarProject.list
  
  
+09:19:44 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/Stepper.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/Stepper.d" -MT"Core/Stepper.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Stepper.o"
+arm-none-eabi-g++ "../Core/absEncoder.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/absEncoder.d" -MT"Core/absEncoder.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/absEncoder.o"
+arm-none-eabi-g++ "../Core/maincpp.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/maincpp.d" -MT"Core/maincpp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/maincpp.o"
+../Core/absEncoder.cpp: In member function 'float absEncoder::position()':
+../Core/absEncoder.cpp:48:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+arm-none-eabi-g++ -o "SolarProject.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Duane Mathias\Documents\GitHub\SolarProject\stm\SolarProject\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SolarProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: SolarProject.elf
+ 
+arm-none-eabi-objdump -h -S  SolarProject.elf  > "SolarProject.list"
+arm-none-eabi-objcopy  -O binary  SolarProject.elf  "SolarProject.bin"
+arm-none-eabi-size   SolarProject.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12884	    128	   1776	  14788	   39c4	SolarProject.elf
+Finished building: SolarProject.list
+Finished building: default.size.stdout
+ 
+ 
+Finished building: SolarProject.bin
+ 
+10:18:08 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/absEncoder.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/absEncoder.d" -MT"Core/absEncoder.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/absEncoder.o"
+arm-none-eabi-g++ "../Core/maincpp.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/maincpp.d" -MT"Core/maincpp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/maincpp.o"
+In file included from ../Core/absEncoder.cpp:8:0:
+../Core/absEncoder.h: In constructor 'absEncoder::absEncoder(const GPIO_TypeDef* const*, const uint16_t*, bool, float)':
+../Core/absEncoder.h:18:13: warning: 'absEncoder::reverse' will be initialized after [-Wreorder]
+  const bool reverse;
+             ^~~~~~~
+../Core/absEncoder.h:17:14: warning:   'const float absEncoder::degreeOffset' [-Wreorder]
+  const float degreeOffset;
+              ^~~~~~~~~~~~
+../Core/absEncoder.cpp:10:1: warning:   when initialized here [-Wreorder]
+ absEncoder::absEncoder(const GPIO_TypeDef* const gpioPorts[10], const uint16_t gpioPins[10], bool reverseDirection, float offset):ports(gpioPorts),pins(gpioPins),reverse(reverseDirection),degreeOffset(offset) {
+ ^~~~~~~~~~
+../Core/absEncoder.cpp: In member function 'float absEncoder::position()':
+../Core/absEncoder.cpp:48:21: error: 'fmod' was not declared in this scope
+  if(deg != 0) deg = fmod(deg,360.0);
+                     ^~~~
+../Core/maincpp.cpp:14:56: error: no matching function for call to 'absEncoder::absEncoder(GPIO_TypeDef* const [10], const uint16_t [10], double)'
+ absEncoder elEncoder(ElEncoderPorts,ElEncoderPins, -1.5);
+                                                        ^
+In file included from ../Core/maincpp.h:12:0,
+                 from ../Core/maincpp.cpp:9:
+../Core/Inc/../absEncoder.h:20:2: note: candidate: absEncoder::absEncoder(const GPIO_TypeDef* const*, const uint16_t*, bool, float)
+  absEncoder(const GPIO_TypeDef* const gpioPorts[10], const uint16_t gpioPins[10], bool reverseDirection, float offset);
+  ^~~~~~~~~~
+../Core/Inc/../absEncoder.h:20:2: note:   candidate expects 4 arguments, 3 provided
+../Core/Inc/../absEncoder.h:14:7: note: candidate: constexpr absEncoder::absEncoder(const absEncoder&)
+ class absEncoder {
+       ^~~~~~~~~~
+../Core/Inc/../absEncoder.h:14:7: note:   candidate expects 1 argument, 3 provided
+make: *** [Core/subdir.mk:33: Core/maincpp.o] Error 1
+make: *** Waiting for unfinished jobs....
+make: *** [Core/subdir.mk:31: Core/absEncoder.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+10:19:16 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/absEncoder.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/absEncoder.d" -MT"Core/absEncoder.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/absEncoder.o"
+arm-none-eabi-g++ "../Core/maincpp.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/maincpp.d" -MT"Core/maincpp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/maincpp.o"
+../Core/maincpp.cpp:14:56: error: no matching function for call to 'absEncoder::absEncoder(GPIO_TypeDef* const [10], const uint16_t [10], double)'
+ absEncoder elEncoder(ElEncoderPorts,ElEncoderPins, -1.5);
+                                                        ^
+In file included from ../Core/maincpp.h:12:0,
+                 from ../Core/maincpp.cpp:9:
+../Core/Inc/../absEncoder.h:20:2: note: candidate: absEncoder::absEncoder(const GPIO_TypeDef* const*, const uint16_t*, bool, float)
+  absEncoder(const GPIO_TypeDef* const gpioPorts[10], const uint16_t gpioPins[10], bool reverseDirection, float offset);
+  ^~~~~~~~~~
+../Core/Inc/../absEncoder.h:20:2: note:   candidate expects 4 arguments, 3 provided
+../Core/Inc/../absEncoder.h:14:7: note: candidate: constexpr absEncoder::absEncoder(const absEncoder&)
+ class absEncoder {
+       ^~~~~~~~~~
+../Core/Inc/../absEncoder.h:14:7: note:   candidate expects 1 argument, 3 provided
+make: *** [Core/subdir.mk:33: Core/maincpp.o] Error 1
+make: *** Waiting for unfinished jobs....
+In file included from ../Core/absEncoder.cpp:8:0:
+../Core/absEncoder.h: In constructor 'absEncoder::absEncoder(const GPIO_TypeDef* const*, const uint16_t*, bool, float)':
+../Core/absEncoder.h:18:13: warning: 'absEncoder::reverse' will be initialized after [-Wreorder]
+  const bool reverse;
+             ^~~~~~~
+../Core/absEncoder.h:17:14: warning:   'const float absEncoder::degreeOffset' [-Wreorder]
+  const float degreeOffset;
+              ^~~~~~~~~~~~
+../Core/absEncoder.cpp:11:1: warning:   when initialized here [-Wreorder]
+ absEncoder::absEncoder(const GPIO_TypeDef* const gpioPorts[10], const uint16_t gpioPins[10], bool reverseDirection, float offset):ports(gpioPorts),pins(gpioPins),reverse(reverseDirection),degreeOffset(offset) {
+ ^~~~~~~~~~
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+10:19:31 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/absEncoder.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/absEncoder.d" -MT"Core/absEncoder.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/absEncoder.o"
+arm-none-eabi-g++ "../Core/maincpp.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/maincpp.d" -MT"Core/maincpp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/maincpp.o"
+In file included from ../Core/absEncoder.cpp:8:0:
+../Core/absEncoder.h: In constructor 'absEncoder::absEncoder(const GPIO_TypeDef* const*, const uint16_t*, bool, float)':
+../Core/absEncoder.h:19:13: warning: 'absEncoder::reverse' will be initialized after [-Wreorder]
+  const bool reverse;
+             ^~~~~~~
+../Core/absEncoder.h:18:14: warning:   'const float absEncoder::degreeOffset' [-Wreorder]
+  const float degreeOffset;
+              ^~~~~~~~~~~~
+../Core/absEncoder.cpp:10:1: warning:   when initialized here [-Wreorder]
+ absEncoder::absEncoder(const GPIO_TypeDef* const gpioPorts[10], const uint16_t gpioPins[10], bool reverseDirection, float offset):ports(gpioPorts),pins(gpioPins),reverse(reverseDirection),degreeOffset(offset) {
+ ^~~~~~~~~~
+../Core/maincpp.cpp:14:56: error: no matching function for call to 'absEncoder::absEncoder(GPIO_TypeDef* const [10], const uint16_t [10], double)'
+ absEncoder elEncoder(ElEncoderPorts,ElEncoderPins, -1.5);
+                                                        ^
+In file included from ../Core/maincpp.h:12:0,
+                 from ../Core/maincpp.cpp:9:
+../Core/Inc/../absEncoder.h:21:2: note: candidate: absEncoder::absEncoder(const GPIO_TypeDef* const*, const uint16_t*, bool, float)
+  absEncoder(const GPIO_TypeDef* const gpioPorts[10], const uint16_t gpioPins[10], bool reverseDirection, float offset);
+  ^~~~~~~~~~
+../Core/Inc/../absEncoder.h:21:2: note:   candidate expects 4 arguments, 3 provided
+../Core/Inc/../absEncoder.h:15:7: note: candidate: constexpr absEncoder::absEncoder(const absEncoder&)
+ class absEncoder {
+       ^~~~~~~~~~
+../Core/Inc/../absEncoder.h:15:7: note:   candidate expects 1 argument, 3 provided
+make: *** [Core/subdir.mk:33: Core/maincpp.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+10:25:28 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/absEncoder.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/absEncoder.d" -MT"Core/absEncoder.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/absEncoder.o"
+arm-none-eabi-g++ "../Core/maincpp.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/maincpp.d" -MT"Core/maincpp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/maincpp.o"
+In file included from ../Core/absEncoder.cpp:8:0:
+../Core/absEncoder.h: In constructor 'absEncoder::absEncoder(const GPIO_TypeDef* const*, const uint16_t*, bool, float)':
+../Core/absEncoder.h:19:13: warning: 'absEncoder::reverse' will be initialized after [-Wreorder]
+  const bool reverse;
+             ^~~~~~~
+../Core/absEncoder.h:18:14: warning:   'const float absEncoder::degreeOffset' [-Wreorder]
+  const float degreeOffset;
+              ^~~~~~~~~~~~
+../Core/absEncoder.cpp:10:1: warning:   when initialized here [-Wreorder]
+ absEncoder::absEncoder(const GPIO_TypeDef* const gpioPorts[10], const uint16_t gpioPins[10], bool reverseDirection, float offset):ports(gpioPorts),pins(gpioPins),reverse(reverseDirection),degreeOffset(offset) {
+ ^~~~~~~~~~
+arm-none-eabi-g++ -o "SolarProject.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Duane Mathias\Documents\GitHub\SolarProject\stm\SolarProject\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SolarProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: SolarProject.elf
+ 
+arm-none-eabi-objdump -h -S  SolarProject.elf  > "SolarProject.list"
+arm-none-eabi-objcopy  -O binary  SolarProject.elf  "SolarProject.bin"
+arm-none-eabi-size   SolarProject.elf 
+   text	   data	    bss	    dec	    hex	filename
+  14140	    128	   1776	  16044	   3eac	SolarProject.elf
+Finished building: default.size.stdout
+ 
+Finished building: SolarProject.bin
+ 
+Finished building: SolarProject.list
+ 
+10:27:22 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/absEncoder.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/absEncoder.d" -MT"Core/absEncoder.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/absEncoder.o"
+arm-none-eabi-g++ "../Core/maincpp.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/maincpp.d" -MT"Core/maincpp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/maincpp.o"
+arm-none-eabi-g++ -o "SolarProject.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Duane Mathias\Documents\GitHub\SolarProject\stm\SolarProject\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SolarProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: SolarProject.elf
+ 
+arm-none-eabi-objdump -h -S  SolarProject.elf  > "SolarProject.list"
+arm-none-eabi-objcopy  -O binary  SolarProject.elf  "SolarProject.bin"
+arm-none-eabi-size   SolarProject.elf 
+   text	   data	    bss	    dec	    hex	filename
+  14140	    128	   1776	  16044	   3eac	SolarProject.elf
+Finished building: default.size.stdout
+ 
+Finished building: SolarProject.bin
+Finished building: SolarProject.list
+ 
+ 
+10:28:22 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-size   SolarProject.elf 
+   text	   data	    bss	    dec	    hex	filename
+  14140	    128	   1776	  16044	   3eac	SolarProject.elf
+Finished building: default.size.stdout
+ 
+10:29:34 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/maincpp.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/maincpp.d" -MT"Core/maincpp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/maincpp.o"
+arm-none-eabi-g++ -o "SolarProject.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Duane Mathias\Documents\GitHub\SolarProject\stm\SolarProject\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SolarProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: SolarProject.elf
+ 
+arm-none-eabi-objdump -h -S  SolarProject.elf  > "SolarProject.list"
+arm-none-eabi-objcopy  -O binary  SolarProject.elf  "SolarProject.bin"
+arm-none-eabi-size   SolarProject.elf 
+   text	   data	    bss	    dec	    hex	filename
+  14144	    128	   1776	  16048	   3eb0	SolarProject.elf
+Finished building: default.size.stdout
+ 
+Finished building: SolarProject.bin
+ 
+Finished building: SolarProject.list
+ 
+10:46:43 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/Stepper.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/Stepper.d" -MT"Core/Stepper.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Stepper.o"
+arm-none-eabi-g++ "../Core/maincpp.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/maincpp.d" -MT"Core/maincpp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/maincpp.o"
+../Core/Stepper.cpp: In member function 'void Stepper::setDir(GPIO_PinState)':
+../Core/Stepper.cpp:20:21: error: cannot convert 'bool' to 'GPIO_PinState' in assignment
+  if(reverse) dir = !dir;
+                     ^~~
+make: *** [Core/subdir.mk:29: Core/Stepper.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+10:47:45 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/Stepper.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/Stepper.d" -MT"Core/Stepper.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Stepper.o"
+arm-none-eabi-g++ "../Core/maincpp.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/maincpp.d" -MT"Core/maincpp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/maincpp.o"
+../Core/Stepper.cpp: In member function 'void Stepper::setDir(bool)':
+../Core/Stepper.cpp:21:55: error: cannot convert 'bool' to 'GPIO_PinState' for argument '3' to 'void HAL_GPIO_WritePin(GPIO_TypeDef*, uint16_t, GPIO_PinState)'
+  HAL_GPIO_WritePin((GPIO_TypeDef*)ports[1],pins[1],dir);
+                                                       ^
+make: *** [Core/subdir.mk:29: Core/Stepper.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+10:48:23 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/Stepper.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/Stepper.d" -MT"Core/Stepper.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Stepper.o"
+arm-none-eabi-g++ -o "SolarProject.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Duane Mathias\Documents\GitHub\SolarProject\stm\SolarProject\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SolarProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: SolarProject.elf
+ 
+arm-none-eabi-objdump -h -S  SolarProject.elf  > "SolarProject.list"
+arm-none-eabi-objcopy  -O binary  SolarProject.elf  "SolarProject.bin"
+arm-none-eabi-size   SolarProject.elf 
+   text	   data	    bss	    dec	    hex	filename
+  14300	    128	   1784	  16212	   3f54	SolarProject.elf
+Finished building: default.size.stdout
+ 
+Finished building: SolarProject.bin
+ 
+Finished building: SolarProject.list
+ 
+10:49:43 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-size   SolarProject.elf 
+   text	   data	    bss	    dec	    hex	filename
+  14300	    128	   1784	  16212	   3f54	SolarProject.elf
+Finished building: default.size.stdout
+ 
+11:02:39 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-size   SolarProject.elf 
+   text	   data	    bss	    dec	    hex	filename
+  14300	    128	   1784	  16212	   3f54	SolarProject.elf
+Finished building: default.size.stdout
+ 
+11:36:00 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/Stepper.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/Stepper.d" -MT"Core/Stepper.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Stepper.o"
+arm-none-eabi-g++ "../Core/maincpp.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/maincpp.d" -MT"Core/maincpp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/maincpp.o"
+../Core/maincpp.cpp: In function 'void mainloop()':
+../Core/maincpp.cpp:44:12: error: 'class Stepper' has no member named 'setDirection'; did you mean 'setDir'?
+  elStepper.setDirection(vel > 0);
+            ^~~~~~~~~~~~
+            setDir
+make: *** [Core/subdir.mk:33: Core/maincpp.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+11:36:10 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/maincpp.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/maincpp.d" -MT"Core/maincpp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/maincpp.o"
+arm-none-eabi-g++ -o "SolarProject.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Duane Mathias\Documents\GitHub\SolarProject\stm\SolarProject\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SolarProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: SolarProject.elf
+ 
+arm-none-eabi-objdump -h -S  SolarProject.elf  > "SolarProject.list"
+arm-none-eabi-objcopy  -O binary  SolarProject.elf  "SolarProject.bin"
+arm-none-eabi-size   SolarProject.elf 
+   text	   data	    bss	    dec	    hex	filename
+  14304	    128	   1784	  16216	   3f58	SolarProject.elf
+Finished building: default.size.stdout
+ 
+Finished building: SolarProject.bin
+ 
+Finished building: SolarProject.list
+ 
+11:37:07 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-size   SolarProject.elf 
+   text	   data	    bss	    dec	    hex	filename
+  14304	    128	   1784	  16216	   3f58	SolarProject.elf
+Finished building: default.size.stdout
+ 
+11:41:36 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/maincpp.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/maincpp.d" -MT"Core/maincpp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/maincpp.o"
+arm-none-eabi-g++ -o "SolarProject.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Duane Mathias\Documents\GitHub\SolarProject\stm\SolarProject\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SolarProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: SolarProject.elf
+ 
+arm-none-eabi-objdump -h -S  SolarProject.elf  > "SolarProject.list"
+arm-none-eabi-objcopy  -O binary  SolarProject.elf  "SolarProject.bin"
+arm-none-eabi-size   SolarProject.elf 
+   text	   data	    bss	    dec	    hex	filename
+  14176	    128	   1784	  16088	   3ed8	SolarProject.elf
+Finished building: default.size.stdout
+ 
+Finished building: SolarProject.bin
+Finished building: SolarProject.list
+ 
+ 
+11:42:18 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-size   SolarProject.elf 
+   text	   data	    bss	    dec	    hex	filename
+  14176	    128	   1784	  16088	   3ed8	SolarProject.elf
+Finished building: default.size.stdout
+ 
+11:43:52 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/maincpp.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/maincpp.d" -MT"Core/maincpp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/maincpp.o"
+arm-none-eabi-g++ -o "SolarProject.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Duane Mathias\Documents\GitHub\SolarProject\stm\SolarProject\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SolarProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: SolarProject.elf
+ 
+arm-none-eabi-objdump -h -S  SolarProject.elf  > "SolarProject.list"
+arm-none-eabi-objcopy  -O binary  SolarProject.elf  "SolarProject.bin"
+arm-none-eabi-size   SolarProject.elf 
+   text	   data	    bss	    dec	    hex	filename
+  14176	    128	   1784	  16088	   3ed8	SolarProject.elf
+Finished building: default.size.stdout
+ 
+Finished building: SolarProject.bin
+ 
+Finished building: SolarProject.list
+ 
+11:44:27 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/maincpp.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/maincpp.d" -MT"Core/maincpp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/maincpp.o"
+arm-none-eabi-g++ -o "SolarProject.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Duane Mathias\Documents\GitHub\SolarProject\stm\SolarProject\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SolarProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: SolarProject.elf
+ 
+arm-none-eabi-objdump -h -S  SolarProject.elf  > "SolarProject.list"
+arm-none-eabi-objcopy  -O binary  SolarProject.elf  "SolarProject.bin"
+arm-none-eabi-size   SolarProject.elf 
+   text	   data	    bss	    dec	    hex	filename
+  14176	    128	   1784	  16088	   3ed8	SolarProject.elf
+Finished building: default.size.stdout
+ 
+Finished building: SolarProject.bin
+ 
+Finished building: SolarProject.list
+ 
+11:45:16 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/maincpp.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/maincpp.d" -MT"Core/maincpp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/maincpp.o"
+arm-none-eabi-g++ -o "SolarProject.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Duane Mathias\Documents\GitHub\SolarProject\stm\SolarProject\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SolarProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: SolarProject.elf
+ 
+arm-none-eabi-objdump -h -S  SolarProject.elf  > "SolarProject.list"
+arm-none-eabi-objcopy  -O binary  SolarProject.elf  "SolarProject.bin"
+arm-none-eabi-size   SolarProject.elf 
+   text	   data	    bss	    dec	    hex	filename
+  14304	    128	   1784	  16216	   3f58	SolarProject.elf
+Finished building: default.size.stdout
+ 
+Finished building: SolarProject.bin
+ 
+Finished building: SolarProject.list
+ 
+12:04:46 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/maincpp.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/maincpp.d" -MT"Core/maincpp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/maincpp.o"
+arm-none-eabi-g++ -o "SolarProject.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Duane Mathias\Documents\GitHub\SolarProject\stm\SolarProject\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SolarProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: SolarProject.elf
+ 
+arm-none-eabi-objdump -h -S  SolarProject.elf  > "SolarProject.list"
+arm-none-eabi-objcopy  -O binary  SolarProject.elf  "SolarProject.bin"
+arm-none-eabi-size   SolarProject.elf 
+   text	   data	    bss	    dec	    hex	filename
+  14308	    128	   1784	  16220	   3f5c	SolarProject.elf
+Finished building: default.size.stdout
+ 
+Finished building: SolarProject.bin
+ 
+Finished building: SolarProject.list
+ 
+12:07:57 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/maincpp.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/maincpp.d" -MT"Core/maincpp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/maincpp.o"
+arm-none-eabi-g++ -o "SolarProject.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Duane Mathias\Documents\GitHub\SolarProject\stm\SolarProject\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SolarProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: SolarProject.elf
+ 
+arm-none-eabi-objdump -h -S  SolarProject.elf  > "SolarProject.list"
+arm-none-eabi-objcopy  -O binary  SolarProject.elf  "SolarProject.bin"
+arm-none-eabi-size   SolarProject.elf 
+   text	   data	    bss	    dec	    hex	filename
+  14308	    128	   1784	  16220	   3f5c	SolarProject.elf
+Finished building: default.size.stdout
+ 
+Finished building: SolarProject.bin
+ 
+Finished building: SolarProject.list
+ 
+12:10:30 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/Stepper.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/Stepper.d" -MT"Core/Stepper.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Stepper.o"
+arm-none-eabi-g++ -o "SolarProject.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Duane Mathias\Documents\GitHub\SolarProject\stm\SolarProject\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SolarProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: SolarProject.elf
+ 
+arm-none-eabi-objdump -h -S  SolarProject.elf  > "SolarProject.list"
+arm-none-eabi-objcopy  -O binary  SolarProject.elf  "SolarProject.bin"
+arm-none-eabi-size   SolarProject.elf 
+   text	   data	    bss	    dec	    hex	filename
+  14308	    128	   1784	  16220	   3f5c	SolarProject.elf
+Finished building: default.size.stdout
+ 
+Finished building: SolarProject.bin
+ 
+Finished building: SolarProject.list
+ 
+12:11:36 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/maincpp.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/maincpp.d" -MT"Core/maincpp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/maincpp.o"
+arm-none-eabi-g++ -o "SolarProject.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Duane Mathias\Documents\GitHub\SolarProject\stm\SolarProject\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SolarProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: SolarProject.elf
+ 
+arm-none-eabi-objdump -h -S  SolarProject.elf  > "SolarProject.list"
+arm-none-eabi-objcopy  -O binary  SolarProject.elf  "SolarProject.bin"
+arm-none-eabi-size   SolarProject.elf 
+   text	   data	    bss	    dec	    hex	filename
+  14308	    128	   1784	  16220	   3f5c	SolarProject.elf
+Finished building: default.size.stdout
+ 
+Finished building: SolarProject.bin
+ 
+Finished building: SolarProject.list
+ 
+12:15:45 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/maincpp.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/maincpp.d" -MT"Core/maincpp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/maincpp.o"
+arm-none-eabi-g++ -o "SolarProject.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Duane Mathias\Documents\GitHub\SolarProject\stm\SolarProject\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SolarProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: SolarProject.elf
+ 
+arm-none-eabi-objdump -h -S  SolarProject.elf  > "SolarProject.list"
+arm-none-eabi-objcopy  -O binary  SolarProject.elf  "SolarProject.bin"
+arm-none-eabi-size   SolarProject.elf 
+   text	   data	    bss	    dec	    hex	filename
+  14316	    128	   1784	  16228	   3f64	SolarProject.elf
+Finished building: default.size.stdout
+ 
+Finished building: SolarProject.bin
+ 
+Finished building: SolarProject.list
+ 

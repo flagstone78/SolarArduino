@@ -1,6 +1,6 @@
-13:47:25 **** Incremental Build of configuration Debug for project SolarProject ****
+12:15:45 **** Incremental Build of configuration Debug for project SolarProject ****
 make -j8 all 
-arm-none-eabi-g++ "../Core/absEncoder.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/absEncoder.d" -MT"Core/absEncoder.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/absEncoder.o"
+arm-none-eabi-g++ "../Core/maincpp.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/maincpp.d" -MT"Core/maincpp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/maincpp.o"
 arm-none-eabi-g++ -o "SolarProject.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Duane Mathias\Documents\GitHub\SolarProject\stm\SolarProject\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SolarProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
 Finished building target: SolarProject.elf
  
@@ -8,13 +8,13 @@ arm-none-eabi-objdump -h -S  SolarProject.elf  > "SolarProject.list"
 arm-none-eabi-objcopy  -O binary  SolarProject.elf  "SolarProject.bin"
 arm-none-eabi-size   SolarProject.elf 
    text	   data	    bss	    dec	    hex	filename
-  12880	    128	   1768	  14776	   39b8	SolarProject.elf
+  14316	    128	   1784	  16228	   3f64	SolarProject.elf
 Finished building: default.size.stdout
  
 Finished building: SolarProject.bin
+ 
 Finished building: SolarProject.list
  
- 
 
-13:47:26 Build Finished. 0 errors, 0 warnings. (took 1s.513ms)
+12:15:46 Build Finished. 0 errors, 0 warnings. (took 1s.537ms)
 
