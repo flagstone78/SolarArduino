@@ -3475,3 +3475,7 @@
 2021-01-16 14:42:04,692 [WARN] IP:2091 - Analog_Filter not found: check if there is a RefParameter without a condition.
 2021-01-16 14:42:04,696 [WARN] IP:2091 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
 2021-01-16 14:42:04,696 [WARN] IP:2091 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2021-01-23 10:12:36,176 [INFO] Activator:170 - 
+
+
+2021-01-23 10:12:36,180 [INFO] Activator:171 - !SESSION log4j initialized

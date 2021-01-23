@@ -11,10 +11,10 @@
 TIM_HandleTypeDef htim1;
 
 //encoders
-absEncoder elEncoder(ElEncoderPorts,ElEncoderPins, false, 88.6875);
+absEncoder elEncoder(ElEncoderPorts,ElEncoderPins, true, -5);
 
 //motors
-Stepper elStepper(ElStepperPorts,ElStepperPins, false);
+Stepper elStepper(ElStepperPorts,ElStepperPins, true);
 
 //clock
 RTC_DS3231 rtc;
@@ -30,7 +30,9 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 
 int currentpos;
 float pos, oldpos, targetAngle;
-DateTime timeSeconds;
+DateTime date;
+long timeSeconds;
+target Target;
 
 void mainsetup(){
 	elStepper.setFreq(100);
@@ -43,6 +45,7 @@ void mainsetup(){
 void mainloop(){
 	pos = elEncoder.position(); //get encoder angle position
 	float err = targetAngle-pos; //feedback
+
 	float p = 200;
 	if (abs(err) < 1.0) p = 20;
 	float vel = p*err; //proportional term
@@ -50,5 +53,12 @@ void mainloop(){
 	//set velocity
 	elStepper.setDir(vel > 0);
 	elStepper.setFreq(abs(vel));
-	timeSeconds = rtc.now();
+
+	date = rtc.now();
+	timeSeconds = date.secondstime();
+	Target = getTargetAzimuth(timeSeconds);
+
+	targetAngle = DEGREES(Target.elevation);
+	if(targetAngle < 5) targetAngle = 5;
+	if(targetAngle > 90) targetAngle = 90;
 }

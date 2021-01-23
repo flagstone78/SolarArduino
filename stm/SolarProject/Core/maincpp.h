@@ -12,6 +12,7 @@
 #include "../absEncoder.h"
 #include "../Stepper.h"
 #include "../RTCLib.h"
+#include "../SolarCalculations.h"
 extern "C" {
 	void mainsetup();
 	void mainloop();

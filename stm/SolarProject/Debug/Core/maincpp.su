@@ -1,7 +1,26 @@
 std_abs.h:74:3:constexpr float std::abs(float)	16	static
+cmath:87:3:constexpr float std::acos(float)	16	static
+cmath:106:3:constexpr float std::asin(float)	16	static
+cmath:144:3:constexpr float std::atan2(float, float)	16	static
+cmath:184:3:constexpr float std::cos(float)	16	static
+cmath:425:3:constexpr float std::sin(float)	16	static
+cmath:482:3:constexpr float std::tan(float)	16	static
+SolarCalculations.h:24:7:float RADIANS(float)	24	static
+SolarCalculations.h:28:7:float DEGREES(float)	24	static
+SolarCalculations.h:32:7:float COS(float)	16	static
+SolarCalculations.h:36:7:float ACOS(float)	16	static
+SolarCalculations.h:40:7:float SIN(float)	16	static
+SolarCalculations.h:44:7:float ASIN(float)	16	static
+SolarCalculations.h:48:7:float TAN(float)	16	static
+SolarCalculations.h:52:7:float ATAN2(float, float)	16	static
+cmath:290:5:constexpr typename __gnu_cxx::__promote_2<_Tp, _Up>::__type std::fmod(_Tp, _Up) [with _Tp = float; _Up = int]	24	static
+SolarCalculations.h:56:7:float MOD(float, int)	24	static
+cmath:415:5:constexpr typename __gnu_cxx::__promote_2<_Tp, _Up>::__type std::pow(_Tp, _Up) [with _Tp = float; _Up = int]	24	static
+SolarCalculations.h:60:7:float POWER(float, int)	24	static
+SolarCalculations.h:68:8:target getTargetAzimuth(uint32_t)	184	static
 maincpp.cpp:23:6:void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef*)	16	static
-maincpp.cpp:35:6:void mainsetup()	8	static
-maincpp.cpp:43:6:void mainloop()	32	static
-maincpp.cpp:54:1:void __static_initialization_and_destruction_0(int, int)	16	static
-maincpp.cpp:54:1:cpp)	8	static
-maincpp.cpp:54:1:cpp)	8	static
+maincpp.cpp:37:6:void mainsetup()	8	static
+maincpp.cpp:45:6:void mainloop()	32	static
+maincpp.cpp:64:1:void __static_initialization_and_destruction_0(int, int)	16	static
+maincpp.cpp:64:1:cpp)	8	static
+maincpp.cpp:64:1:cpp)	8	static

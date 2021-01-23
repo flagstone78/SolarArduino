@@ -1,10 +1,43 @@
-15:06:11 **** Incremental Build of configuration Debug for project SolarProject ****
+12:50:39 **** Incremental Build of configuration Debug for project SolarProject ****
 make -j8 all 
+arm-none-eabi-g++ "../Core/maincpp.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/maincpp.d" -MT"Core/maincpp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/maincpp.o"
+In file included from ../Core/maincpp.h:15:0,
+                 from ../Core/maincpp.cpp:9:
+../Core/Inc/../SolarCalculations.h: In function 'target getTargetAzimuth(uint32_t)':
+../Core/Inc/../SolarCalculations.h:80:9: warning: unused variable 'JulianDay' [-Wunused-variable]
+   float JulianDay = (float)JulianDateNoonJan_1_2000 - 0.5 + ((float)seconds/86400);
+         ^~~~~~~~~
+In file included from ../Core/maincpp.h:15:0,
+                 from ../Core/maincpp.cpp:9:
+../Core/Inc/../SolarCalculations.h:105:9: warning: unused variable 'SunRadVector' [-Wunused-variable]
+   float SunRadVector = (1.000001018 * (1 - EccentEarthOrbit * EccentEarthOrbit)) / (1 + EccentEarthOrbit * COS(RADIANS(SunTrueAnom)));
+         ^~~~~~~~~~~~
+../Core/Inc/../SolarCalculations.h:117:9: warning: unused variable 'SunRtAscen' [-Wunused-variable]
+   float SunRtAscen = DEGREES(ATAN2(COS(RADIANS(SunAppLong)), COS(RADIANS(ObliqCorr)) * SIN(RADIANS(SunAppLong))));
+         ^~~~~~~~~~
+../Core/Inc/../SolarCalculations.h:137:9: warning: unused variable 'SunriseTime' [-Wunused-variable]
+   float SunriseTime = SolarNoon - HASunrise * 4 / 1440;
+         ^~~~~~~~~~~
+../Core/Inc/../SolarCalculations.h:140:9: warning: unused variable 'SunsetTime' [-Wunused-variable]
+   float SunsetTime = SolarNoon + HASunrise * 4 / 1440;
+         ^~~~~~~~~~
+../Core/Inc/../SolarCalculations.h:143:9: warning: unused variable 'SunlightDuration' [-Wunused-variable]
+   float SunlightDuration = 8 * HASunrise;
+         ^~~~~~~~~~~~~~~~
+arm-none-eabi-g++ -o "SolarProject.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Duane Mathias\Documents\GitHub\SolarProject\stm\SolarProject\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SolarProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: SolarProject.elf
+ 
+arm-none-eabi-objdump -h -S  SolarProject.elf  > "SolarProject.list"
+arm-none-eabi-objcopy  -O binary  SolarProject.elf  "SolarProject.bin"
 arm-none-eabi-size   SolarProject.elf 
    text	   data	    bss	    dec	    hex	filename
-  17424	    128	   1792	  19344	   4b90	SolarProject.elf
+  33680	    128	   1800	  35608	   8b18	SolarProject.elf
 Finished building: default.size.stdout
  
+Finished building: SolarProject.bin
+ 
+Finished building: SolarProject.list
+ 
 
-15:06:11 Build Finished. 0 errors, 0 warnings. (took 471ms)
+12:50:41 Build Finished. 0 errors, 6 warnings. (took 1s.690ms)
 

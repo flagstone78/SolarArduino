@@ -29,7 +29,8 @@ Core/maincpp.o: ../Core/maincpp.cpp ../Core/maincpp.h ../Core/Inc/main.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h \
  ../Core/Inc/../absEncoder.h ../Core/Inc/../GLOBALS.h \
- ../Core/Inc/../Stepper.h ../Core/Inc/../RTCLib.h
+ ../Core/Inc/../Stepper.h ../Core/Inc/../RTCLib.h \
+ ../Core/Inc/../SolarCalculations.h
 
 ../Core/maincpp.h:
 
@@ -100,3 +101,5 @@ Core/maincpp.o: ../Core/maincpp.cpp ../Core/maincpp.h ../Core/Inc/main.h \
 ../Core/Inc/../Stepper.h:
 
 ../Core/Inc/../RTCLib.h:
+
+../Core/Inc/../SolarCalculations.h:
