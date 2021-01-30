@@ -1,0 +1,31 @@
+std_abs.h:70:3:constexpr double std::abs(double)	16	static
+solarCalc2.cpp:7:8:double calcTimeJulianCent(double)	32	static
+solarCalc2.cpp:12:8:double calcJDFromJulianCent(double)	32	static
+solarCalc2.cpp:17:6:bool isLeapYear(int)	16	static
+solarCalc2.cpp:21:5:ymd calcDateFromJD(double)	96	static
+solarCalc2.cpp:42:8:double calcDoyFromJD(double)	64	static
+solarCalc2.cpp:52:8:double radToDeg(double)	24	static
+solarCalc2.cpp:56:8:double degToRad(double)	24	static
+solarCalc2.cpp:60:8:double calcGeomMeanLongSun(double)	32	static
+solarCalc2.cpp:71:8:double calcGeomMeanAnomalySun(double)	32	static
+solarCalc2.cpp:76:8:double calcEccentricityEarthOrbit(double)	32	static
+solarCalc2.cpp:81:8:double calcSunEqOfCenter(double)	72	static
+solarCalc2.cpp:91:8:double calcSunTrueLong(double)	48	static
+solarCalc2.cpp:98:8:double calcSunTrueAnomaly(double)	48	static
+solarCalc2.cpp:105:8:double calcSunRadVector(double)	48	static
+solarCalc2.cpp:112:8:double calcSunApparentLong(double)	48	static
+solarCalc2.cpp:119:8:double calcMeanObliquityOfEcliptic(double)	40	static
+solarCalc2.cpp:125:8:double calcObliquityCorrection(double)	48	static
+solarCalc2.cpp:132:8:double calcSunRtAscension(double)	64	static
+solarCalc2.cpp:141:8:double calcSunDeclination(double)	56	static
+solarCalc2.cpp:149:8:double calcEquationOfTime(double)	112	static
+solarCalc2.cpp:168:8:double calcHourAngleSunrise(double, double)	72	static
+cmath:272:5:constexpr typename __gnu_cxx::__enable_if<std::__is_integer<_Tp>::__value, double>::__type std::floor(_Tp) [with _Tp = int]	24	static
+solarCalc2.cpp:176:8:double getJD(int, int, double)	56	static
+solarCalc2.cpp:187:8:double calcRefraction(double)	40	static
+solarCalc2.cpp:206:6:AzEl calcAzEl(double, double, double, double, double)	216	static
+solarCalc2.cpp:265:8:double calcSolNoon(double, double, double)	80	static
+solarCalc2.cpp:283:8:double calcSunriseSetUTC(bool, double, double, double)	96	static
+solarCalc2.cpp:297:8:double calcJDofNextPrevRiseSet(bool, bool, double, double, double, double)	96	static
+solarCalc2.cpp:318:12:SunRiseSet calcSunriseSet(bool, double, double, double, double)	192	static
+solarCalc2.cpp:363:6:AzEl calculateSolar(tm, Geo)	104	static

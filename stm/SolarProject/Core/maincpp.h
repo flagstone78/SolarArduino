@@ -11,8 +11,20 @@
 #include "main.h"
 #include "../absEncoder.h"
 #include "../Stepper.h"
-#include "../RTCLib.h"
-#include "../SolarCalculations.h"
+//#include "../RTCLib.h"
+//#include "../SolarCalculations.h"
+#include "../solarCalc2.h"
+#include <time.h>
+
+const Geo geo = {
+		  0, //time zone of the clock (preferred gmt)
+	44.0121, //Latitude of the solar collector, needs to be changed for current location, rochester Mn
+	-92.4802 //Longitude of the solar collector, needs to be changed for current location, current Rochester Mn
+};
+const float timeZone = 0;
+
+//#define JulianDateNoonJan_1_2000 2451545; //https://en.wikipedia.org/wiki/Julian_day
+
 extern "C" {
 	void mainsetup();
 	void mainloop();

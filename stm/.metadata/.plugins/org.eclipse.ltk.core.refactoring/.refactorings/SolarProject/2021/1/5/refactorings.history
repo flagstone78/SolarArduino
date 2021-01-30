@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;SolarProject/Core/solar2Calc2.h&apos; to &apos;solarCalc2.h&apos;" description="Rename resource &apos;solar2Calc2.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Core/solar2Calc2.h" name="solarCalc2.h" stamp="1612039934456" updateReferences="true"/>
+</session>

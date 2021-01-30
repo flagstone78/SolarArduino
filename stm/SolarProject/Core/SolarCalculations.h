@@ -10,7 +10,7 @@
 
 const float longitude = -92.4802; //Longitude of the solar collector, needs to be changed for current location, current Rochester Mn
 const float latitude = 44.0121; //Latitude of the solar collector, needs to be changed for current location, rochester Mn
-const float timeZone = -5;
+const float timeZone = 0;
 
 #include <math.h>
 
