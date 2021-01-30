@@ -300,21 +300,6 @@ Discarded input sections
  .comment       0x0000000000000000       0x7c Core/GLOBALS.o
  .ARM.attributes
                 0x0000000000000000       0x39 Core/GLOBALS.o
- .group         0x0000000000000000        0xc Core/RTCLib.o
- .text          0x0000000000000000        0x0 Core/RTCLib.o
- .data          0x0000000000000000        0x0 Core/RTCLib.o
- .bss           0x0000000000000000        0x0 Core/RTCLib.o
- .debug_info    0x0000000000000000       0x21 Core/RTCLib.o
- .debug_abbrev  0x0000000000000000       0x13 Core/RTCLib.o
- .debug_aranges
-                0x0000000000000000       0x18 Core/RTCLib.o
- .debug_macro   0x0000000000000000       0x11 Core/RTCLib.o
- .debug_macro   0x0000000000000000      0xb32 Core/RTCLib.o
- .debug_line    0x0000000000000000       0x33 Core/RTCLib.o
- .debug_str     0x0000000000000000     0x3103 Core/RTCLib.o
- .comment       0x0000000000000000       0x7c Core/RTCLib.o
- .ARM.attributes
-                0x0000000000000000       0x39 Core/RTCLib.o
  .group         0x0000000000000000        0xc Core/Stepper.o
  .group         0x0000000000000000        0xc Core/Stepper.o
  .group         0x0000000000000000        0xc Core/Stepper.o
@@ -3984,7 +3969,6 @@ LOAD c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.exte
 LOAD c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
 LOAD c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/crt0.o
 LOAD Core/GLOBALS.o
-LOAD Core/RTCLib.o
 LOAD Core/Stepper.o
 LOAD Core/absEncoder.o
 LOAD Core/maincpp.o

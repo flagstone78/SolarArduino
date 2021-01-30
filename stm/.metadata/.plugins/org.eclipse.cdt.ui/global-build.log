@@ -16509,3 +16509,13 @@ Finished building: SolarProject.bin
  
 Finished building: SolarProject.list
  
+16:12:39 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-g++ -o "SolarProject.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Duane Mathias\Documents\GitHub\SolarProject\stm\SolarProject\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SolarProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: SolarProject.elf
+ 
+arm-none-eabi-size   SolarProject.elf 
+   text	   data	    bss	    dec	    hex	filename
+  36188	    596	   1872	  38656	   9700	SolarProject.elf
+Finished building: default.size.stdout
+ 
