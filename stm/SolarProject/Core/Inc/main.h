@@ -54,7 +54,7 @@ extern "C" {
 void Error_Handler(void);
 
 /* USER CODE BEGIN EFP */
-extern void mainLoop();
+extern void mainloop();
 extern void mainsetup();
 /* USER CODE END EFP */
 

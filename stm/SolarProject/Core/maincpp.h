@@ -21,9 +21,6 @@ const Geo geo = {
 	44.0121, //Latitude of the solar collector, needs to be changed for current location, rochester Mn
 	-92.4802 //Longitude of the solar collector, needs to be changed for current location, current Rochester Mn
 };
-const float timeZone = 0;
-
-//#define JulianDateNoonJan_1_2000 2451545; //https://en.wikipedia.org/wiki/Julian_day
 
 extern "C" {
 	void mainsetup();
