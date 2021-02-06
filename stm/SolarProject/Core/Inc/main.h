@@ -61,14 +61,14 @@ extern void mainsetup();
 /* Private defines -----------------------------------------------------------*/
 #define B1_Pin GPIO_PIN_13
 #define B1_GPIO_Port GPIOC
+#define AzEna_Pin GPIO_PIN_0
+#define AzEna_GPIO_Port GPIOC
+#define AzDir_Pin GPIO_PIN_1
+#define AzDir_GPIO_Port GPIOC
 #define ElPul_Pin GPIO_PIN_0
 #define ElPul_GPIO_Port GPIOA
 #define ElDir_Pin GPIO_PIN_1
 #define ElDir_GPIO_Port GPIOA
-#define AzDir_Pin GPIO_PIN_2
-#define AzDir_GPIO_Port GPIOA
-#define AzPul_Pin GPIO_PIN_3
-#define AzPul_GPIO_Port GPIOA
 #define ElEna_Pin GPIO_PIN_4
 #define ElEna_GPIO_Port GPIOA
 #define ElYellow_Pin GPIO_PIN_5
@@ -79,6 +79,8 @@ extern void mainsetup();
 #define ElPurple_GPIO_Port GPIOA
 #define AzOrange_Pin GPIO_PIN_5
 #define AzOrange_GPIO_Port GPIOC
+#define AzPul_Pin GPIO_PIN_0
+#define AzPul_GPIO_Port GPIOB
 #define AzWhite_Pin GPIO_PIN_1
 #define AzWhite_GPIO_Port GPIOB
 #define AzGrey_Pin GPIO_PIN_2
@@ -101,8 +103,6 @@ extern void mainsetup();
 #define ElWhite_GPIO_Port GPIOA
 #define ElGrey_Pin GPIO_PIN_9
 #define ElGrey_GPIO_Port GPIOA
-#define AzEna_Pin GPIO_PIN_10
-#define AzEna_GPIO_Port GPIOA
 #define AzGreen_Pin GPIO_PIN_11
 #define AzGreen_GPIO_Port GPIOA
 #define AzYellow_Pin GPIO_PIN_12
