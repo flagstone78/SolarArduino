@@ -1,13 +1,49 @@
-16:12:39 **** Incremental Build of configuration Debug for project SolarProject ****
+13:28:58 **** Incremental Build of configuration Debug for project SolarProject ****
 make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32f4xx_hal_msp.d" -MT"Core/Src/stm32f4xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32f4xx_it.d" -MT"Core/Src/stm32f4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_it.o"
+arm-none-eabi-g++ "../Core/GLOBALS.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/GLOBALS.d" -MT"Core/GLOBALS.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/GLOBALS.o"
+arm-none-eabi-g++ "../Core/Stepper.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/Stepper.d" -MT"Core/Stepper.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Stepper.o"
+arm-none-eabi-g++ "../Core/absEncoder.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/absEncoder.d" -MT"Core/absEncoder.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/absEncoder.o"
+arm-none-eabi-g++ "../Core/maincpp.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/maincpp.d" -MT"Core/maincpp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/maincpp.o"
+arm-none-eabi-g++ "../Core/solarCalc2.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/solarCalc2.d" -MT"Core/solarCalc2.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/solarCalc2.o"
+../Core/Src/main.c: In function 'MX_RTC_Init':
+../Core/Src/main.c:182:19: warning: variable 'sDate' set but not used [-Wunused-but-set-variable]
+   RTC_DateTypeDef sDate = {0};
+                   ^~~~~
+../Core/Src/main.c:181:19: warning: variable 'sTime' set but not used [-Wunused-but-set-variable]
+   RTC_TimeTypeDef sTime = {0};
+                   ^~~~~
+../Core/Stepper.cpp: In member function 'void Stepper::setFreq(float)':
+../Core/Stepper.cpp:36:26: warning: left operand of comma operator has no effect [-Wunused-value]
+  timer->Instance->ARR = (timer,(uint16_t)(65535.0/Hz));
+                          ^~~~~
+In file included from ../Core/absEncoder.cpp:8:0:
+../Core/absEncoder.h: In constructor 'absEncoder::absEncoder(const GPIO_TypeDef* const*, const uint16_t*, float, bool, float)':
+../Core/absEncoder.h:20:14: warning: 'absEncoder::opPoint' will be initialized after [-Wreorder]
+  const float opPoint;  // return angle in range of opPoint-180 to opPoint+180; opPoint must be between -180 to 180
+              ^~~~~~~
+../Core/absEncoder.h:18:13: warning:   'const bool absEncoder::reverse' [-Wreorder]
+  const bool reverse; // count + as clockwise or counter clock wise
+             ^~~~~~~
+../Core/absEncoder.cpp:10:1: warning:   when initialized here [-Wreorder]
+ absEncoder::absEncoder(const GPIO_TypeDef* const gpioPorts[10], const uint16_t gpioPins[10], float operatingPoint, bool reverseDirection, float offset)
+ ^~~~~~~~~~
 arm-none-eabi-g++ -o "SolarProject.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Duane Mathias\Documents\GitHub\SolarProject\stm\SolarProject\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SolarProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
 Finished building target: SolarProject.elf
  
+arm-none-eabi-objdump -h -S  SolarProject.elf  > "SolarProject.list"
+arm-none-eabi-objcopy  -O binary  SolarProject.elf  "SolarProject.bin"
 arm-none-eabi-size   SolarProject.elf 
    text	   data	    bss	    dec	    hex	filename
-  36188	    596	   1872	  38656	   9700	SolarProject.elf
+  36820	    596	   1984	  39400	   99e8	SolarProject.elf
 Finished building: default.size.stdout
  
+Finished building: SolarProject.bin
+ 
+Finished building: SolarProject.list
+ 
 
-16:12:40 Build Finished. 0 errors, 0 warnings. (took 1s.63ms)
+13:29:01 Build Finished. 0 errors, 6 warnings. (took 2s.818ms)
 

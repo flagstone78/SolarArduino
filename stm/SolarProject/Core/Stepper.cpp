@@ -7,7 +7,8 @@
 
 #include "Stepper.h"
 
-Stepper::Stepper(const GPIO_TypeDef* const gpioPorts[3], const uint16_t gpioPins[3], const bool reverseDirection):ports(gpioPorts),pins(gpioPins), reverse(reverseDirection) {
+Stepper::Stepper(TIM_HandleTypeDef* timer, const GPIO_TypeDef* const gpioPorts[3], const uint16_t gpioPins[3], const bool reverseDirection)
+:ports(gpioPorts),pins(gpioPins), reverse(reverseDirection),timer(timer) {
 
 }
 
@@ -32,7 +33,7 @@ void Stepper::update(){
 void Stepper::setFreq(float Hz){
 	if(Hz < 1) Hz = 1;
 	if(Hz > 2000) Hz = 2000;
-	TIM1->ARR = (uint16_t)(65535.0/Hz);
+	timer->Instance->ARR = (timer,(uint16_t)(65535.0/Hz));
 }
 
 void Stepper::setTarget(int pos){

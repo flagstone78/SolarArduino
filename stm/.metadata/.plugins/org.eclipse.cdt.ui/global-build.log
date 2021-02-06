@@ -16519,3 +16519,1773 @@ arm-none-eabi-size   SolarProject.elf
   36188	    596	   1872	  38656	   9700	SolarProject.elf
 Finished building: default.size.stdout
  
+09:23:29 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32f4xx_hal_msp.d" -MT"Core/Src/stm32f4xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32f4xx_it.d" -MT"Core/Src/stm32f4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_it.o"
+arm-none-eabi-gcc "../Core/Src/system_stm32f4xx.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/system_stm32f4xx.d" -MT"Core/Src/system_stm32f4xx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/system_stm32f4xx.o"
+arm-none-eabi-g++ "../Core/GLOBALS.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/GLOBALS.d" -MT"Core/GLOBALS.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/GLOBALS.o"
+arm-none-eabi-g++ "../Core/Stepper.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/Stepper.d" -MT"Core/Stepper.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Stepper.o"
+arm-none-eabi-g++ "../Core/absEncoder.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/absEncoder.d" -MT"Core/absEncoder.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/absEncoder.o"
+arm-none-eabi-g++ "../Core/maincpp.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/maincpp.d" -MT"Core/maincpp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/maincpp.o"
+arm-none-eabi-g++ "../Core/solarCalc2.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/solarCalc2.d" -MT"Core/solarCalc2.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/solarCalc2.o"
+arm-none-eabi-g++ -o "SolarProject.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Duane Mathias\Documents\GitHub\SolarProject\stm\SolarProject\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SolarProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: SolarProject.elf
+ 
+arm-none-eabi-objdump -h -S  SolarProject.elf  > "SolarProject.list"
+arm-none-eabi-objcopy  -O binary  SolarProject.elf  "SolarProject.bin"
+arm-none-eabi-size   SolarProject.elf 
+   text	   data	    bss	    dec	    hex	filename
+  37236	    596	   1936	  39768	   9b58	SolarProject.elf
+Finished building: SolarProject.list
+Finished building: SolarProject.bin
+Finished building: default.size.stdout
+ 
+ 
+ 
+09:24:49 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'MX_RTC_Init':
+../Core/Src/main.c:181:19: warning: variable 'sDate' set but not used [-Wunused-but-set-variable]
+   RTC_DateTypeDef sDate = {0};
+                   ^~~~~
+../Core/Src/main.c:180:19: warning: variable 'sTime' set but not used [-Wunused-but-set-variable]
+   RTC_TimeTypeDef sTime = {0};
+                   ^~~~~
+arm-none-eabi-g++ -o "SolarProject.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Duane Mathias\Documents\GitHub\SolarProject\stm\SolarProject\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SolarProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: SolarProject.elf
+ 
+arm-none-eabi-objdump -h -S  SolarProject.elf  > "SolarProject.list"
+arm-none-eabi-objcopy  -O binary  SolarProject.elf  "SolarProject.bin"
+arm-none-eabi-size   SolarProject.elf 
+   text	   data	    bss	    dec	    hex	filename
+  36420	    596	   1936	  38952	   9828	SolarProject.elf
+Finished building: default.size.stdout
+ 
+Finished building: SolarProject.bin
+ 
+Finished building: SolarProject.list
+ 
+09:26:15 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32f4xx_hal_msp.d" -MT"Core/Src/stm32f4xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32f4xx_it.d" -MT"Core/Src/stm32f4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_it.o"
+arm-none-eabi-gcc "../Core/Src/system_stm32f4xx.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/system_stm32f4xx.d" -MT"Core/Src/system_stm32f4xx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/system_stm32f4xx.o"
+arm-none-eabi-g++ "../Core/GLOBALS.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/GLOBALS.d" -MT"Core/GLOBALS.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/GLOBALS.o"
+arm-none-eabi-g++ "../Core/Stepper.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/Stepper.d" -MT"Core/Stepper.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Stepper.o"
+arm-none-eabi-g++ "../Core/absEncoder.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/absEncoder.d" -MT"Core/absEncoder.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/absEncoder.o"
+../Core/Src/main.c: In function 'MX_RTC_Init':
+../Core/Src/main.c:181:19: warning: variable 'sDate' set but not used [-Wunused-but-set-variable]
+   RTC_DateTypeDef sDate = {0};
+                   ^~~~~
+arm-none-eabi-g++ "../Core/maincpp.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/maincpp.d" -MT"Core/maincpp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/maincpp.o"
+arm-none-eabi-g++ "../Core/solarCalc2.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/solarCalc2.d" -MT"Core/solarCalc2.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/solarCalc2.o"
+arm-none-eabi-g++ -o "SolarProject.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Duane Mathias\Documents\GitHub\SolarProject\stm\SolarProject\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SolarProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: SolarProject.elf
+ 
+arm-none-eabi-objdump -h -S  SolarProject.elf  > "SolarProject.list"
+arm-none-eabi-objcopy  -O binary  SolarProject.elf  "SolarProject.bin"
+arm-none-eabi-size   SolarProject.elf 
+   text	   data	    bss	    dec	    hex	filename
+  36876	    596	   1936	  39408	   99f0	SolarProject.elf
+Finished building: default.size.stdout
+ 
+Finished building: SolarProject.bin
+ 
+Finished building: SolarProject.list
+ 
+09:26:46 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'MX_RTC_Init':
+../Core/Src/main.c:181:19: warning: variable 'sDate' set but not used [-Wunused-but-set-variable]
+   RTC_DateTypeDef sDate = {0};
+                   ^~~~~
+../Core/Src/main.c:180:19: warning: variable 'sTime' set but not used [-Wunused-but-set-variable]
+   RTC_TimeTypeDef sTime = {0};
+                   ^~~~~
+arm-none-eabi-g++ -o "SolarProject.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Duane Mathias\Documents\GitHub\SolarProject\stm\SolarProject\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SolarProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: SolarProject.elf
+ 
+arm-none-eabi-objdump -h -S  SolarProject.elf  > "SolarProject.list"
+arm-none-eabi-objcopy  -O binary  SolarProject.elf  "SolarProject.bin"
+arm-none-eabi-size   SolarProject.elf 
+   text	   data	    bss	    dec	    hex	filename
+  36420	    596	   1936	  38952	   9828	SolarProject.elf
+Finished building: default.size.stdout
+ 
+Finished building: SolarProject.bin
+ 
+Finished building: SolarProject.list
+ 
+09:41:15 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ "../Core/maincpp.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/maincpp.d" -MT"Core/maincpp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/maincpp.o"
+../Core/Src/main.c: In function 'MX_RTC_Init':
+../Core/Src/main.c:182:19: warning: variable 'sDate' set but not used [-Wunused-but-set-variable]
+   RTC_DateTypeDef sDate = {0};
+                   ^~~~~
+../Core/Src/main.c:181:19: warning: variable 'sTime' set but not used [-Wunused-but-set-variable]
+   RTC_TimeTypeDef sTime = {0};
+                   ^~~~~
+../Core/maincpp.cpp:16:22: error: 'AzEncoderPorts' was not declared in this scope
+ absEncoder azEncoder(AzEncoderPorts,AzEncoderPins, true, -5);
+                      ^~~~~~~~~~~~~~
+../Core/maincpp.cpp:16:22: note: suggested alternative: 'ElEncoderPorts'
+ absEncoder azEncoder(AzEncoderPorts,AzEncoderPins, true, -5);
+                      ^~~~~~~~~~~~~~
+                      ElEncoderPorts
+../Core/maincpp.cpp:16:37: error: 'AzEncoderPins' was not declared in this scope
+ absEncoder azEncoder(AzEncoderPorts,AzEncoderPins, true, -5);
+                                     ^~~~~~~~~~~~~
+../Core/maincpp.cpp:16:37: note: suggested alternative: 'ElEncoderPins'
+ absEncoder azEncoder(AzEncoderPorts,AzEncoderPins, true, -5);
+                                     ^~~~~~~~~~~~~
+                                     ElEncoderPins
+../Core/maincpp.cpp:20:19: error: 'AzStepperPorts' was not declared in this scope
+ Stepper azStepper(AzStepperPorts,AzStepperPins, true);
+                   ^~~~~~~~~~~~~~
+../Core/maincpp.cpp:20:19: note: suggested alternative: 'ElStepperPorts'
+ Stepper azStepper(AzStepperPorts,AzStepperPins, true);
+                   ^~~~~~~~~~~~~~
+                   ElStepperPorts
+../Core/maincpp.cpp:20:34: error: 'AzStepperPins' was not declared in this scope
+ Stepper azStepper(AzStepperPorts,AzStepperPins, true);
+                                  ^~~~~~~~~~~~~
+../Core/maincpp.cpp:20:34: note: suggested alternative: 'ElStepperPins'
+ Stepper azStepper(AzStepperPorts,AzStepperPins, true);
+                                  ^~~~~~~~~~~~~
+                                  ElStepperPins
+../Core/maincpp.cpp: In function 'void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef*)':
+../Core/maincpp.cpp:28:15: error: switch quantity not an integer
+   switch (htim){
+               ^
+../Core/maincpp.cpp:29:8: error: could not convert '& htim1' from 'TIM_HandleTypeDef*' to '<type error>'
+   case &htim1:
+        ^~~~~~
+../Core/maincpp.cpp:32:9: error: 'htim2' was not declared in this scope
+   case &htim2:
+         ^~~~~
+../Core/maincpp.cpp:32:9: note: suggested alternative: 'htim'
+   case &htim2:
+         ^~~~~
+         htim
+../Core/maincpp.cpp: In function 'void mainsetup()':
+../Core/maincpp.cpp:55:2: error: 'pos' was not declared in this scope
+  pos=0;
+  ^~~
+../Core/maincpp.cpp:55:2: note: suggested alternative: 'pow'
+  pos=0;
+  ^~~
+  pow
+../Core/maincpp.cpp: In function 'void mainloop()':
+../Core/maincpp.cpp:90:15: error: cannot bind non-const lvalue reference of type 'float&' to an rvalue of type 'float'
+  limit(Target.Elevation, 90,5);
+        ~~~~~~~^~~~~~~~~
+../Core/maincpp.cpp:72:6: note:   initializing argument 1 of 'void limit(float&, float, float)'
+ void limit(float &var, float high, float low){
+      ^~~~~
+../Core/maincpp.cpp:91:15: error: cannot bind non-const lvalue reference of type 'float&' to an rvalue of type 'float'
+  limit(Target.Azimuth, 180,0);
+        ~~~~~~~^~~~~~~
+../Core/maincpp.cpp:72:6: note:   initializing argument 1 of 'void limit(float&, float, float)'
+ void limit(float &var, float high, float low){
+      ^~~~~
+make: *** [Core/subdir.mk:36: Core/maincpp.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+09:44:12 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/maincpp.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/maincpp.d" -MT"Core/maincpp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/maincpp.o"
+../Core/maincpp.cpp:16:22: error: 'AzEncoderPorts' was not declared in this scope
+ absEncoder azEncoder(AzEncoderPorts,AzEncoderPins, true, -5);
+                      ^~~~~~~~~~~~~~
+../Core/maincpp.cpp:16:22: note: suggested alternative: 'ElEncoderPorts'
+ absEncoder azEncoder(AzEncoderPorts,AzEncoderPins, true, -5);
+                      ^~~~~~~~~~~~~~
+                      ElEncoderPorts
+../Core/maincpp.cpp:16:37: error: 'AzEncoderPins' was not declared in this scope
+ absEncoder azEncoder(AzEncoderPorts,AzEncoderPins, true, -5);
+                                     ^~~~~~~~~~~~~
+../Core/maincpp.cpp:16:37: note: suggested alternative: 'ElEncoderPins'
+ absEncoder azEncoder(AzEncoderPorts,AzEncoderPins, true, -5);
+                                     ^~~~~~~~~~~~~
+                                     ElEncoderPins
+../Core/maincpp.cpp:20:19: error: 'AzStepperPorts' was not declared in this scope
+ Stepper azStepper(AzStepperPorts,AzStepperPins, true);
+                   ^~~~~~~~~~~~~~
+../Core/maincpp.cpp:20:19: note: suggested alternative: 'ElStepperPorts'
+ Stepper azStepper(AzStepperPorts,AzStepperPins, true);
+                   ^~~~~~~~~~~~~~
+                   ElStepperPorts
+../Core/maincpp.cpp:20:34: error: 'AzStepperPins' was not declared in this scope
+ Stepper azStepper(AzStepperPorts,AzStepperPins, true);
+                                  ^~~~~~~~~~~~~
+../Core/maincpp.cpp:20:34: note: suggested alternative: 'ElStepperPins'
+ Stepper azStepper(AzStepperPorts,AzStepperPins, true);
+                                  ^~~~~~~~~~~~~
+                                  ElStepperPins
+../Core/maincpp.cpp: In function 'void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef*)':
+../Core/maincpp.cpp:28:15: error: switch quantity not an integer
+   switch (htim){
+               ^
+../Core/maincpp.cpp:29:8: error: could not convert '& htim1' from 'TIM_HandleTypeDef*' to '<type error>'
+   case &htim1:
+        ^~~~~~
+../Core/maincpp.cpp:32:9: error: 'htim2' was not declared in this scope
+   case &htim2:
+         ^~~~~
+../Core/maincpp.cpp:32:9: note: suggested alternative: 'htim'
+   case &htim2:
+         ^~~~~
+         htim
+../Core/maincpp.cpp: In function 'void mainsetup()':
+../Core/maincpp.cpp:55:2: error: 'pos' was not declared in this scope
+  pos=0;
+  ^~~
+../Core/maincpp.cpp:55:2: note: suggested alternative: 'pow'
+  pos=0;
+  ^~~
+  pow
+../Core/maincpp.cpp: In function 'void mainloop()':
+../Core/maincpp.cpp:88:30: error: cannot convert 'double' to 'float*' for argument '1' to 'void limit(float*, float, float)'
+  limit(Target.Elevation, 90,5);
+                              ^
+../Core/maincpp.cpp:89:29: error: cannot convert 'double' to 'float*' for argument '1' to 'void limit(float*, float, float)'
+  limit(Target.Azimuth, 180,0);
+                             ^
+make: *** [Core/subdir.mk:36: Core/maincpp.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+09:44:29 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/maincpp.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/maincpp.d" -MT"Core/maincpp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/maincpp.o"
+../Core/maincpp.cpp:16:22: error: 'AzEncoderPorts' was not declared in this scope
+ absEncoder azEncoder(AzEncoderPorts,AzEncoderPins, true, -5);
+                      ^~~~~~~~~~~~~~
+../Core/maincpp.cpp:16:22: note: suggested alternative: 'ElEncoderPorts'
+ absEncoder azEncoder(AzEncoderPorts,AzEncoderPins, true, -5);
+                      ^~~~~~~~~~~~~~
+                      ElEncoderPorts
+../Core/maincpp.cpp:16:37: error: 'AzEncoderPins' was not declared in this scope
+ absEncoder azEncoder(AzEncoderPorts,AzEncoderPins, true, -5);
+                                     ^~~~~~~~~~~~~
+../Core/maincpp.cpp:16:37: note: suggested alternative: 'ElEncoderPins'
+ absEncoder azEncoder(AzEncoderPorts,AzEncoderPins, true, -5);
+                                     ^~~~~~~~~~~~~
+                                     ElEncoderPins
+../Core/maincpp.cpp:20:19: error: 'AzStepperPorts' was not declared in this scope
+ Stepper azStepper(AzStepperPorts,AzStepperPins, true);
+                   ^~~~~~~~~~~~~~
+../Core/maincpp.cpp:20:19: note: suggested alternative: 'ElStepperPorts'
+ Stepper azStepper(AzStepperPorts,AzStepperPins, true);
+                   ^~~~~~~~~~~~~~
+                   ElStepperPorts
+../Core/maincpp.cpp:20:34: error: 'AzStepperPins' was not declared in this scope
+ Stepper azStepper(AzStepperPorts,AzStepperPins, true);
+                                  ^~~~~~~~~~~~~
+../Core/maincpp.cpp:20:34: note: suggested alternative: 'ElStepperPins'
+ Stepper azStepper(AzStepperPorts,AzStepperPins, true);
+                                  ^~~~~~~~~~~~~
+                                  ElStepperPins
+../Core/maincpp.cpp: In function 'void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef*)':
+../Core/maincpp.cpp:28:15: error: switch quantity not an integer
+   switch (htim){
+               ^
+../Core/maincpp.cpp:29:8: error: could not convert '& htim1' from 'TIM_HandleTypeDef*' to '<type error>'
+   case &htim1:
+        ^~~~~~
+../Core/maincpp.cpp:32:9: error: 'htim2' was not declared in this scope
+   case &htim2:
+         ^~~~~
+../Core/maincpp.cpp:32:9: note: suggested alternative: 'htim'
+   case &htim2:
+         ^~~~~
+         htim
+../Core/maincpp.cpp: In function 'void mainsetup()':
+../Core/maincpp.cpp:55:2: error: 'pos' was not declared in this scope
+  pos=0;
+  ^~~
+../Core/maincpp.cpp:55:2: note: suggested alternative: 'pow'
+  pos=0;
+  ^~~
+  pow
+../Core/maincpp.cpp: In function 'void mainloop()':
+../Core/maincpp.cpp:88:31: error: cannot convert 'double*' to 'float*' for argument '1' to 'void limit(float*, float, float)'
+  limit(&Target.Elevation, 90,5);
+                               ^
+../Core/maincpp.cpp:89:30: error: cannot convert 'double*' to 'float*' for argument '1' to 'void limit(float*, float, float)'
+  limit(&Target.Azimuth, 180,0);
+                              ^
+make: *** [Core/subdir.mk:36: Core/maincpp.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+09:44:50 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/maincpp.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/maincpp.d" -MT"Core/maincpp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/maincpp.o"
+../Core/maincpp.cpp:16:22: error: 'AzEncoderPorts' was not declared in this scope
+ absEncoder azEncoder(AzEncoderPorts,AzEncoderPins, true, -5);
+                      ^~~~~~~~~~~~~~
+../Core/maincpp.cpp:16:22: note: suggested alternative: 'ElEncoderPorts'
+ absEncoder azEncoder(AzEncoderPorts,AzEncoderPins, true, -5);
+                      ^~~~~~~~~~~~~~
+                      ElEncoderPorts
+../Core/maincpp.cpp:16:37: error: 'AzEncoderPins' was not declared in this scope
+ absEncoder azEncoder(AzEncoderPorts,AzEncoderPins, true, -5);
+                                     ^~~~~~~~~~~~~
+../Core/maincpp.cpp:16:37: note: suggested alternative: 'ElEncoderPins'
+ absEncoder azEncoder(AzEncoderPorts,AzEncoderPins, true, -5);
+                                     ^~~~~~~~~~~~~
+                                     ElEncoderPins
+../Core/maincpp.cpp:20:19: error: 'AzStepperPorts' was not declared in this scope
+ Stepper azStepper(AzStepperPorts,AzStepperPins, true);
+                   ^~~~~~~~~~~~~~
+../Core/maincpp.cpp:20:19: note: suggested alternative: 'ElStepperPorts'
+ Stepper azStepper(AzStepperPorts,AzStepperPins, true);
+                   ^~~~~~~~~~~~~~
+                   ElStepperPorts
+../Core/maincpp.cpp:20:34: error: 'AzStepperPins' was not declared in this scope
+ Stepper azStepper(AzStepperPorts,AzStepperPins, true);
+                                  ^~~~~~~~~~~~~
+../Core/maincpp.cpp:20:34: note: suggested alternative: 'ElStepperPins'
+ Stepper azStepper(AzStepperPorts,AzStepperPins, true);
+                                  ^~~~~~~~~~~~~
+                                  ElStepperPins
+../Core/maincpp.cpp: In function 'void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef*)':
+../Core/maincpp.cpp:28:15: error: switch quantity not an integer
+   switch (htim){
+               ^
+../Core/maincpp.cpp:29:8: error: could not convert '& htim1' from 'TIM_HandleTypeDef*' to '<type error>'
+   case &htim1:
+        ^~~~~~
+../Core/maincpp.cpp:32:9: error: 'htim2' was not declared in this scope
+   case &htim2:
+         ^~~~~
+../Core/maincpp.cpp:32:9: note: suggested alternative: 'htim'
+   case &htim2:
+         ^~~~~
+         htim
+../Core/maincpp.cpp: In function 'void mainsetup()':
+../Core/maincpp.cpp:55:2: error: 'pos' was not declared in this scope
+  pos=0;
+  ^~~
+../Core/maincpp.cpp:55:2: note: suggested alternative: 'pow'
+  pos=0;
+  ^~~
+  pow
+make: *** [Core/subdir.mk:36: Core/maincpp.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+09:45:03 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/maincpp.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/maincpp.d" -MT"Core/maincpp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/maincpp.o"
+../Core/maincpp.cpp:16:22: error: 'AzEncoderPorts' was not declared in this scope
+ absEncoder azEncoder(AzEncoderPorts,AzEncoderPins, true, -5);
+                      ^~~~~~~~~~~~~~
+../Core/maincpp.cpp:16:22: note: suggested alternative: 'ElEncoderPorts'
+ absEncoder azEncoder(AzEncoderPorts,AzEncoderPins, true, -5);
+                      ^~~~~~~~~~~~~~
+                      ElEncoderPorts
+../Core/maincpp.cpp:16:37: error: 'AzEncoderPins' was not declared in this scope
+ absEncoder azEncoder(AzEncoderPorts,AzEncoderPins, true, -5);
+                                     ^~~~~~~~~~~~~
+../Core/maincpp.cpp:16:37: note: suggested alternative: 'ElEncoderPins'
+ absEncoder azEncoder(AzEncoderPorts,AzEncoderPins, true, -5);
+                                     ^~~~~~~~~~~~~
+                                     ElEncoderPins
+../Core/maincpp.cpp:20:19: error: 'AzStepperPorts' was not declared in this scope
+ Stepper azStepper(AzStepperPorts,AzStepperPins, true);
+                   ^~~~~~~~~~~~~~
+../Core/maincpp.cpp:20:19: note: suggested alternative: 'ElStepperPorts'
+ Stepper azStepper(AzStepperPorts,AzStepperPins, true);
+                   ^~~~~~~~~~~~~~
+                   ElStepperPorts
+../Core/maincpp.cpp:20:34: error: 'AzStepperPins' was not declared in this scope
+ Stepper azStepper(AzStepperPorts,AzStepperPins, true);
+                                  ^~~~~~~~~~~~~
+../Core/maincpp.cpp:20:34: note: suggested alternative: 'ElStepperPins'
+ Stepper azStepper(AzStepperPorts,AzStepperPins, true);
+                                  ^~~~~~~~~~~~~
+                                  ElStepperPins
+../Core/maincpp.cpp: In function 'void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef*)':
+../Core/maincpp.cpp:28:15: error: switch quantity not an integer
+   switch (htim){
+               ^
+../Core/maincpp.cpp:29:8: error: could not convert '& htim1' from 'TIM_HandleTypeDef*' to '<type error>'
+   case &htim1:
+        ^~~~~~
+../Core/maincpp.cpp:32:9: error: 'htim2' was not declared in this scope
+   case &htim2:
+         ^~~~~
+../Core/maincpp.cpp:32:9: note: suggested alternative: 'htim'
+   case &htim2:
+         ^~~~~
+         htim
+../Core/maincpp.cpp: In function 'void mainsetup()':
+../Core/maincpp.cpp:55:2: error: 'pos' was not declared in this scope
+  pos=0;
+  ^~~
+../Core/maincpp.cpp:55:2: note: suggested alternative: 'pow'
+  pos=0;
+  ^~~
+  pow
+make: *** [Core/subdir.mk:36: Core/maincpp.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+09:47:22 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/GLOBALS.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/GLOBALS.d" -MT"Core/GLOBALS.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/GLOBALS.o"
+arm-none-eabi-g++ "../Core/Stepper.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/Stepper.d" -MT"Core/Stepper.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Stepper.o"
+arm-none-eabi-g++ "../Core/absEncoder.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/absEncoder.d" -MT"Core/absEncoder.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/absEncoder.o"
+arm-none-eabi-g++ "../Core/maincpp.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/maincpp.d" -MT"Core/maincpp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/maincpp.o"
+In file included from ../Core/GLOBALS.cpp:8:0:
+../Core/GLOBALS.h:22:38: error: redefinition of 'GPIO_TypeDef* const ElEncoderPorts [10]'
+ GPIO_TypeDef* const ElEncoderPorts[10] = {AzBlack_GPIO_Port, AzRed_GPIO_Port, AzOrange_GPIO_Port, AzYellow_GPIO_Port, AzGreen_GPIO_Port, AzPurple_GPIO_Port, AzGrey_GPIO_Port, AzWhite_GPIO_Port, AzBlackWhite_GPIO_Port, AzRedWhite_GPIO_Port};
+                                      ^
+In file included from ../Core/GLOBALS.cpp:8:0:
+../Core/GLOBALS.h:16:21: note: 'GPIO_TypeDef* const ElEncoderPorts [10]' previously defined here
+ GPIO_TypeDef* const ElEncoderPorts[10] = {ElBlack_GPIO_Port, ElRed_GPIO_Port, ElOrange_GPIO_Port, ElYellow_GPIO_Port, ElGreen_GPIO_Port, ElPurple_GPIO_Port, ElGrey_GPIO_Port, ElWhite_GPIO_Port, ElBlackWhite_GPIO_Port, ElRedWhite_GPIO_Port};
+                     ^~~~~~~~~~~~~~
+In file included from ../Core/GLOBALS.cpp:8:0:
+../Core/GLOBALS.h:23:32: error: redefinition of 'const uint16_t ElEncoderPins [10]'
+ const uint16_t ElEncoderPins[10] = {AzBlack_Pin, AzRed_Pin, AzOrange_Pin, AzYellow_Pin, AzGreen_Pin, AzPurple_Pin, AzGrey_Pin, AzWhite_Pin, AzBlackWhite_Pin, AzRedWhite_Pin};
+                                ^
+../Core/GLOBALS.h:17:16: note: 'const uint16_t ElEncoderPins [10]' previously defined here
+ const uint16_t ElEncoderPins[10] = {ElBlack_Pin, ElRed_Pin, ElOrange_Pin, ElYellow_Pin, ElGreen_Pin, ElPurple_Pin, ElGrey_Pin, ElWhite_Pin, ElBlackWhite_Pin, ElRedWhite_Pin};
+                ^~~~~~~~~~~~~
+In file included from ../Core/Stepper.h:11:0,
+                 from ../Core/Stepper.cpp:8:
+../Core/GLOBALS.h:22:38: error: redefinition of 'GPIO_TypeDef* const ElEncoderPorts [10]'
+ GPIO_TypeDef* const ElEncoderPorts[10] = {AzBlack_GPIO_Port, AzRed_GPIO_Port, AzOrange_GPIO_Port, AzYellow_GPIO_Port, AzGreen_GPIO_Port, AzPurple_GPIO_Port, AzGrey_GPIO_Port, AzWhite_GPIO_Port, AzBlackWhite_GPIO_Port, AzRedWhite_GPIO_Port};
+                                      ^
+In file included from ../Core/Stepper.h:11:0,
+                 from ../Core/Stepper.cpp:8:
+../Core/GLOBALS.h:16:21: note: 'GPIO_TypeDef* const ElEncoderPorts [10]' previously defined here
+ GPIO_TypeDef* const ElEncoderPorts[10] = {ElBlack_GPIO_Port, ElRed_GPIO_Port, ElOrange_GPIO_Port, ElYellow_GPIO_Port, ElGreen_GPIO_Port, ElPurple_GPIO_Port, ElGrey_GPIO_Port, ElWhite_GPIO_Port, ElBlackWhite_GPIO_Port, ElRedWhite_GPIO_Port};
+                     ^~~~~~~~~~~~~~
+../Core/GLOBALS.h:25:37: error: redefinition of 'GPIO_TypeDef* const ElStepperPorts [3]'
+ GPIO_TypeDef* const ElStepperPorts[3] = {AzPul_GPIO_Port, AzDir_GPIO_Port,AzEna_GPIO_Port};
+                                     ^
+In file included from ../Core/Stepper.h:11:0,
+                 from ../Core/Stepper.cpp:8:
+../Core/GLOBALS.h:23:32: error: redefinition of 'const uint16_t ElEncoderPins [10]'
+ const uint16_t ElEncoderPins[10] = {AzBlack_Pin, AzRed_Pin, AzOrange_Pin, AzYellow_Pin, AzGreen_Pin, AzPurple_Pin, AzGrey_Pin, AzWhite_Pin, AzBlackWhite_Pin, AzRedWhite_Pin};
+                                ^
+../Core/GLOBALS.h:19:21: note: 'GPIO_TypeDef* const ElStepperPorts [3]' previously defined here
+ GPIO_TypeDef* const ElStepperPorts[3] = {ElPul_GPIO_Port, ElDir_GPIO_Port,ElEna_GPIO_Port};
+                     ^~~~~~~~~~~~~~
+../Core/GLOBALS.h:17:16: note: 'const uint16_t ElEncoderPins [10]' previously defined here
+ const uint16_t ElEncoderPins[10] = {ElBlack_Pin, ElRed_Pin, ElOrange_Pin, ElYellow_Pin, ElGreen_Pin, ElPurple_Pin, ElGrey_Pin, ElWhite_Pin, ElBlackWhite_Pin, ElRedWhite_Pin};
+                ^~~~~~~~~~~~~
+../Core/GLOBALS.h:26:31: error: redefinition of 'const uint16_t ElStepperPins [3]'
+ const uint16_t ElStepperPins[3] = {AzPul_Pin, AzDir_Pin,AzEna_Pin};
+                               ^
+../Core/GLOBALS.h:20:16: note: 'const uint16_t ElStepperPins [3]' previously defined here
+ const uint16_t ElStepperPins[3] = {ElPul_Pin, ElDir_Pin,ElEna_Pin};
+                ^~~~~~~~~~~~~
+../Core/GLOBALS.h:25:37: error: redefinition of 'GPIO_TypeDef* const ElStepperPorts [3]'
+ GPIO_TypeDef* const ElStepperPorts[3] = {AzPul_GPIO_Port, AzDir_GPIO_Port,AzEna_GPIO_Port};
+                                     ^
+../Core/GLOBALS.h:19:21: note: 'GPIO_TypeDef* const ElStepperPorts [3]' previously defined here
+ GPIO_TypeDef* const ElStepperPorts[3] = {ElPul_GPIO_Port, ElDir_GPIO_Port,ElEna_GPIO_Port};
+                     ^~~~~~~~~~~~~~
+../Core/GLOBALS.h:26:31: error: redefinition of 'const uint16_t ElStepperPins [3]'
+ const uint16_t ElStepperPins[3] = {AzPul_Pin, AzDir_Pin,AzEna_Pin};
+                               ^
+../Core/GLOBALS.h:20:16: note: 'const uint16_t ElStepperPins [3]' previously defined here
+ const uint16_t ElStepperPins[3] = {ElPul_Pin, ElDir_Pin,ElEna_Pin};
+                ^~~~~~~~~~~~~
+make: *** [Core/subdir.mk:30: Core/GLOBALS.o] Error 1
+make: *** Waiting for unfinished jobs....
+make: *** [Core/subdir.mk:32: Core/Stepper.o] Error 1
+In file included from ../Core/absEncoder.h:12:0,
+                 from ../Core/absEncoder.cpp:8:
+../Core/GLOBALS.h:22:38: error: redefinition of 'GPIO_TypeDef* const ElEncoderPorts [10]'
+ GPIO_TypeDef* const ElEncoderPorts[10] = {AzBlack_GPIO_Port, AzRed_GPIO_Port, AzOrange_GPIO_Port, AzYellow_GPIO_Port, AzGreen_GPIO_Port, AzPurple_GPIO_Port, AzGrey_GPIO_Port, AzWhite_GPIO_Port, AzBlackWhite_GPIO_Port, AzRedWhite_GPIO_Port};
+                                      ^
+In file included from ../Core/absEncoder.h:12:0,
+                 from ../Core/absEncoder.cpp:8:
+../Core/GLOBALS.h:16:21: note: 'GPIO_TypeDef* const ElEncoderPorts [10]' previously defined here
+ GPIO_TypeDef* const ElEncoderPorts[10] = {ElBlack_GPIO_Port, ElRed_GPIO_Port, ElOrange_GPIO_Port, ElYellow_GPIO_Port, ElGreen_GPIO_Port, ElPurple_GPIO_Port, ElGrey_GPIO_Port, ElWhite_GPIO_Port, ElBlackWhite_GPIO_Port, ElRedWhite_GPIO_Port};
+                     ^~~~~~~~~~~~~~
+In file included from ../Core/absEncoder.h:12:0,
+                 from ../Core/absEncoder.cpp:8:
+../Core/GLOBALS.h:23:32: error: redefinition of 'const uint16_t ElEncoderPins [10]'
+ const uint16_t ElEncoderPins[10] = {AzBlack_Pin, AzRed_Pin, AzOrange_Pin, AzYellow_Pin, AzGreen_Pin, AzPurple_Pin, AzGrey_Pin, AzWhite_Pin, AzBlackWhite_Pin, AzRedWhite_Pin};
+                                ^
+../Core/GLOBALS.h:17:16: note: 'const uint16_t ElEncoderPins [10]' previously defined here
+ const uint16_t ElEncoderPins[10] = {ElBlack_Pin, ElRed_Pin, ElOrange_Pin, ElYellow_Pin, ElGreen_Pin, ElPurple_Pin, ElGrey_Pin, ElWhite_Pin, ElBlackWhite_Pin, ElRedWhite_Pin};
+                ^~~~~~~~~~~~~
+../Core/GLOBALS.h:25:37: error: redefinition of 'GPIO_TypeDef* const ElStepperPorts [3]'
+ GPIO_TypeDef* const ElStepperPorts[3] = {AzPul_GPIO_Port, AzDir_GPIO_Port,AzEna_GPIO_Port};
+                                     ^
+../Core/GLOBALS.h:19:21: note: 'GPIO_TypeDef* const ElStepperPorts [3]' previously defined here
+ GPIO_TypeDef* const ElStepperPorts[3] = {ElPul_GPIO_Port, ElDir_GPIO_Port,ElEna_GPIO_Port};
+                     ^~~~~~~~~~~~~~
+../Core/GLOBALS.h:26:31: error: redefinition of 'const uint16_t ElStepperPins [3]'
+ const uint16_t ElStepperPins[3] = {AzPul_Pin, AzDir_Pin,AzEna_Pin};
+                               ^
+../Core/GLOBALS.h:20:16: note: 'const uint16_t ElStepperPins [3]' previously defined here
+ const uint16_t ElStepperPins[3] = {ElPul_Pin, ElDir_Pin,ElEna_Pin};
+                ^~~~~~~~~~~~~
+make: *** [Core/subdir.mk:34: Core/absEncoder.o] Error 1
+In file included from ../Core/Inc/../absEncoder.h:12:0,
+                 from ../Core/maincpp.h:12,
+                 from ../Core/maincpp.cpp:9:
+../Core/Inc/../GLOBALS.h:22:38: error: redefinition of 'GPIO_TypeDef* const ElEncoderPorts [10]'
+ GPIO_TypeDef* const ElEncoderPorts[10] = {AzBlack_GPIO_Port, AzRed_GPIO_Port, AzOrange_GPIO_Port, AzYellow_GPIO_Port, AzGreen_GPIO_Port, AzPurple_GPIO_Port, AzGrey_GPIO_Port, AzWhite_GPIO_Port, AzBlackWhite_GPIO_Port, AzRedWhite_GPIO_Port};
+                                      ^
+In file included from ../Core/Inc/../absEncoder.h:12:0,
+                 from ../Core/maincpp.h:12,
+                 from ../Core/maincpp.cpp:9:
+../Core/Inc/../GLOBALS.h:16:21: note: 'GPIO_TypeDef* const ElEncoderPorts [10]' previously defined here
+ GPIO_TypeDef* const ElEncoderPorts[10] = {ElBlack_GPIO_Port, ElRed_GPIO_Port, ElOrange_GPIO_Port, ElYellow_GPIO_Port, ElGreen_GPIO_Port, ElPurple_GPIO_Port, ElGrey_GPIO_Port, ElWhite_GPIO_Port, ElBlackWhite_GPIO_Port, ElRedWhite_GPIO_Port};
+                     ^~~~~~~~~~~~~~
+In file included from ../Core/Inc/../absEncoder.h:12:0,
+                 from ../Core/maincpp.h:12,
+                 from ../Core/maincpp.cpp:9:
+../Core/Inc/../GLOBALS.h:23:32: error: redefinition of 'const uint16_t ElEncoderPins [10]'
+ const uint16_t ElEncoderPins[10] = {AzBlack_Pin, AzRed_Pin, AzOrange_Pin, AzYellow_Pin, AzGreen_Pin, AzPurple_Pin, AzGrey_Pin, AzWhite_Pin, AzBlackWhite_Pin, AzRedWhite_Pin};
+                                ^
+../Core/Inc/../GLOBALS.h:17:16: note: 'const uint16_t ElEncoderPins [10]' previously defined here
+ const uint16_t ElEncoderPins[10] = {ElBlack_Pin, ElRed_Pin, ElOrange_Pin, ElYellow_Pin, ElGreen_Pin, ElPurple_Pin, ElGrey_Pin, ElWhite_Pin, ElBlackWhite_Pin, ElRedWhite_Pin};
+                ^~~~~~~~~~~~~
+../Core/Inc/../GLOBALS.h:25:37: error: redefinition of 'GPIO_TypeDef* const ElStepperPorts [3]'
+ GPIO_TypeDef* const ElStepperPorts[3] = {AzPul_GPIO_Port, AzDir_GPIO_Port,AzEna_GPIO_Port};
+                                     ^
+../Core/Inc/../GLOBALS.h:19:21: note: 'GPIO_TypeDef* const ElStepperPorts [3]' previously defined here
+ GPIO_TypeDef* const ElStepperPorts[3] = {ElPul_GPIO_Port, ElDir_GPIO_Port,ElEna_GPIO_Port};
+                     ^~~~~~~~~~~~~~
+../Core/Inc/../GLOBALS.h:26:31: error: redefinition of 'const uint16_t ElStepperPins [3]'
+ const uint16_t ElStepperPins[3] = {AzPul_Pin, AzDir_Pin,AzEna_Pin};
+                               ^
+../Core/Inc/../GLOBALS.h:20:16: note: 'const uint16_t ElStepperPins [3]' previously defined here
+ const uint16_t ElStepperPins[3] = {ElPul_Pin, ElDir_Pin,ElEna_Pin};
+                ^~~~~~~~~~~~~
+../Core/maincpp.cpp:16:22: error: 'AzEncoderPorts' was not declared in this scope
+ absEncoder azEncoder(AzEncoderPorts,AzEncoderPins, true, -5);
+                      ^~~~~~~~~~~~~~
+../Core/maincpp.cpp:16:22: note: suggested alternative: 'ElEncoderPorts'
+ absEncoder azEncoder(AzEncoderPorts,AzEncoderPins, true, -5);
+                      ^~~~~~~~~~~~~~
+                      ElEncoderPorts
+../Core/maincpp.cpp:16:37: error: 'AzEncoderPins' was not declared in this scope
+ absEncoder azEncoder(AzEncoderPorts,AzEncoderPins, true, -5);
+                                     ^~~~~~~~~~~~~
+../Core/maincpp.cpp:16:37: note: suggested alternative: 'ElEncoderPins'
+ absEncoder azEncoder(AzEncoderPorts,AzEncoderPins, true, -5);
+                                     ^~~~~~~~~~~~~
+                                     ElEncoderPins
+../Core/maincpp.cpp:20:19: error: 'AzStepperPorts' was not declared in this scope
+ Stepper azStepper(AzStepperPorts,AzStepperPins, true);
+                   ^~~~~~~~~~~~~~
+../Core/maincpp.cpp:20:19: note: suggested alternative: 'ElStepperPorts'
+ Stepper azStepper(AzStepperPorts,AzStepperPins, true);
+                   ^~~~~~~~~~~~~~
+                   ElStepperPorts
+../Core/maincpp.cpp:20:34: error: 'AzStepperPins' was not declared in this scope
+ Stepper azStepper(AzStepperPorts,AzStepperPins, true);
+                                  ^~~~~~~~~~~~~
+../Core/maincpp.cpp:20:34: note: suggested alternative: 'ElStepperPins'
+ Stepper azStepper(AzStepperPorts,AzStepperPins, true);
+                                  ^~~~~~~~~~~~~
+                                  ElStepperPins
+../Core/maincpp.cpp: In function 'void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef*)':
+../Core/maincpp.cpp:28:15: error: switch quantity not an integer
+   switch (htim){
+               ^
+../Core/maincpp.cpp:29:8: error: could not convert '& htim1' from 'TIM_HandleTypeDef*' to '<type error>'
+   case &htim1:
+        ^~~~~~
+../Core/maincpp.cpp:32:9: error: 'htim2' was not declared in this scope
+   case &htim2:
+         ^~~~~
+../Core/maincpp.cpp:32:9: note: suggested alternative: 'htim'
+   case &htim2:
+         ^~~~~
+         htim
+../Core/maincpp.cpp: In function 'void mainsetup()':
+../Core/maincpp.cpp:55:2: error: 'pos' was not declared in this scope
+  pos=0;
+  ^~~
+../Core/maincpp.cpp:55:2: note: suggested alternative: 'pow'
+  pos=0;
+  ^~~
+  pow
+make: *** [Core/subdir.mk:36: Core/maincpp.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+09:47:37 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/GLOBALS.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/GLOBALS.d" -MT"Core/GLOBALS.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/GLOBALS.o"
+arm-none-eabi-g++ "../Core/Stepper.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/Stepper.d" -MT"Core/Stepper.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Stepper.o"
+arm-none-eabi-g++ "../Core/absEncoder.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/absEncoder.d" -MT"Core/absEncoder.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/absEncoder.o"
+arm-none-eabi-g++ "../Core/maincpp.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/maincpp.d" -MT"Core/maincpp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/maincpp.o"
+../Core/maincpp.cpp: In function 'void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef*)':
+../Core/maincpp.cpp:28:15: error: switch quantity not an integer
+   switch (htim){
+               ^
+../Core/maincpp.cpp:29:8: error: could not convert '& htim1' from 'TIM_HandleTypeDef*' to '<type error>'
+   case &htim1:
+        ^~~~~~
+../Core/maincpp.cpp:32:9: error: 'htim2' was not declared in this scope
+   case &htim2:
+         ^~~~~
+../Core/maincpp.cpp:32:9: note: suggested alternative: 'htim'
+   case &htim2:
+         ^~~~~
+         htim
+../Core/maincpp.cpp: In function 'void mainsetup()':
+../Core/maincpp.cpp:55:2: error: 'pos' was not declared in this scope
+  pos=0;
+  ^~~
+../Core/maincpp.cpp:55:2: note: suggested alternative: 'pow'
+  pos=0;
+  ^~~
+  pow
+make: *** [Core/subdir.mk:36: Core/maincpp.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+09:47:48 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/maincpp.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/maincpp.d" -MT"Core/maincpp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/maincpp.o"
+../Core/maincpp.cpp: In function 'void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef*)':
+../Core/maincpp.cpp:28:15: error: switch quantity not an integer
+   switch (htim){
+               ^
+../Core/maincpp.cpp:29:8: error: could not convert '& htim1' from 'TIM_HandleTypeDef*' to '<type error>'
+   case &htim1:
+        ^~~~~~
+../Core/maincpp.cpp:32:9: error: 'htim2' was not declared in this scope
+   case &htim2:
+         ^~~~~
+../Core/maincpp.cpp:32:9: note: suggested alternative: 'htim'
+   case &htim2:
+         ^~~~~
+         htim
+../Core/maincpp.cpp: In function 'void mainsetup()':
+../Core/maincpp.cpp:55:2: error: 'pos' was not declared in this scope
+  pos=0;
+  ^~~
+../Core/maincpp.cpp:55:2: note: suggested alternative: 'pow'
+  pos=0;
+  ^~~
+  pow
+make: *** [Core/subdir.mk:36: Core/maincpp.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+09:50:53 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/maincpp.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/maincpp.d" -MT"Core/maincpp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/maincpp.o"
+../Core/maincpp.cpp: In function 'void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef*)':
+../Core/maincpp.cpp:29:8: error: invalid conversion from 'TIM_HandleTypeDef*' to 'int' [-fpermissive]
+   case &htim1:
+        ^~~~~~
+../Core/maincpp.cpp:29:9: error: conversion from pointer type 'TIM_HandleTypeDef*' to arithmetic type 'int' in a constant expression
+   case &htim1:
+         ^~~~~
+../Core/maincpp.cpp:32:9: error: 'htim2' was not declared in this scope
+   case &htim2:
+         ^~~~~
+../Core/maincpp.cpp:32:9: note: suggested alternative: 'htim'
+   case &htim2:
+         ^~~~~
+         htim
+../Core/maincpp.cpp: In function 'void mainsetup()':
+../Core/maincpp.cpp:55:2: error: 'pos' was not declared in this scope
+  pos=0;
+  ^~~
+../Core/maincpp.cpp:55:2: note: suggested alternative: 'pow'
+  pos=0;
+  ^~~
+  pow
+make: *** [Core/subdir.mk:36: Core/maincpp.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+09:51:13 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/maincpp.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/maincpp.d" -MT"Core/maincpp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/maincpp.o"
+../Core/maincpp.cpp: In function 'void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef*)':
+../Core/maincpp.cpp:29:19: error: conversion from pointer type 'TIM_HandleTypeDef*' to arithmetic type 'intptr_t {aka int}' in a constant expression
+   case (intptr_t)&htim1:
+                   ^~~~~
+../Core/maincpp.cpp:32:19: error: 'htim2' was not declared in this scope
+   case (intptr_t)&htim2:
+                   ^~~~~
+../Core/maincpp.cpp:32:19: note: suggested alternative: 'htim'
+   case (intptr_t)&htim2:
+                   ^~~~~
+                   htim
+../Core/maincpp.cpp: In function 'void mainsetup()':
+../Core/maincpp.cpp:55:2: error: 'pos' was not declared in this scope
+  pos=0;
+  ^~~
+../Core/maincpp.cpp:55:2: note: suggested alternative: 'pow'
+  pos=0;
+  ^~~
+  pow
+make: *** [Core/subdir.mk:36: Core/maincpp.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+09:53:32 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/maincpp.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/maincpp.d" -MT"Core/maincpp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/maincpp.o"
+../Core/maincpp.cpp: In function 'void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef*)':
+../Core/maincpp.cpp:28:15: error: comparison between distinct pointer types 'TIM_HandleTypeDef**' and 'TIM_HandleTypeDef*' lacks a cast [-fpermissive]
+  if(&htim == &htim1) elStepper.update();
+               ^~~~~
+../Core/maincpp.cpp:29:20: error: 'htim2' was not declared in this scope
+  else if(&htim == &htim2) azStepper.update();
+                    ^~~~~
+../Core/maincpp.cpp:29:20: note: suggested alternative: 'htim'
+  else if(&htim == &htim2) azStepper.update();
+                    ^~~~~
+                    htim
+../Core/maincpp.cpp: In function 'void mainsetup()':
+../Core/maincpp.cpp:45:2: error: 'pos' was not declared in this scope
+  pos=0;
+  ^~~
+../Core/maincpp.cpp:45:2: note: suggested alternative: 'pow'
+  pos=0;
+  ^~~
+  pow
+make: *** [Core/subdir.mk:36: Core/maincpp.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+09:53:41 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/maincpp.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/maincpp.d" -MT"Core/maincpp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/maincpp.o"
+../Core/maincpp.cpp: In function 'void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef*)':
+../Core/maincpp.cpp:28:15: error: comparison between distinct pointer types 'TIM_HandleTypeDef**' and 'TIM_HandleTypeDef*' lacks a cast [-fpermissive]
+  if(&htim == &htim1) elStepper.update();
+               ^~~~~
+../Core/maincpp.cpp:29:20: error: 'htim2' was not declared in this scope
+  else if(&htim == &htim2) azStepper.update();
+                    ^~~~~
+../Core/maincpp.cpp:29:20: note: suggested alternative: 'htim'
+  else if(&htim == &htim2) azStepper.update();
+                    ^~~~~
+                    htim
+../Core/maincpp.cpp: In function 'void mainsetup()':
+../Core/maincpp.cpp:45:2: error: 'pos' was not declared in this scope
+  pos=0;
+  ^~~
+../Core/maincpp.cpp:45:2: note: suggested alternative: 'pow'
+  pos=0;
+  ^~~
+  pow
+make: *** [Core/subdir.mk:36: Core/maincpp.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+09:54:06 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/maincpp.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/maincpp.d" -MT"Core/maincpp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/maincpp.o"
+../Core/maincpp.cpp: In function 'void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef*)':
+../Core/maincpp.cpp:29:19: error: 'htim2' was not declared in this scope
+  else if(htim == &htim2) azStepper.update();
+                   ^~~~~
+../Core/maincpp.cpp:29:19: note: suggested alternative: 'htim'
+  else if(htim == &htim2) azStepper.update();
+                   ^~~~~
+                   htim
+../Core/maincpp.cpp: In function 'void mainsetup()':
+../Core/maincpp.cpp:46:2: error: 'pos' was not declared in this scope
+  pos=0;
+  ^~~
+../Core/maincpp.cpp:46:2: note: suggested alternative: 'pow'
+  pos=0;
+  ^~~
+  pow
+make: *** [Core/subdir.mk:36: Core/maincpp.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+09:54:26 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/maincpp.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/maincpp.d" -MT"Core/maincpp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/maincpp.o"
+../Core/maincpp.cpp: In function 'void mainsetup()':
+../Core/maincpp.cpp:47:2: error: 'pos' was not declared in this scope
+  pos=0;
+  ^~~
+../Core/maincpp.cpp:47:2: note: suggested alternative: 'pow'
+  pos=0;
+  ^~~
+  pow
+make: *** [Core/subdir.mk:36: Core/maincpp.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+09:55:19 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/maincpp.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/maincpp.d" -MT"Core/maincpp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/maincpp.o"
+arm-none-eabi-g++ -o "SolarProject.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Duane Mathias\Documents\GitHub\SolarProject\stm\SolarProject\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SolarProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: SolarProject.elf
+ 
+arm-none-eabi-objdump -h -S  SolarProject.elf  > "SolarProject.list"
+arm-none-eabi-objcopy  -O binary  SolarProject.elf  "SolarProject.bin"
+arm-none-eabi-size   SolarProject.elf 
+   text	   data	    bss	    dec	    hex	filename
+  36956	    596	   1968	  39520	   9a60	SolarProject.elf
+Finished building: default.size.stdout
+ 
+Finished building: SolarProject.bin
+ 
+Finished building: SolarProject.list
+ 
+10:02:53 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/Stepper.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/Stepper.d" -MT"Core/Stepper.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Stepper.o"
+arm-none-eabi-g++ "../Core/maincpp.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/maincpp.d" -MT"Core/maincpp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/maincpp.o"
+../Core/Stepper.cpp: In member function 'void Stepper::setFreq(float)':
+../Core/Stepper.cpp:36:9: error: 'const struct TIM_HandleTypeDef' has no member named 'ARR'
+  timer->ARR = (uint16_t)(65535.0/Hz);
+         ^~~
+make: *** [Core/subdir.mk:32: Core/Stepper.o] Error 1
+make: *** Waiting for unfinished jobs....
+../Core/maincpp.cpp:16:67: error: no matching function for call to 'absEncoder::absEncoder(TIM_HandleTypeDef*, GPIO_TypeDef* const [10], const uint16_t [10], bool, int)'
+ absEncoder elEncoder(&htim1,ElEncoderPorts,ElEncoderPins, true, -5);
+                                                                   ^
+In file included from ../Core/maincpp.h:12:0,
+                 from ../Core/maincpp.cpp:9:
+../Core/Inc/../absEncoder.h:21:2: note: candidate: absEncoder::absEncoder(const GPIO_TypeDef* const*, const uint16_t*, bool, float)
+  absEncoder(const GPIO_TypeDef* const gpioPorts[10], const uint16_t gpioPins[10], bool reverseDirection, float offset);
+  ^~~~~~~~~~
+../Core/Inc/../absEncoder.h:21:2: note:   candidate expects 4 arguments, 5 provided
+../Core/Inc/../absEncoder.h:15:7: note: candidate: constexpr absEncoder::absEncoder(const absEncoder&)
+ class absEncoder {
+       ^~~~~~~~~~
+../Core/Inc/../absEncoder.h:15:7: note:   candidate expects 1 argument, 5 provided
+../Core/maincpp.cpp:17:67: error: no matching function for call to 'absEncoder::absEncoder(TIM_HandleTypeDef*, GPIO_TypeDef* const [10], const uint16_t [10], bool, int)'
+ absEncoder azEncoder(&htim2,AzEncoderPorts,AzEncoderPins, true, -5);
+                                                                   ^
+In file included from ../Core/maincpp.h:12:0,
+                 from ../Core/maincpp.cpp:9:
+../Core/Inc/../absEncoder.h:21:2: note: candidate: absEncoder::absEncoder(const GPIO_TypeDef* const*, const uint16_t*, bool, float)
+  absEncoder(const GPIO_TypeDef* const gpioPorts[10], const uint16_t gpioPins[10], bool reverseDirection, float offset);
+  ^~~~~~~~~~
+../Core/Inc/../absEncoder.h:21:2: note:   candidate expects 4 arguments, 5 provided
+../Core/Inc/../absEncoder.h:15:7: note: candidate: constexpr absEncoder::absEncoder(const absEncoder&)
+ class absEncoder {
+       ^~~~~~~~~~
+../Core/Inc/../absEncoder.h:15:7: note:   candidate expects 1 argument, 5 provided
+../Core/maincpp.cpp:20:53: error: no matching function for call to 'Stepper::Stepper(GPIO_TypeDef* const [3], const uint16_t [3], bool)'
+ Stepper elStepper(ElStepperPorts,ElStepperPins, true);
+                                                     ^
+In file included from ../Core/maincpp.h:13:0,
+                 from ../Core/maincpp.cpp:9:
+../Core/Inc/../Stepper.h:21:2: note: candidate: Stepper::Stepper(TIM_HandleTypeDef*, const GPIO_TypeDef* const*, const uint16_t*, bool)
+  Stepper(TIM_HandleTypeDef* timer, const GPIO_TypeDef* const gpioPorts[3], const uint16_t gpioPins[3], bool reverseDirection);
+  ^~~~~~~
+../Core/Inc/../Stepper.h:21:2: note:   candidate expects 4 arguments, 3 provided
+../Core/Inc/../Stepper.h:13:7: note: candidate: constexpr Stepper::Stepper(const Stepper&)
+ class Stepper {
+       ^~~~~~~
+../Core/Inc/../Stepper.h:13:7: note:   candidate expects 1 argument, 3 provided
+../Core/maincpp.cpp:21:53: error: no matching function for call to 'Stepper::Stepper(GPIO_TypeDef* const [3], const uint16_t [3], bool)'
+ Stepper azStepper(AzStepperPorts,AzStepperPins, true);
+                                                     ^
+In file included from ../Core/maincpp.h:13:0,
+                 from ../Core/maincpp.cpp:9:
+../Core/Inc/../Stepper.h:21:2: note: candidate: Stepper::Stepper(TIM_HandleTypeDef*, const GPIO_TypeDef* const*, const uint16_t*, bool)
+  Stepper(TIM_HandleTypeDef* timer, const GPIO_TypeDef* const gpioPorts[3], const uint16_t gpioPins[3], bool reverseDirection);
+  ^~~~~~~
+../Core/Inc/../Stepper.h:21:2: note:   candidate expects 4 arguments, 3 provided
+../Core/Inc/../Stepper.h:13:7: note: candidate: constexpr Stepper::Stepper(const Stepper&)
+ class Stepper {
+       ^~~~~~~
+../Core/Inc/../Stepper.h:13:7: note:   candidate expects 1 argument, 3 provided
+make: *** [Core/subdir.mk:36: Core/maincpp.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+10:03:23 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/Stepper.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/Stepper.d" -MT"Core/Stepper.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Stepper.o"
+arm-none-eabi-g++ "../Core/maincpp.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/maincpp.d" -MT"Core/maincpp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/maincpp.o"
+../Core/Stepper.cpp: In member function 'void Stepper::setFreq(float)':
+../Core/Stepper.cpp:36:10: error: 'const struct TIM_HandleTypeDef' has no member named 'ARR'
+  *timer->ARR = (uint16_t)(65535.0/Hz);
+          ^~~
+make: *** [Core/subdir.mk:32: Core/Stepper.o] Error 1
+make: *** Waiting for unfinished jobs....
+../Core/maincpp.cpp:16:67: error: no matching function for call to 'absEncoder::absEncoder(TIM_HandleTypeDef*, GPIO_TypeDef* const [10], const uint16_t [10], bool, int)'
+ absEncoder elEncoder(&htim1,ElEncoderPorts,ElEncoderPins, true, -5);
+                                                                   ^
+In file included from ../Core/maincpp.h:12:0,
+                 from ../Core/maincpp.cpp:9:
+../Core/Inc/../absEncoder.h:21:2: note: candidate: absEncoder::absEncoder(const GPIO_TypeDef* const*, const uint16_t*, bool, float)
+  absEncoder(const GPIO_TypeDef* const gpioPorts[10], const uint16_t gpioPins[10], bool reverseDirection, float offset);
+  ^~~~~~~~~~
+../Core/Inc/../absEncoder.h:21:2: note:   candidate expects 4 arguments, 5 provided
+../Core/Inc/../absEncoder.h:15:7: note: candidate: constexpr absEncoder::absEncoder(const absEncoder&)
+ class absEncoder {
+       ^~~~~~~~~~
+../Core/Inc/../absEncoder.h:15:7: note:   candidate expects 1 argument, 5 provided
+../Core/maincpp.cpp:17:67: error: no matching function for call to 'absEncoder::absEncoder(TIM_HandleTypeDef*, GPIO_TypeDef* const [10], const uint16_t [10], bool, int)'
+ absEncoder azEncoder(&htim2,AzEncoderPorts,AzEncoderPins, true, -5);
+                                                                   ^
+In file included from ../Core/maincpp.h:12:0,
+                 from ../Core/maincpp.cpp:9:
+../Core/Inc/../absEncoder.h:21:2: note: candidate: absEncoder::absEncoder(const GPIO_TypeDef* const*, const uint16_t*, bool, float)
+  absEncoder(const GPIO_TypeDef* const gpioPorts[10], const uint16_t gpioPins[10], bool reverseDirection, float offset);
+  ^~~~~~~~~~
+../Core/Inc/../absEncoder.h:21:2: note:   candidate expects 4 arguments, 5 provided
+../Core/Inc/../absEncoder.h:15:7: note: candidate: constexpr absEncoder::absEncoder(const absEncoder&)
+ class absEncoder {
+       ^~~~~~~~~~
+../Core/Inc/../absEncoder.h:15:7: note:   candidate expects 1 argument, 5 provided
+../Core/maincpp.cpp:20:53: error: no matching function for call to 'Stepper::Stepper(GPIO_TypeDef* const [3], const uint16_t [3], bool)'
+ Stepper elStepper(ElStepperPorts,ElStepperPins, true);
+                                                     ^
+In file included from ../Core/maincpp.h:13:0,
+                 from ../Core/maincpp.cpp:9:
+../Core/Inc/../Stepper.h:21:2: note: candidate: Stepper::Stepper(TIM_HandleTypeDef*, const GPIO_TypeDef* const*, const uint16_t*, bool)
+  Stepper(TIM_HandleTypeDef* timer, const GPIO_TypeDef* const gpioPorts[3], const uint16_t gpioPins[3], bool reverseDirection);
+  ^~~~~~~
+../Core/Inc/../Stepper.h:21:2: note:   candidate expects 4 arguments, 3 provided
+../Core/Inc/../Stepper.h:13:7: note: candidate: constexpr Stepper::Stepper(const Stepper&)
+ class Stepper {
+       ^~~~~~~
+../Core/Inc/../Stepper.h:13:7: note:   candidate expects 1 argument, 3 provided
+../Core/maincpp.cpp:21:53: error: no matching function for call to 'Stepper::Stepper(GPIO_TypeDef* const [3], const uint16_t [3], bool)'
+ Stepper azStepper(AzStepperPorts,AzStepperPins, true);
+                                                     ^
+In file included from ../Core/maincpp.h:13:0,
+                 from ../Core/maincpp.cpp:9:
+../Core/Inc/../Stepper.h:21:2: note: candidate: Stepper::Stepper(TIM_HandleTypeDef*, const GPIO_TypeDef* const*, const uint16_t*, bool)
+  Stepper(TIM_HandleTypeDef* timer, const GPIO_TypeDef* const gpioPorts[3], const uint16_t gpioPins[3], bool reverseDirection);
+  ^~~~~~~
+../Core/Inc/../Stepper.h:21:2: note:   candidate expects 4 arguments, 3 provided
+../Core/Inc/../Stepper.h:13:7: note: candidate: constexpr Stepper::Stepper(const Stepper&)
+ class Stepper {
+       ^~~~~~~
+../Core/Inc/../Stepper.h:13:7: note:   candidate expects 1 argument, 3 provided
+make: *** [Core/subdir.mk:36: Core/maincpp.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+10:03:36 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/Stepper.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/Stepper.d" -MT"Core/Stepper.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Stepper.o"
+arm-none-eabi-g++ "../Core/maincpp.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/maincpp.d" -MT"Core/maincpp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/maincpp.o"
+../Core/Stepper.cpp: In member function 'void Stepper::setFreq(float)':
+../Core/Stepper.cpp:36:10: error: 'const struct TIM_HandleTypeDef' has no member named 'ARR'
+  &timer->ARR = (uint16_t)(65535.0/Hz);
+          ^~~
+make: *** [Core/subdir.mk:32: Core/Stepper.o] Error 1
+make: *** Waiting for unfinished jobs....
+../Core/maincpp.cpp:16:67: error: no matching function for call to 'absEncoder::absEncoder(TIM_HandleTypeDef*, GPIO_TypeDef* const [10], const uint16_t [10], bool, int)'
+ absEncoder elEncoder(&htim1,ElEncoderPorts,ElEncoderPins, true, -5);
+                                                                   ^
+In file included from ../Core/maincpp.h:12:0,
+                 from ../Core/maincpp.cpp:9:
+../Core/Inc/../absEncoder.h:21:2: note: candidate: absEncoder::absEncoder(const GPIO_TypeDef* const*, const uint16_t*, bool, float)
+  absEncoder(const GPIO_TypeDef* const gpioPorts[10], const uint16_t gpioPins[10], bool reverseDirection, float offset);
+  ^~~~~~~~~~
+../Core/Inc/../absEncoder.h:21:2: note:   candidate expects 4 arguments, 5 provided
+../Core/Inc/../absEncoder.h:15:7: note: candidate: constexpr absEncoder::absEncoder(const absEncoder&)
+ class absEncoder {
+       ^~~~~~~~~~
+../Core/Inc/../absEncoder.h:15:7: note:   candidate expects 1 argument, 5 provided
+../Core/maincpp.cpp:17:67: error: no matching function for call to 'absEncoder::absEncoder(TIM_HandleTypeDef*, GPIO_TypeDef* const [10], const uint16_t [10], bool, int)'
+ absEncoder azEncoder(&htim2,AzEncoderPorts,AzEncoderPins, true, -5);
+                                                                   ^
+In file included from ../Core/maincpp.h:12:0,
+                 from ../Core/maincpp.cpp:9:
+../Core/Inc/../absEncoder.h:21:2: note: candidate: absEncoder::absEncoder(const GPIO_TypeDef* const*, const uint16_t*, bool, float)
+  absEncoder(const GPIO_TypeDef* const gpioPorts[10], const uint16_t gpioPins[10], bool reverseDirection, float offset);
+  ^~~~~~~~~~
+../Core/Inc/../absEncoder.h:21:2: note:   candidate expects 4 arguments, 5 provided
+../Core/Inc/../absEncoder.h:15:7: note: candidate: constexpr absEncoder::absEncoder(const absEncoder&)
+ class absEncoder {
+       ^~~~~~~~~~
+../Core/Inc/../absEncoder.h:15:7: note:   candidate expects 1 argument, 5 provided
+../Core/maincpp.cpp:20:53: error: no matching function for call to 'Stepper::Stepper(GPIO_TypeDef* const [3], const uint16_t [3], bool)'
+ Stepper elStepper(ElStepperPorts,ElStepperPins, true);
+                                                     ^
+In file included from ../Core/maincpp.h:13:0,
+                 from ../Core/maincpp.cpp:9:
+../Core/Inc/../Stepper.h:21:2: note: candidate: Stepper::Stepper(TIM_HandleTypeDef*, const GPIO_TypeDef* const*, const uint16_t*, bool)
+  Stepper(TIM_HandleTypeDef* timer, const GPIO_TypeDef* const gpioPorts[3], const uint16_t gpioPins[3], bool reverseDirection);
+  ^~~~~~~
+../Core/Inc/../Stepper.h:21:2: note:   candidate expects 4 arguments, 3 provided
+../Core/Inc/../Stepper.h:13:7: note: candidate: constexpr Stepper::Stepper(const Stepper&)
+ class Stepper {
+       ^~~~~~~
+../Core/Inc/../Stepper.h:13:7: note:   candidate expects 1 argument, 3 provided
+../Core/maincpp.cpp:21:53: error: no matching function for call to 'Stepper::Stepper(GPIO_TypeDef* const [3], const uint16_t [3], bool)'
+ Stepper azStepper(AzStepperPorts,AzStepperPins, true);
+                                                     ^
+In file included from ../Core/maincpp.h:13:0,
+                 from ../Core/maincpp.cpp:9:
+../Core/Inc/../Stepper.h:21:2: note: candidate: Stepper::Stepper(TIM_HandleTypeDef*, const GPIO_TypeDef* const*, const uint16_t*, bool)
+  Stepper(TIM_HandleTypeDef* timer, const GPIO_TypeDef* const gpioPorts[3], const uint16_t gpioPins[3], bool reverseDirection);
+  ^~~~~~~
+../Core/Inc/../Stepper.h:21:2: note:   candidate expects 4 arguments, 3 provided
+../Core/Inc/../Stepper.h:13:7: note: candidate: constexpr Stepper::Stepper(const Stepper&)
+ class Stepper {
+       ^~~~~~~
+../Core/Inc/../Stepper.h:13:7: note:   candidate expects 1 argument, 3 provided
+make: *** [Core/subdir.mk:36: Core/maincpp.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+10:04:47 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/Stepper.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/Stepper.d" -MT"Core/Stepper.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Stepper.o"
+arm-none-eabi-g++ "../Core/maincpp.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/maincpp.d" -MT"Core/maincpp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/maincpp.o"
+../Core/Stepper.cpp: In constructor 'Stepper::Stepper(TIM_HandleTypeDef, const GPIO_TypeDef* const*, const uint16_t*, bool)':
+../Core/Stepper.cpp:11:72: error: cannot convert 'TIM_HandleTypeDef' to 'const TIM_HandleTypeDef*' in initialization
+ :ports(gpioPorts),pins(gpioPins), reverse(reverseDirection),timer(timer) {
+                                                                        ^
+../Core/Stepper.cpp: In member function 'void Stepper::setFreq(float)':
+../Core/Stepper.cpp:36:9: error: 'const struct TIM_HandleTypeDef' has no member named 'ARR'
+  timer->ARR = (uint16_t)(65535.0/Hz);
+         ^~~
+make: *** [Core/subdir.mk:32: Core/Stepper.o] Error 1
+make: *** Waiting for unfinished jobs....
+../Core/maincpp.cpp:16:66: error: no matching function for call to 'absEncoder::absEncoder(TIM_HandleTypeDef&, GPIO_TypeDef* const [10], const uint16_t [10], bool, int)'
+ absEncoder elEncoder(htim1,ElEncoderPorts,ElEncoderPins, true, -5);
+                                                                  ^
+In file included from ../Core/maincpp.h:12:0,
+                 from ../Core/maincpp.cpp:9:
+../Core/Inc/../absEncoder.h:21:2: note: candidate: absEncoder::absEncoder(const GPIO_TypeDef* const*, const uint16_t*, bool, float)
+  absEncoder(const GPIO_TypeDef* const gpioPorts[10], const uint16_t gpioPins[10], bool reverseDirection, float offset);
+  ^~~~~~~~~~
+../Core/Inc/../absEncoder.h:21:2: note:   candidate expects 4 arguments, 5 provided
+../Core/Inc/../absEncoder.h:15:7: note: candidate: constexpr absEncoder::absEncoder(const absEncoder&)
+ class absEncoder {
+       ^~~~~~~~~~
+../Core/Inc/../absEncoder.h:15:7: note:   candidate expects 1 argument, 5 provided
+../Core/maincpp.cpp:17:66: error: no matching function for call to 'absEncoder::absEncoder(TIM_HandleTypeDef&, GPIO_TypeDef* const [10], const uint16_t [10], bool, int)'
+ absEncoder azEncoder(htim2,AzEncoderPorts,AzEncoderPins, true, -5);
+                                                                  ^
+In file included from ../Core/maincpp.h:12:0,
+                 from ../Core/maincpp.cpp:9:
+../Core/Inc/../absEncoder.h:21:2: note: candidate: absEncoder::absEncoder(const GPIO_TypeDef* const*, const uint16_t*, bool, float)
+  absEncoder(const GPIO_TypeDef* const gpioPorts[10], const uint16_t gpioPins[10], bool reverseDirection, float offset);
+  ^~~~~~~~~~
+../Core/Inc/../absEncoder.h:21:2: note:   candidate expects 4 arguments, 5 provided
+../Core/Inc/../absEncoder.h:15:7: note: candidate: constexpr absEncoder::absEncoder(const absEncoder&)
+ class absEncoder {
+       ^~~~~~~~~~
+../Core/Inc/../absEncoder.h:15:7: note:   candidate expects 1 argument, 5 provided
+../Core/maincpp.cpp:20:53: error: no matching function for call to 'Stepper::Stepper(GPIO_TypeDef* const [3], const uint16_t [3], bool)'
+ Stepper elStepper(ElStepperPorts,ElStepperPins, true);
+                                                     ^
+In file included from ../Core/maincpp.h:13:0,
+                 from ../Core/maincpp.cpp:9:
+../Core/Inc/../Stepper.h:21:2: note: candidate: Stepper::Stepper(TIM_HandleTypeDef, const GPIO_TypeDef* const*, const uint16_t*, bool)
+  Stepper(TIM_HandleTypeDef timer, const GPIO_TypeDef* const gpioPorts[3], const uint16_t gpioPins[3], bool reverseDirection);
+  ^~~~~~~
+../Core/Inc/../Stepper.h:21:2: note:   candidate expects 4 arguments, 3 provided
+../Core/Inc/../Stepper.h:13:7: note: candidate: constexpr Stepper::Stepper(const Stepper&)
+ class Stepper {
+       ^~~~~~~
+../Core/Inc/../Stepper.h:13:7: note:   candidate expects 1 argument, 3 provided
+../Core/maincpp.cpp:21:53: error: no matching function for call to 'Stepper::Stepper(GPIO_TypeDef* const [3], const uint16_t [3], bool)'
+ Stepper azStepper(AzStepperPorts,AzStepperPins, true);
+                                                     ^
+In file included from ../Core/maincpp.h:13:0,
+                 from ../Core/maincpp.cpp:9:
+../Core/Inc/../Stepper.h:21:2: note: candidate: Stepper::Stepper(TIM_HandleTypeDef, const GPIO_TypeDef* const*, const uint16_t*, bool)
+  Stepper(TIM_HandleTypeDef timer, const GPIO_TypeDef* const gpioPorts[3], const uint16_t gpioPins[3], bool reverseDirection);
+  ^~~~~~~
+../Core/Inc/../Stepper.h:21:2: note:   candidate expects 4 arguments, 3 provided
+../Core/Inc/../Stepper.h:13:7: note: candidate: constexpr Stepper::Stepper(const Stepper&)
+ class Stepper {
+       ^~~~~~~
+../Core/Inc/../Stepper.h:13:7: note:   candidate expects 1 argument, 3 provided
+make: *** [Core/subdir.mk:36: Core/maincpp.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+10:05:14 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/Stepper.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/Stepper.d" -MT"Core/Stepper.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Stepper.o"
+arm-none-eabi-g++ "../Core/maincpp.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/maincpp.d" -MT"Core/maincpp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/maincpp.o"
+../Core/Stepper.cpp: In constructor 'Stepper::Stepper(TIM_HandleTypeDef, const GPIO_TypeDef* const*, const uint16_t*, bool)':
+../Core/Stepper.cpp:11:72: error: cannot convert 'TIM_HandleTypeDef' to 'const TIM_HandleTypeDef*' in initialization
+ :ports(gpioPorts),pins(gpioPins), reverse(reverseDirection),timer(timer) {
+                                                                        ^
+../Core/Stepper.cpp: In member function 'void Stepper::setFreq(float)':
+../Core/Stepper.cpp:36:9: error: 'const struct TIM_HandleTypeDef' has no member named 'ARR'
+  timer->ARR = (uint16_t)(65535.0/Hz);
+         ^~~
+make: *** [Core/subdir.mk:32: Core/Stepper.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+10:06:30 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/Stepper.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/Stepper.d" -MT"Core/Stepper.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Stepper.o"
+arm-none-eabi-g++ "../Core/maincpp.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/maincpp.d" -MT"Core/maincpp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/maincpp.o"
+../Core/Stepper.cpp: In member function 'void Stepper::setFreq(float)':
+../Core/Stepper.cpp:36:7: error: base operand of '->' has non-pointer type 'const TIM_HandleTypeDef'
+  timer->ARR = (uint16_t)(65535.0/Hz);
+       ^~
+make: *** [Core/subdir.mk:32: Core/Stepper.o] Error 1
+make: *** Waiting for unfinished jobs....
+../Core/maincpp.cpp: In function 'void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef*)':
+../Core/maincpp.cpp:29:10: error: no match for 'operator==' (operand types are 'TIM_HandleTypeDef*' and 'const TIM_HandleTypeDef')
+  if(htim == elStepper.timer) elStepper.update();
+     ~~~~~^~~~~~~~~~~~~~~~~~
+../Core/maincpp.cpp:30:15: error: no match for 'operator==' (operand types are 'TIM_HandleTypeDef*' and 'const TIM_HandleTypeDef')
+  else if(htim == azStepper.timer) azStepper.update();
+          ~~~~~^~~~~~~~~~~~~~~~~~
+make: *** [Core/subdir.mk:36: Core/maincpp.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+10:07:28 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/Stepper.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/Stepper.d" -MT"Core/Stepper.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Stepper.o"
+arm-none-eabi-g++ "../Core/maincpp.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/maincpp.d" -MT"Core/maincpp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/maincpp.o"
+In file included from ../Core/Stepper.cpp:8:0:
+../Core/Stepper.h:21:33: error: expected ',' or '...' before '*' token
+  Stepper(TIM_HandleTypeDef timer*, const GPIO_TypeDef* const gpioPorts[3], const uint16_t gpioPins[3], bool reverseDirection);
+                                 ^
+../Core/Stepper.cpp:10:1: error: prototype for 'Stepper::Stepper(TIM_HandleTypeDef*, const GPIO_TypeDef* const*, const uint16_t*, bool)' does not match any in class 'Stepper'
+ Stepper::Stepper(TIM_HandleTypeDef* timer, const GPIO_TypeDef* const gpioPorts[3], const uint16_t gpioPins[3], const bool reverseDirection)
+ ^~~~~~~
+In file included from ../Core/Stepper.cpp:8:0:
+../Core/Stepper.h:13:7: error: candidates are: constexpr Stepper::Stepper(const Stepper&)
+ class Stepper {
+       ^~~~~~~
+../Core/Stepper.h:21:2: error:                 Stepper::Stepper(TIM_HandleTypeDef)
+  Stepper(TIM_HandleTypeDef timer*, const GPIO_TypeDef* const gpioPorts[3], const uint16_t gpioPins[3], bool reverseDirection);
+  ^~~~~~~
+../Core/Stepper.cpp: In member function 'void Stepper::setFreq(float)':
+../Core/Stepper.cpp:36:9: error: 'const struct TIM_HandleTypeDef' has no member named 'ARR'
+  timer->ARR = (uint16_t)(65535.0/Hz);
+         ^~~
+make: *** [Core/subdir.mk:32: Core/Stepper.o] Error 1
+make: *** Waiting for unfinished jobs....
+In file included from ../Core/maincpp.h:13:0,
+                 from ../Core/maincpp.cpp:9:
+../Core/Inc/../Stepper.h:21:33: error: expected ',' or '...' before '*' token
+  Stepper(TIM_HandleTypeDef timer*, const GPIO_TypeDef* const gpioPorts[3], const uint16_t gpioPins[3], bool reverseDirection);
+                                 ^
+../Core/maincpp.cpp:20:60: error: no matching function for call to 'Stepper::Stepper(TIM_HandleTypeDef*, GPIO_TypeDef* const [3], const uint16_t [3], bool)'
+ Stepper elStepper(&htim1,ElStepperPorts,ElStepperPins, true);
+                                                            ^
+In file included from ../Core/maincpp.h:13:0,
+                 from ../Core/maincpp.cpp:9:
+../Core/Inc/../Stepper.h:21:2: note: candidate: Stepper::Stepper(TIM_HandleTypeDef)
+  Stepper(TIM_HandleTypeDef timer*, const GPIO_TypeDef* const gpioPorts[3], const uint16_t gpioPins[3], bool reverseDirection);
+  ^~~~~~~
+../Core/Inc/../Stepper.h:21:2: note:   candidate expects 1 argument, 4 provided
+../Core/Inc/../Stepper.h:13:7: note: candidate: constexpr Stepper::Stepper(const Stepper&)
+ class Stepper {
+       ^~~~~~~
+../Core/Inc/../Stepper.h:13:7: note:   candidate expects 1 argument, 4 provided
+../Core/maincpp.cpp:21:60: error: no matching function for call to 'Stepper::Stepper(TIM_HandleTypeDef*, GPIO_TypeDef* const [3], const uint16_t [3], bool)'
+ Stepper azStepper(&htim2,AzStepperPorts,AzStepperPins, true);
+                                                            ^
+In file included from ../Core/maincpp.h:13:0,
+                 from ../Core/maincpp.cpp:9:
+../Core/Inc/../Stepper.h:21:2: note: candidate: Stepper::Stepper(TIM_HandleTypeDef)
+  Stepper(TIM_HandleTypeDef timer*, const GPIO_TypeDef* const gpioPorts[3], const uint16_t gpioPins[3], bool reverseDirection);
+  ^~~~~~~
+../Core/Inc/../Stepper.h:21:2: note:   candidate expects 1 argument, 4 provided
+../Core/Inc/../Stepper.h:13:7: note: candidate: constexpr Stepper::Stepper(const Stepper&)
+ class Stepper {
+       ^~~~~~~
+../Core/Inc/../Stepper.h:13:7: note:   candidate expects 1 argument, 4 provided
+make: *** [Core/subdir.mk:36: Core/maincpp.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+10:07:54 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/Stepper.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/Stepper.d" -MT"Core/Stepper.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Stepper.o"
+arm-none-eabi-g++ "../Core/maincpp.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/maincpp.d" -MT"Core/maincpp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/maincpp.o"
+../Core/Stepper.cpp: In member function 'void Stepper::setFreq(float)':
+../Core/Stepper.cpp:36:9: error: 'const struct TIM_HandleTypeDef' has no member named 'ARR'
+  timer->ARR = (uint16_t)(65535.0/Hz);
+         ^~~
+make: *** [Core/subdir.mk:32: Core/Stepper.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+10:10:08 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/Stepper.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/Stepper.d" -MT"Core/Stepper.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Stepper.o"
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:400:0,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/GLOBALS.h:11,
+                 from ../Core/Stepper.h:11,
+                 from ../Core/Stepper.cpp:8:
+../Core/Stepper.cpp: In member function 'void Stepper::setFreq(float)':
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h:1249:48: error: assignment of member 'TIM_Base_InitTypeDef::Period' in read-only object
+     (__HANDLE__)->Init.Period = (__AUTORELOAD__);    \
+                                                ^
+../Core/Stepper.cpp:36:2: note: in expansion of macro '__HAL_TIM_SET_AUTORELOAD'
+  __HAL_TIM_SET_AUTORELOAD(timer,(uint16_t)(65535.0/Hz));
+  ^~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [Core/subdir.mk:32: Core/Stepper.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+10:10:24 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/Stepper.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/Stepper.d" -MT"Core/Stepper.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Stepper.o"
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:400:0,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/GLOBALS.h:11,
+                 from ../Core/Stepper.h:11,
+                 from ../Core/Stepper.cpp:8:
+../Core/Stepper.cpp: In member function 'void Stepper::setFreq(float)':
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h:1249:48: error: assignment of member 'TIM_Base_InitTypeDef::Period' in read-only object
+     (__HANDLE__)->Init.Period = (__AUTORELOAD__);    \
+                                                ^
+../Core/Stepper.cpp:36:2: note: in expansion of macro '__HAL_TIM_SET_AUTORELOAD'
+  __HAL_TIM_SET_AUTORELOAD(timer,(uint16_t)(65535.0/Hz));
+  ^~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [Core/subdir.mk:32: Core/Stepper.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+10:10:30 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/Stepper.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/Stepper.d" -MT"Core/Stepper.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Stepper.o"
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:400:0,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/GLOBALS.h:11,
+                 from ../Core/Stepper.h:11,
+                 from ../Core/Stepper.cpp:8:
+../Core/Stepper.cpp: In member function 'void Stepper::setFreq(float)':
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h:1249:48: error: assignment of member 'TIM_Base_InitTypeDef::Period' in read-only object
+     (__HANDLE__)->Init.Period = (__AUTORELOAD__);    \
+                                                ^
+../Core/Stepper.cpp:36:2: note: in expansion of macro '__HAL_TIM_SET_AUTORELOAD'
+  __HAL_TIM_SET_AUTORELOAD(timer,(uint16_t)(65535.0/Hz));
+  ^~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [Core/subdir.mk:32: Core/Stepper.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+10:12:31 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/Stepper.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/Stepper.d" -MT"Core/Stepper.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Stepper.o"
+../Core/Stepper.cpp: In member function 'void Stepper::setFreq(float)':
+../Core/Stepper.cpp:36:51: error: expression cannot be used as a function
+  timer->Instance->ARR(timer,(uint16_t)(65535.0/Hz));
+                                                   ^
+make: *** [Core/subdir.mk:32: Core/Stepper.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+10:12:44 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/Stepper.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/Stepper.d" -MT"Core/Stepper.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Stepper.o"
+../Core/Stepper.cpp: In member function 'void Stepper::setFreq(float)':
+../Core/Stepper.cpp:36:26: warning: left operand of comma operator has no effect [-Wunused-value]
+  timer->Instance->ARR = (timer,(uint16_t)(65535.0/Hz));
+                          ^~~~~
+arm-none-eabi-g++ -o "SolarProject.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Duane Mathias\Documents\GitHub\SolarProject\stm\SolarProject\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SolarProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: SolarProject.elf
+ 
+arm-none-eabi-objdump -h -S  SolarProject.elf  > "SolarProject.list"
+arm-none-eabi-objcopy  -O binary  SolarProject.elf  "SolarProject.bin"
+arm-none-eabi-size   SolarProject.elf 
+   text	   data	    bss	    dec	    hex	filename
+  36996	    596	   1976	  39568	   9a90	SolarProject.elf
+Finished building: default.size.stdout
+ 
+Finished building: SolarProject.bin
+ 
+Finished building: SolarProject.list
+ 
+10:20:25 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/maincpp.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/maincpp.d" -MT"Core/maincpp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/maincpp.o"
+arm-none-eabi-g++ -o "SolarProject.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Duane Mathias\Documents\GitHub\SolarProject\stm\SolarProject\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SolarProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: SolarProject.elf
+ 
+arm-none-eabi-objdump -h -S  SolarProject.elf  > "SolarProject.list"
+arm-none-eabi-objcopy  -O binary  SolarProject.elf  "SolarProject.bin"
+arm-none-eabi-size   SolarProject.elf 
+   text	   data	    bss	    dec	    hex	filename
+  36996	    596	   1976	  39568	   9a90	SolarProject.elf
+Finished building: default.size.stdout
+ 
+Finished building: SolarProject.bin
+ 
+Finished building: SolarProject.list
+ 
+10:22:09 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/maincpp.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/maincpp.d" -MT"Core/maincpp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/maincpp.o"
+arm-none-eabi-g++ -o "SolarProject.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Duane Mathias\Documents\GitHub\SolarProject\stm\SolarProject\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SolarProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: SolarProject.elf
+ 
+arm-none-eabi-objdump -h -S  SolarProject.elf  > "SolarProject.list"
+arm-none-eabi-objcopy  -O binary  SolarProject.elf  "SolarProject.bin"
+arm-none-eabi-size   SolarProject.elf 
+   text	   data	    bss	    dec	    hex	filename
+  36996	    596	   1976	  39568	   9a90	SolarProject.elf
+Finished building: default.size.stdout
+ 
+Finished building: SolarProject.bin
+ 
+Finished building: SolarProject.list
+ 
+10:22:33 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/maincpp.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/maincpp.d" -MT"Core/maincpp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/maincpp.o"
+arm-none-eabi-g++ -o "SolarProject.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Duane Mathias\Documents\GitHub\SolarProject\stm\SolarProject\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SolarProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: SolarProject.elf
+ 
+arm-none-eabi-objdump -h -S  SolarProject.elf  > "SolarProject.list"
+arm-none-eabi-objcopy  -O binary  SolarProject.elf  "SolarProject.bin"
+arm-none-eabi-size   SolarProject.elf 
+   text	   data	    bss	    dec	    hex	filename
+  36996	    596	   1976	  39568	   9a90	SolarProject.elf
+Finished building: default.size.stdout
+ 
+Finished building: SolarProject.bin
+ 
+Finished building: SolarProject.list
+ 
+10:22:48 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-size   SolarProject.elf 
+   text	   data	    bss	    dec	    hex	filename
+  36996	    596	   1976	  39568	   9a90	SolarProject.elf
+Finished building: default.size.stdout
+ 
+10:23:34 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/maincpp.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/maincpp.d" -MT"Core/maincpp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/maincpp.o"
+arm-none-eabi-g++ -o "SolarProject.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Duane Mathias\Documents\GitHub\SolarProject\stm\SolarProject\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SolarProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: SolarProject.elf
+ 
+arm-none-eabi-objdump -h -S  SolarProject.elf  > "SolarProject.list"
+arm-none-eabi-objcopy  -O binary  SolarProject.elf  "SolarProject.bin"
+arm-none-eabi-size   SolarProject.elf 
+   text	   data	    bss	    dec	    hex	filename
+  36996	    596	   1976	  39568	   9a90	SolarProject.elf
+Finished building: default.size.stdout
+ 
+Finished building: SolarProject.bin
+ 
+Finished building: SolarProject.list
+ 
+10:24:48 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/maincpp.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/maincpp.d" -MT"Core/maincpp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/maincpp.o"
+arm-none-eabi-g++ -o "SolarProject.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Duane Mathias\Documents\GitHub\SolarProject\stm\SolarProject\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SolarProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: SolarProject.elf
+ 
+arm-none-eabi-objdump -h -S  SolarProject.elf  > "SolarProject.list"
+arm-none-eabi-objcopy  -O binary  SolarProject.elf  "SolarProject.bin"
+arm-none-eabi-size   SolarProject.elf 
+   text	   data	    bss	    dec	    hex	filename
+  36972	    596	   1976	  39544	   9a78	SolarProject.elf
+Finished building: default.size.stdout
+ 
+Finished building: SolarProject.bin
+ 
+Finished building: SolarProject.list
+ 
+10:25:36 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/maincpp.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/maincpp.d" -MT"Core/maincpp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/maincpp.o"
+arm-none-eabi-g++ -o "SolarProject.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Duane Mathias\Documents\GitHub\SolarProject\stm\SolarProject\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SolarProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: SolarProject.elf
+ 
+arm-none-eabi-objdump -h -S  SolarProject.elf  > "SolarProject.list"
+arm-none-eabi-objcopy  -O binary  SolarProject.elf  "SolarProject.bin"
+arm-none-eabi-size   SolarProject.elf 
+   text	   data	    bss	    dec	    hex	filename
+  36844	    596	   1976	  39416	   99f8	SolarProject.elf
+Finished building: default.size.stdout
+ 
+Finished building: SolarProject.bin
+ 
+Finished building: SolarProject.list
+ 
+10:28:47 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/maincpp.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/maincpp.d" -MT"Core/maincpp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/maincpp.o"
+arm-none-eabi-g++ -o "SolarProject.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Duane Mathias\Documents\GitHub\SolarProject\stm\SolarProject\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SolarProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: SolarProject.elf
+ 
+arm-none-eabi-objdump -h -S  SolarProject.elf  > "SolarProject.list"
+arm-none-eabi-objcopy  -O binary  SolarProject.elf  "SolarProject.bin"
+arm-none-eabi-size   SolarProject.elf 
+   text	   data	    bss	    dec	    hex	filename
+  36844	    596	   1976	  39416	   99f8	SolarProject.elf
+Finished building: default.size.stdout
+ 
+Finished building: SolarProject.bin
+ 
+Finished building: SolarProject.list
+ 
+10:49:28 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/absEncoder.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/absEncoder.d" -MT"Core/absEncoder.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/absEncoder.o"
+arm-none-eabi-g++ "../Core/maincpp.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/maincpp.d" -MT"Core/maincpp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/maincpp.o"
+In file included from ../Core/absEncoder.cpp:8:0:
+../Core/absEncoder.h: In constructor 'absEncoder::absEncoder(const GPIO_TypeDef* const*, const uint16_t*, float, bool, float)':
+../Core/absEncoder.h:20:14: warning: 'absEncoder::opPoint' will be initialized after [-Wreorder]
+  const float opPoint;  // return angle in range of opPoint-180 to opPoint+180; opPoint must be between -180 to 180
+              ^~~~~~~
+../Core/absEncoder.h:18:13: warning:   'const bool absEncoder::reverse' [-Wreorder]
+  const bool reverse; // count + as clockwise or counter clock wise
+             ^~~~~~~
+../Core/absEncoder.cpp:10:1: warning:   when initialized here [-Wreorder]
+ absEncoder::absEncoder(const GPIO_TypeDef* const gpioPorts[10], const uint16_t gpioPins[10], float operatingPoint, bool reverseDirection, float offset)
+ ^~~~~~~~~~
+arm-none-eabi-g++ -o "SolarProject.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Duane Mathias\Documents\GitHub\SolarProject\stm\SolarProject\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SolarProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: SolarProject.elf
+ 
+arm-none-eabi-objdump -h -S  SolarProject.elf  > "SolarProject.list"
+arm-none-eabi-objcopy  -O binary  SolarProject.elf  "SolarProject.bin"
+arm-none-eabi-size   SolarProject.elf 
+   text	   data	    bss	    dec	    hex	filename
+  36932	    596	   1984	  39512	   9a58	SolarProject.elf
+Finished building: default.size.stdout
+ 
+Finished building: SolarProject.list
+ 
+Finished building: SolarProject.bin
+ 
+10:54:42 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/maincpp.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/maincpp.d" -MT"Core/maincpp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/maincpp.o"
+arm-none-eabi-g++ -o "SolarProject.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Duane Mathias\Documents\GitHub\SolarProject\stm\SolarProject\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SolarProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: SolarProject.elf
+ 
+arm-none-eabi-objdump -h -S  SolarProject.elf  > "SolarProject.list"
+arm-none-eabi-objcopy  -O binary  SolarProject.elf  "SolarProject.bin"
+arm-none-eabi-size   SolarProject.elf 
+   text	   data	    bss	    dec	    hex	filename
+  37084	    596	   1984	  39664	   9af0	SolarProject.elf
+Finished building: default.size.stdout
+ 
+Finished building: SolarProject.bin
+ 
+Finished building: SolarProject.list
+ 
+10:59:35 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/maincpp.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/maincpp.d" -MT"Core/maincpp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/maincpp.o"
+arm-none-eabi-g++ -o "SolarProject.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Duane Mathias\Documents\GitHub\SolarProject\stm\SolarProject\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SolarProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: SolarProject.elf
+ 
+arm-none-eabi-objdump -h -S  SolarProject.elf  > "SolarProject.list"
+arm-none-eabi-objcopy  -O binary  SolarProject.elf  "SolarProject.bin"
+arm-none-eabi-size   SolarProject.elf 
+   text	   data	    bss	    dec	    hex	filename
+  37084	    596	   1984	  39664	   9af0	SolarProject.elf
+Finished building: default.size.stdout
+ 
+Finished building: SolarProject.bin
+ 
+Finished building: SolarProject.list
+ 
+11:02:16 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/maincpp.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/maincpp.d" -MT"Core/maincpp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/maincpp.o"
+arm-none-eabi-g++ -o "SolarProject.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Duane Mathias\Documents\GitHub\SolarProject\stm\SolarProject\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SolarProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: SolarProject.elf
+ 
+arm-none-eabi-objdump -h -S  SolarProject.elf  > "SolarProject.list"
+arm-none-eabi-objcopy  -O binary  SolarProject.elf  "SolarProject.bin"
+arm-none-eabi-size   SolarProject.elf 
+   text	   data	    bss	    dec	    hex	filename
+  37084	    596	   1984	  39664	   9af0	SolarProject.elf
+Finished building: default.size.stdout
+ 
+Finished building: SolarProject.bin
+ 
+Finished building: SolarProject.list
+ 
+11:22:01 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-size   SolarProject.elf 
+   text	   data	    bss	    dec	    hex	filename
+  37084	    596	   1984	  39664	   9af0	SolarProject.elf
+Finished building: default.size.stdout
+ 
+11:25:22 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-size   SolarProject.elf 
+   text	   data	    bss	    dec	    hex	filename
+  37084	    596	   1984	  39664	   9af0	SolarProject.elf
+Finished building: default.size.stdout
+ 
+11:43:31 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-size   SolarProject.elf 
+   text	   data	    bss	    dec	    hex	filename
+  37084	    596	   1984	  39664	   9af0	SolarProject.elf
+Finished building: default.size.stdout
+ 
+11:51:48 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-size   SolarProject.elf 
+   text	   data	    bss	    dec	    hex	filename
+  37084	    596	   1984	  39664	   9af0	SolarProject.elf
+Finished building: default.size.stdout
+ 
+11:55:04 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/maincpp.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/maincpp.d" -MT"Core/maincpp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/maincpp.o"
+arm-none-eabi-g++ -o "SolarProject.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Duane Mathias\Documents\GitHub\SolarProject\stm\SolarProject\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SolarProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: SolarProject.elf
+ 
+arm-none-eabi-objdump -h -S  SolarProject.elf  > "SolarProject.list"
+arm-none-eabi-objcopy  -O binary  SolarProject.elf  "SolarProject.bin"
+arm-none-eabi-size   SolarProject.elf 
+   text	   data	    bss	    dec	    hex	filename
+  37068	    596	   1984	  39648	   9ae0	SolarProject.elf
+Finished building: default.size.stdout
+ 
+Finished building: SolarProject.bin
+ 
+Finished building: SolarProject.list
+ 
+12:01:11 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/maincpp.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/maincpp.d" -MT"Core/maincpp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/maincpp.o"
+arm-none-eabi-g++ -o "SolarProject.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Duane Mathias\Documents\GitHub\SolarProject\stm\SolarProject\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SolarProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: SolarProject.elf
+ 
+arm-none-eabi-objdump -h -S  SolarProject.elf  > "SolarProject.list"
+arm-none-eabi-objcopy  -O binary  SolarProject.elf  "SolarProject.bin"
+arm-none-eabi-size   SolarProject.elf 
+   text	   data	    bss	    dec	    hex	filename
+  37060	    596	   1984	  39640	   9ad8	SolarProject.elf
+Finished building: default.size.stdout
+ 
+Finished building: SolarProject.bin
+ 
+Finished building: SolarProject.list
+ 
+12:02:09 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/maincpp.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/maincpp.d" -MT"Core/maincpp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/maincpp.o"
+arm-none-eabi-g++ -o "SolarProject.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Duane Mathias\Documents\GitHub\SolarProject\stm\SolarProject\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SolarProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: SolarProject.elf
+ 
+arm-none-eabi-objdump -h -S  SolarProject.elf  > "SolarProject.list"
+arm-none-eabi-objcopy  -O binary  SolarProject.elf  "SolarProject.bin"
+arm-none-eabi-size   SolarProject.elf 
+   text	   data	    bss	    dec	    hex	filename
+  37084	    596	   1984	  39664	   9af0	SolarProject.elf
+Finished building: default.size.stdout
+ 
+Finished building: SolarProject.bin
+ 
+Finished building: SolarProject.list
+ 
+12:02:47 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/maincpp.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/maincpp.d" -MT"Core/maincpp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/maincpp.o"
+arm-none-eabi-g++ -o "SolarProject.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Duane Mathias\Documents\GitHub\SolarProject\stm\SolarProject\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SolarProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: SolarProject.elf
+ 
+arm-none-eabi-objdump -h -S  SolarProject.elf  > "SolarProject.list"
+arm-none-eabi-objcopy  -O binary  SolarProject.elf  "SolarProject.bin"
+arm-none-eabi-size   SolarProject.elf 
+   text	   data	    bss	    dec	    hex	filename
+  37084	    596	   1984	  39664	   9af0	SolarProject.elf
+Finished building: default.size.stdout
+ 
+Finished building: SolarProject.bin
+ 
+Finished building: SolarProject.list
+ 
+12:03:10 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-size   SolarProject.elf 
+   text	   data	    bss	    dec	    hex	filename
+  37084	    596	   1984	  39664	   9af0	SolarProject.elf
+Finished building: default.size.stdout
+ 
+12:16:46 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-size   SolarProject.elf 
+   text	   data	    bss	    dec	    hex	filename
+  37084	    596	   1984	  39664	   9af0	SolarProject.elf
+Finished building: default.size.stdout
+ 
+12:20:14 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-size   SolarProject.elf 
+   text	   data	    bss	    dec	    hex	filename
+  37084	    596	   1984	  39664	   9af0	SolarProject.elf
+Finished building: default.size.stdout
+ 
+12:32:57 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-size   SolarProject.elf 
+   text	   data	    bss	    dec	    hex	filename
+  37084	    596	   1984	  39664	   9af0	SolarProject.elf
+Finished building: default.size.stdout
+ 
+12:36:44 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/maincpp.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/maincpp.d" -MT"Core/maincpp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/maincpp.o"
+arm-none-eabi-g++ -o "SolarProject.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Duane Mathias\Documents\GitHub\SolarProject\stm\SolarProject\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SolarProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: SolarProject.elf
+ 
+arm-none-eabi-objdump -h -S  SolarProject.elf  > "SolarProject.list"
+arm-none-eabi-objcopy  -O binary  SolarProject.elf  "SolarProject.bin"
+arm-none-eabi-size   SolarProject.elf 
+   text	   data	    bss	    dec	    hex	filename
+  36820	    596	   1984	  39400	   99e8	SolarProject.elf
+Finished building: default.size.stdout
+ 
+Finished building: SolarProject.bin
+ 
+Finished building: SolarProject.list
+ 
+12:52:09 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-size   SolarProject.elf 
+   text	   data	    bss	    dec	    hex	filename
+  36820	    596	   1984	  39400	   99e8	SolarProject.elf
+Finished building: default.size.stdout
+ 
+12:52:19 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-size   SolarProject.elf 
+   text	   data	    bss	    dec	    hex	filename
+  36820	    596	   1984	  39400	   99e8	SolarProject.elf
+Finished building: default.size.stdout
+ 
+12:54:40 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-size   SolarProject.elf 
+   text	   data	    bss	    dec	    hex	filename
+  36820	    596	   1984	  39400	   99e8	SolarProject.elf
+Finished building: default.size.stdout
+ 
+13:07:57 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-size   SolarProject.elf 
+   text	   data	    bss	    dec	    hex	filename
+  36820	    596	   1984	  39400	   99e8	SolarProject.elf
+Finished building: default.size.stdout
+ 
+13:14:37 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-size   SolarProject.elf 
+   text	   data	    bss	    dec	    hex	filename
+  36820	    596	   1984	  39400	   99e8	SolarProject.elf
+Finished building: default.size.stdout
+ 
+13:19:04 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32f4xx_hal_msp.d" -MT"Core/Src/stm32f4xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32f4xx_it.d" -MT"Core/Src/stm32f4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_it.o"
+arm-none-eabi-g++ "../Core/GLOBALS.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/GLOBALS.d" -MT"Core/GLOBALS.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/GLOBALS.o"
+arm-none-eabi-g++ "../Core/Stepper.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/Stepper.d" -MT"Core/Stepper.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Stepper.o"
+arm-none-eabi-g++ "../Core/absEncoder.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/absEncoder.d" -MT"Core/absEncoder.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/absEncoder.o"
+arm-none-eabi-g++ "../Core/maincpp.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/maincpp.d" -MT"Core/maincpp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/maincpp.o"
+arm-none-eabi-g++ "../Core/solarCalc2.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/solarCalc2.d" -MT"Core/solarCalc2.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/solarCalc2.o"
+../Core/Src/main.c: In function 'MX_RTC_Init':
+../Core/Src/main.c:182:19: warning: variable 'sDate' set but not used [-Wunused-but-set-variable]
+   RTC_DateTypeDef sDate = {0};
+                   ^~~~~
+../Core/Src/main.c:181:19: warning: variable 'sTime' set but not used [-Wunused-but-set-variable]
+   RTC_TimeTypeDef sTime = {0};
+                   ^~~~~
+../Core/Stepper.cpp: In member function 'void Stepper::setFreq(float)':
+../Core/Stepper.cpp:36:26: warning: left operand of comma operator has no effect [-Wunused-value]
+  timer->Instance->ARR = (timer,(uint16_t)(65535.0/Hz));
+                          ^~~~~
+In file included from ../Core/absEncoder.cpp:8:0:
+../Core/absEncoder.h: In constructor 'absEncoder::absEncoder(const GPIO_TypeDef* const*, const uint16_t*, float, bool, float)':
+../Core/absEncoder.h:20:14: warning: 'absEncoder::opPoint' will be initialized after [-Wreorder]
+  const float opPoint;  // return angle in range of opPoint-180 to opPoint+180; opPoint must be between -180 to 180
+              ^~~~~~~
+../Core/absEncoder.h:18:13: warning:   'const bool absEncoder::reverse' [-Wreorder]
+  const bool reverse; // count + as clockwise or counter clock wise
+             ^~~~~~~
+../Core/absEncoder.cpp:10:1: warning:   when initialized here [-Wreorder]
+ absEncoder::absEncoder(const GPIO_TypeDef* const gpioPorts[10], const uint16_t gpioPins[10], float operatingPoint, bool reverseDirection, float offset)
+ ^~~~~~~~~~
+arm-none-eabi-g++ -o "SolarProject.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Duane Mathias\Documents\GitHub\SolarProject\stm\SolarProject\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SolarProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: SolarProject.elf
+ 
+arm-none-eabi-objdump -h -S  SolarProject.elf  > "SolarProject.list"
+arm-none-eabi-objcopy  -O binary  SolarProject.elf  "SolarProject.bin"
+arm-none-eabi-size   SolarProject.elf 
+   text	   data	    bss	    dec	    hex	filename
+  36820	    596	   1984	  39400	   99e8	SolarProject.elf
+Finished building: default.size.stdout
+ 
+Finished building: SolarProject.bin
+ 
+Finished building: SolarProject.list
+ 
+13:22:26 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-size   SolarProject.elf 
+   text	   data	    bss	    dec	    hex	filename
+  36820	    596	   1984	  39400	   99e8	SolarProject.elf
+Finished building: default.size.stdout
+ 
+13:28:14 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-size   SolarProject.elf 
+   text	   data	    bss	    dec	    hex	filename
+  36820	    596	   1984	  39400	   99e8	SolarProject.elf
+Finished building: default.size.stdout
+ 
+13:28:58 **** Incremental Build of configuration Debug for project SolarProject ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32f4xx_hal_msp.d" -MT"Core/Src/stm32f4xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32f4xx_it.d" -MT"Core/Src/stm32f4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_it.o"
+arm-none-eabi-g++ "../Core/GLOBALS.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/GLOBALS.d" -MT"Core/GLOBALS.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/GLOBALS.o"
+arm-none-eabi-g++ "../Core/Stepper.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/Stepper.d" -MT"Core/Stepper.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Stepper.o"
+arm-none-eabi-g++ "../Core/absEncoder.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/absEncoder.d" -MT"Core/absEncoder.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/absEncoder.o"
+arm-none-eabi-g++ "../Core/maincpp.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/maincpp.d" -MT"Core/maincpp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/maincpp.o"
+arm-none-eabi-g++ "../Core/solarCalc2.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/solarCalc2.d" -MT"Core/solarCalc2.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/solarCalc2.o"
+../Core/Src/main.c: In function 'MX_RTC_Init':
+../Core/Src/main.c:182:19: warning: variable 'sDate' set but not used [-Wunused-but-set-variable]
+   RTC_DateTypeDef sDate = {0};
+                   ^~~~~
+../Core/Src/main.c:181:19: warning: variable 'sTime' set but not used [-Wunused-but-set-variable]
+   RTC_TimeTypeDef sTime = {0};
+                   ^~~~~
+../Core/Stepper.cpp: In member function 'void Stepper::setFreq(float)':
+../Core/Stepper.cpp:36:26: warning: left operand of comma operator has no effect [-Wunused-value]
+  timer->Instance->ARR = (timer,(uint16_t)(65535.0/Hz));
+                          ^~~~~
+In file included from ../Core/absEncoder.cpp:8:0:
+../Core/absEncoder.h: In constructor 'absEncoder::absEncoder(const GPIO_TypeDef* const*, const uint16_t*, float, bool, float)':
+../Core/absEncoder.h:20:14: warning: 'absEncoder::opPoint' will be initialized after [-Wreorder]
+  const float opPoint;  // return angle in range of opPoint-180 to opPoint+180; opPoint must be between -180 to 180
+              ^~~~~~~
+../Core/absEncoder.h:18:13: warning:   'const bool absEncoder::reverse' [-Wreorder]
+  const bool reverse; // count + as clockwise or counter clock wise
+             ^~~~~~~
+../Core/absEncoder.cpp:10:1: warning:   when initialized here [-Wreorder]
+ absEncoder::absEncoder(const GPIO_TypeDef* const gpioPorts[10], const uint16_t gpioPins[10], float operatingPoint, bool reverseDirection, float offset)
+ ^~~~~~~~~~
+arm-none-eabi-g++ -o "SolarProject.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Duane Mathias\Documents\GitHub\SolarProject\stm\SolarProject\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SolarProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: SolarProject.elf
+ 
+arm-none-eabi-objdump -h -S  SolarProject.elf  > "SolarProject.list"
+arm-none-eabi-objcopy  -O binary  SolarProject.elf  "SolarProject.bin"
+arm-none-eabi-size   SolarProject.elf 
+   text	   data	    bss	    dec	    hex	filename
+  36820	    596	   1984	  39400	   99e8	SolarProject.elf
+Finished building: default.size.stdout
+ 
+Finished building: SolarProject.bin
+ 
+Finished building: SolarProject.list
+ 

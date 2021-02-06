@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="RESET"/>
+		<item key="selection" value="acos"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="acos"/>
+			<item value="localtime"/>
+			<item value="isNumber"/>
+			<item value="storeoperation"/>
+			<item value="stop"/>
+			<item value="rtc_stop"/>
+			<item value="dbg_rtc_stop"/>
+			<item value="time"/>
 			<item value="reset"/>
 			<item value="seconds"/>
 			<item value="IRQHandler"/>
@@ -20,8 +28,8 @@
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="885"/>
-		<item key="DIALOG_Y_ORIGIN" value="215"/>
+		<item key="DIALOG_X_ORIGIN" value="1028"/>
+		<item key="DIALOG_Y_ORIGIN" value="158"/>
 		<item key="DIALOG_WIDTH" value="332"/>
 		<item key="DIALOG_HEIGHT" value="459"/>
 		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|12.0|0|WINDOWS|1|-16|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
