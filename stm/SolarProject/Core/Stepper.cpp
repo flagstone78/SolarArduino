@@ -16,13 +16,16 @@ Stepper::~Stepper() {
 	// TODO Auto-generated destructor stub
 }
 
+void Stepper::Enable(bool ena){
+	HAL_GPIO_WritePin((GPIO_TypeDef*)ports[2],pins[2],(GPIO_PinState)!ena);
+}
+
 void Stepper::setDir(bool dir){
 	if(reverse) dir = !dir;
 	HAL_GPIO_WritePin((GPIO_TypeDef*)ports[1],pins[1],(GPIO_PinState)dir);
 }
 
 void Stepper::step() {
-	//bool dirState = ((ports[1]->ODR & pins[1]) == pins[1]);
 	HAL_GPIO_TogglePin((GPIO_TypeDef*) ports[0], pins[0]);
 }
 

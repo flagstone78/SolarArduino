@@ -22,6 +22,7 @@ public:
 	virtual ~Stepper();
 	void step();
 	void update();
+	void Enable(bool ena);
 	void setDir(bool dir);
 	void setFreq(float Hz);
 	void setTarget(int pos);

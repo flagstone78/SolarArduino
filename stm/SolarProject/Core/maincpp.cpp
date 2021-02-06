@@ -17,7 +17,7 @@ absEncoder elEncoder(ElEncoderPorts,ElEncoderPins, 0, true, -5);
 absEncoder azEncoder(AzEncoderPorts,AzEncoderPins, 180, false, 183);
 
 //motors
-Stepper elStepper(&htim1,ElStepperPorts,ElStepperPins, true);
+Stepper elStepper(&htim1,ElStepperPorts,ElStepperPins, false);
 Stepper azStepper(&htim2,AzStepperPorts,AzStepperPins, true);
 
 //clock
@@ -47,6 +47,9 @@ AzEl Target;
 void mainsetup(){
 	elStepper.setFreq(100);
 	azStepper.setFreq(100);
+
+	elStepper.Enable(true);
+	azStepper.Enable(true);
 }
 
 void motorControl(Stepper* s, absEncoder* e, float targetAngle){
