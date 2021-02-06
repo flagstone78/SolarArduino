@@ -1,9 +1,0 @@
-std_abs.h:74:3:constexpr float std::abs(float)	16	static
-maincpp.cpp:27:6:void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef*)	16	static
-maincpp.cpp:47:6:void mainsetup()	8	static
-maincpp.cpp:52:6:void motorControl(Stepper*, absEncoder*, float)	40	static
-maincpp.cpp:65:6:void limit(double*, double, double)	40	static
-maincpp.cpp:70:6:void mainloop()	64	static
-maincpp.cpp:86:1:void __static_initialization_and_destruction_0(int, int)	24	static
-maincpp.cpp:86:1:cpp)	8	static
-maincpp.cpp:86:1:cpp)	8	static

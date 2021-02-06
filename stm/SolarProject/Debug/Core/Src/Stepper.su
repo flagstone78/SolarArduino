@@ -1,3 +1,0 @@
-Stepper.cpp:10:1:Stepper::Stepper()	16	static
-Stepper.cpp:15:1:Stepper::~Stepper()	16	static
-Stepper.cpp:15:1:virtual Stepper::~Stepper()	16	static

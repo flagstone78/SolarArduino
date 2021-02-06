@@ -1,9 +1,0 @@
-Stepper.cpp:10:1:Stepper::Stepper(TIM_HandleTypeDef*, const GPIO_TypeDef* const*, const uint16_t*, bool)	24	static
-Stepper.cpp:15:1:Stepper::~Stepper()	16	static
-Stepper.cpp:15:1:virtual Stepper::~Stepper()	16	static
-Stepper.cpp:19:6:void Stepper::setDir(bool)	16	static
-Stepper.cpp:24:6:void Stepper::step()	16	static
-Stepper.cpp:29:6:void Stepper::update()	16	static
-Stepper.cpp:33:6:void Stepper::setFreq(float)	24	static
-Stepper.cpp:39:6:void Stepper::setTarget(int)	16	static
-Stepper.cpp:43:14:unsigned int Stepper::getPosition()	16	static
