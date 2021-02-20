@@ -37,13 +37,18 @@ uint16_t absEncoder::positionRaw(){
 		bit = (p&pins[i])>0;
 		grey += bit<<i;
 	}
-	grey = (0xffff^grey)&0x02ff; //bitwise invert because the encoder is active low
-	return grayToBinary(grey);
+	grey = (0xffff^grey)&0x03ff; //bitwise invert because the encoder is active low
+	return grey;
+}
+
+//between 0 and 1024
+uint16_t absEncoder::positionInt(){
+	return grayToBinary(positionRaw());
 }
 
 //return the position of the encoder in degrees opPoint-180.0 to opPoint+180.0 range
 float absEncoder::position(){
-	float deg = positionRaw()*360.0/1024.0;
+	float deg = positionInt()*360.0/1024.0;
 	if(reverse) deg = -deg;
 	deg += degreeOffset;
 	if(deg != 0) deg = fmod(deg,360.0); //between -360 to 360
