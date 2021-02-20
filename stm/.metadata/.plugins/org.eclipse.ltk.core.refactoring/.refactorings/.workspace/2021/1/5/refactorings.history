@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">&#x0A;<refactoring comment="Delete 2 resources" deleteContents="false" description="Delete 2 resources" element1="/SolarProject/Core/RTCLib.cpp" element2="/SolarProject/Core/RTCLib.h" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="2" stamp="1612044748722"/>&#x0A;<refactoring comment="Delete resource &apos;SolarProject/Core/SolarCalculations.h&apos;" deleteContents="false" description="Delete resource &apos;SolarProject/Core/SolarCalculations.h&apos;" element1="/SolarProject/Core/SolarCalculations.h" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1612044756584"/>
-</session>
