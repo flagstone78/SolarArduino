@@ -22,24 +22,27 @@ absEncoder azEncoder(AzEncoderPorts,AzEncoderPins, 180, false, 173);
 //absEncoder azEncoder(AzEncoderPorts,AzEncoderPins, 0, false, 0);
 
 //motors
-Stepper elStepper(&htim1,ElStepperPorts,ElStepperPins, false);
-Stepper azStepper(&htim2,AzStepperPorts,AzStepperPins, true);
+Stepper elStepper(ElStepperPorts,ElStepperPins, false);
+Stepper azStepper(AzStepperPorts,AzStepperPins, true);
+
+MotorControl azControl(&htim1,&azEncoder,&azStepper);
+MotorControl elControl(&htim2,&elEncoder,&elStepper);
 
 //clock
 //RTC_DS3231 rtc;
 
 // callback function for stepper motor timer
-bool enableMotors = false;
+bool enableMotors = true;
 bool manualControl = false;
 bool updateTime = true;
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
 	if(enableMotors){
-	if(htim == elStepper.timer) {
-		elStepper.update();
+	if(htim == elControl.timer) {
+		elControl.update();
 	}
-	if(htim == azStepper.timer) {
-		azStepper.update();
+	if(htim == azControl.timer) {
+		azControl.update();
 	}
 	}
 }
@@ -58,9 +61,6 @@ char printBuf[50];
 AzEl Target;
 
 void mainsetup(){
-	elStepper.setFreq(100);
-	azStepper.setFreq(100);
-
 	elStepper.Enable(true);
 	azStepper.Enable(true);
 
@@ -68,18 +68,6 @@ void mainsetup(){
 	Target.Azimuth = azEncoder.position();
 }
 
-void motorControl(Stepper* s, absEncoder* e, float targetAngle){
-	float pos = e->position();
-	float err = targetAngle-pos; //feedback
-
-	float p = 200;
-	if (abs(err) < 1.0) p = 20;
-	float vel = p*err; //proportional term
-
-	//set velocity
-	s->setDir(vel > 0);
-	s->setFreq(abs(vel));
-}
 
 void limit(double *var, double high, double low){
 	if(*var < low) *var = low;
@@ -97,7 +85,7 @@ int bin2int(int b){
 }
 
 void mainloop(){
-
+	//debug program
 	/*azpos = azEncoder.position();
 	azRaw = bin2int(azEncoder.positionRaw());
 	sprintf(printBuf,"a: %f b: %i\n",azpos,azRaw);
@@ -123,11 +111,8 @@ void mainloop(){
 	if(!manualControl){
 		Target = calculateSolar(tms,geo);
 	}
-
 	limit(&Target.Elevation, 90,5);
 	limit(&Target.Azimuth, 300,60);
-
-	motorControl(&elStepper, &elEncoder, Target.Elevation);
-	motorControl(&azStepper, &azEncoder, Target.Azimuth);
-
+	elControl.setTargetAngle(Target.Elevation);
+	azControl.setTargetAngle(Target.Azimuth);
 }

@@ -13,20 +13,18 @@
 class Stepper {
 	const GPIO_TypeDef*const* ports;
 	const uint16_t* pins;
-	int currentStep, targetStep;
+	//int currentStep, targetStep;
 	const bool reverse;
 public:
-	const TIM_HandleTypeDef* timer;
-
-	Stepper(TIM_HandleTypeDef* timer, const GPIO_TypeDef* const gpioPorts[3], const uint16_t gpioPins[3], bool reverseDirection);
+	Stepper(const GPIO_TypeDef* const gpioPorts[3], const uint16_t gpioPins[3], bool reverseDirection);
 	virtual ~Stepper();
 	void step();
-	void update();
 	void Enable(bool ena);
 	void setDir(bool dir);
-	void setFreq(float Hz);
-	void setTarget(int pos);
-	unsigned int getPosition();
+	//void update();
+	//void setFreq(float Hz);
+	//void setTarget(int pos);
+	//unsigned int getPosition();
 };
 
 #endif /* SRC_STEPPER_H_ */

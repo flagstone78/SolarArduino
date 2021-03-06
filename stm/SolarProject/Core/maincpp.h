@@ -11,6 +11,7 @@
 #include "main.h"
 #include "../absEncoder.h"
 #include "../Stepper.h"
+#include "../MotorControl.h"
 //#include "../RTCLib.h"
 //#include "../SolarCalculations.h"
 #include "../solarCalc2.h"

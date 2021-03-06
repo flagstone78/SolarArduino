@@ -54,6 +54,7 @@ float absEncoder::position(){
 	if(deg != 0) deg = fmod(deg,360.0); //between -360 to 360
 	if(deg < opPoint-180.0)deg+=360;
 	else if(deg > opPoint+180.0)deg-=360;
+	//cachedPosition = deg;
 	return deg;
 }
 
