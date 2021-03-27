@@ -18,8 +18,6 @@ class MotorControl{
 public:
 	TIM_HandleTypeDef* const timer;
 
-
-
 	MotorControl(TIM_HandleTypeDef* timer, absEncoder* encoder, Stepper* stepper):encoder(encoder),stepper(stepper),timer(timer){
 		setTimer(10);
 	};
@@ -29,18 +27,21 @@ public:
 		timer->Instance->ARR = (uint16_t)(65535.0/stepsPerSecond); //update timer
 	}
 	void setTargetAngle(float t){targetAngle = t;}
-	void update(){
+	void update(bool enableMotor){
 		encoderPos = encoder->position();
 		error= targetAngle-encoderPos; //feedback
 
 		float vel = pgain*error; //proportional term
 
 		//set velocity
-		stepper->setDir(vel > 0);
-		float stepsPerSecond = abs(vel);
-		if (abs(error) > 0.5) stepper->step(); //dont step if below min
-		setTimer(stepsPerSecond);
+		if(enableMotor){
+			stepper->setDir(vel > 0);
+			float stepsPerSecond = abs(vel);
+			if (abs(error) > 0.5) stepper->step(); //dont step if below min
+			setTimer(stepsPerSecond);
+		}
 	}
+
 };
 
 

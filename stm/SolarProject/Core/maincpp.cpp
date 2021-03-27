@@ -18,12 +18,12 @@ UART_HandleTypeDef huart2;
 
 //encoders
 absEncoder elEncoder(ElEncoderPorts,ElEncoderPins, 0, true, 0.4);
-absEncoder azEncoder(AzEncoderPorts,AzEncoderPins, 180, false, 173);
+absEncoder azEncoder(AzEncoderPorts,AzEncoderPins, 180, false, 186);//173
 //absEncoder azEncoder(AzEncoderPorts,AzEncoderPins, 0, false, 0);
 
 //motors
 Stepper elStepper(ElStepperPorts,ElStepperPins, false);
-Stepper azStepper(AzStepperPorts,AzStepperPins, true);
+Stepper azStepper(AzStepperPorts,AzStepperPins, false);
 
 MotorControl azControl(&htim1,&azEncoder,&azStepper);
 MotorControl elControl(&htim2,&elEncoder,&elStepper);
@@ -37,13 +37,11 @@ bool manualControl = false;
 bool updateTime = true;
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
-	if(enableMotors){
 	if(htim == elControl.timer) {
-		elControl.update();
+		elControl.update(enableMotors);
 	}
 	if(htim == azControl.timer) {
-		azControl.update();
-	}
+		azControl.update(enableMotors);
 	}
 }
 
