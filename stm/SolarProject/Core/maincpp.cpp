@@ -52,6 +52,7 @@ bool dir = false;
 float elpos, azpos, oldpos, targetAngle=0;
 time_t timeSeconds;
 tm tms;
+uint32_t oldMillis=0;
 
 char printBuf[300];
 
@@ -82,12 +83,14 @@ int bin2int(int b){
 }
 
 void mainloop(){
-
+	if((millis()-oldMillis) > 1000){
+		oldMillis = millis();
 	sprintf(printBuf,"lati: %f\n\r long: %f\n\r date: %ld\n\r time: %ld\n\r Az: %f \n\r AzT: %f\n\r El: %f\n\r ElT: %f\n\r",
 			gps.location.lat(), gps.location.lng(), gps.date.value(), gps.time.value(),
 			azEncoder.position(), Target.Azimuth,
 			elEncoder.position(), Target.Elevation);
 	HAL_UART_Transmit(&huart2, (uint8_t *)printBuf, sizeof(printBuf), 50);
+	}
 
 	//get the time from gps module  (gps is update from the customUART function from uart1 interrupt)
 	if(updateTime && gps.time.isValid()){
