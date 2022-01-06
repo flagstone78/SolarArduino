@@ -2,19 +2,16 @@
  * maincpp.cpp
  *
  *  Created on: Jan 2, 2021
- *      Author: Duane Mathias
+ *      Author: Alan Mathias
  */
 
 
 #include "maincpp.h"
-#include <stdio.h>
+
 
 TIM_HandleTypeDef htim1;
 TIM_HandleTypeDef htim2;
-RTC_HandleTypeDef hrtc;
-UART_HandleTypeDef huart2;
-
-
+UART_HandleTypeDef huart2; //to debugger
 
 //encoders
 absEncoder elEncoder(ElEncoderPorts,ElEncoderPins, 0, true, 0.4);
@@ -28,8 +25,8 @@ Stepper azStepper(AzStepperPorts,AzStepperPins, false);
 MotorControl azControl(&htim1,&azEncoder,&azStepper);
 MotorControl elControl(&htim2,&elEncoder,&elStepper);
 
-//clock
-//RTC_DS3231 rtc;
+//gps
+TinyGPSPlus gps;
 
 // callback function for stepper motor timer
 bool enableMotors = true;
@@ -45,16 +42,18 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 	}
 }
 
+void customUART(char c){
+	gps.encode(c);
+}
+
 
 int azRaw;
 bool dir = false;
 float elpos, azpos, oldpos, targetAngle=0;
-RTC_DateTypeDef dateS;
-RTC_TimeTypeDef timeS;
 time_t timeSeconds;
 tm tms;
 
-char printBuf[50];
+char printBuf[300];
 
 AzEl Target;
 
@@ -83,30 +82,30 @@ int bin2int(int b){
 }
 
 void mainloop(){
-	//debug program
-	/*azpos = azEncoder.position();
-	azRaw = bin2int(azEncoder.positionRaw());
-	sprintf(printBuf,"a: %f b: %i\n",azpos,azRaw);
+
+	sprintf(printBuf,"lati: %f\n\r long: %f\n\r date: %ld\n\r time: %ld\n\r Az: %f \n\r AzT: %f\n\r El: %f\n\r ElT: %f\n\r",
+			gps.location.lat(), gps.location.lng(), gps.date.value(), gps.time.value(),
+			azEncoder.position(), Target.Azimuth,
+			elEncoder.position(), Target.Elevation);
 	HAL_UART_Transmit(&huart2, (uint8_t *)printBuf, sizeof(printBuf), 50);
 
-	azStepper.setDir(dir); //false is to negative
-	if(azpos>60 && azpos < 300){
-		azStepper.step();
-		for(int i=10000;i>0;i--){}
-	}*/
-
-
-	//get the time (must be called getTime then getDate to work properly)
-	HAL_RTC_GetTime(&hrtc,&timeS,RTC_FORMAT_BIN);
-	HAL_RTC_GetDate(&hrtc,&dateS,RTC_FORMAT_BIN);
-
-	if(updateTime){
-		const int century = 1; //centuries since 1900
-		tms = {timeS.Seconds,timeS.Minutes,timeS.Hours,dateS.Date,dateS.Month-1,dateS.Year+century*100,0,0,(int)timeS.DayLightSaving};
+	//get the time from gps module  (gps is update from the customUART function from uart1 interrupt)
+	if(updateTime && gps.time.isValid()){
+		tms.tm_year = gps.date.year()%100 + century*100; //years from 1900
+		tms.tm_mon = gps.date.month()-1; //month is zero indexed
+		tms.tm_mday = gps.date.day();
+		tms.tm_hour = gps.time.hour();
+		tms.tm_min = gps.time.minute();
+		tms.tm_sec = gps.time.second();
 		timeSeconds = mktime(&tms); //update mday and yday
 	}
 
-	if(!manualControl){
+	if(gps.location.isValid()){
+		geo.lat = gps.location.lat();
+		geo.lon = gps.location.lng();
+	}
+
+	if(!manualControl && gps.time.isValid()){
 		Target = calculateSolar(tms,geo);
 	}
 	limit(&Target.Elevation, 90,5);

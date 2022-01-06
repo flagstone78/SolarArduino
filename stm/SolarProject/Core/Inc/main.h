@@ -56,6 +56,7 @@ void Error_Handler(void);
 /* USER CODE BEGIN EFP */
 extern void mainloop();
 extern void mainsetup();
+extern void customUART(char c);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
